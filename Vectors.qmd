@@ -5,17 +5,17 @@ format: html
 
 ## Background
 
-Vector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (.shp).
+Vector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (`.shp`).
 
 ## Adding Vectors
 
-Download a shapefile of all archaeological sites in this region: [`Lab1_All_Sites.zip`](https://drive.google.com/file/d/1wTdCl3f3wcVAkd2wMedKyv0yE_wreJ6l/view?usp=sharing). Similar to adding rasters, navigate to `Layer` -\> `Add Layer` -\> `Add Vector Layer...`. In the window, select `AllSites.shp` under `Source` and add to the map.
+Download a shapefile of all archaeological sites in this region: [`Lab1_AllSites.zip`](https://drive.google.com/file/d/1wTdCl3f3wcVAkd2wMedKyv0yE_wreJ6l/view?usp=drive_link). Similar to adding rasters, navigate to `Layer` -\> `Add Layer` -\> `Add Vector Layer...`. In the window, select `AllSites.shp` under `Source` and add to the map.
 
 Right-click on the newly added vector layer and select `Zoom to Layer(s)` to see its full extent.
 
 `Zoom to Layer(s)` allows you to see the full extent of a vector layer, but sometimes an outlier can unduly affect the map view. In this case, there seems to be a data point in an unlikely place in the southern end of the map view.
 
-![Zoom to all sites in QGIS](images/clipboard-1383867738.png){#zoom-all-sites width="100%"}
+![Zoom to all sites in QGIS](images/clipboard-2814145598.png){#zoom-sites width="100%"}
 
 Use the `Identify Features` ![](images/clipboard-244210898.png){width="5%"} in the top toolbar and click on this outlier to examine it.
 
@@ -37,7 +37,7 @@ Are there any patterns in the general distribution of all archaeological sites v
 
 Sometimes, we want to examine archaeological features of a particular type. To do that, right-click on `AllSites` and select `Open Attribute Table`.
 
-In the `Attribute Table`, you can see each data point has some values or "attributes" associate to it. In the table, locate the column/field `Type`, which contains string/text values such as `mound`, `other`, `flat`.
+In the `Attribute Table`, you can see each data point has some values or "attributes" associate to it. In the table, locate the column/field `Type`, which contains string/text values such as `Mound`, `Other`, `Flat`.
 
 ![Attribute table in QGIS](images/clipboard-4111578544.png){#attribute-table width="100%"}
 

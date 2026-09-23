@@ -1,101 +1,34 @@
 [
   {
-    "objectID": "Vectors.html",
-    "href": "Vectors.html",
-    "title": "Vectors",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Digital Archaeology Labs",
     "section": "",
-    "text": "Background\nVector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (.shp).",
+    "text": "Welcome\nThis website is designed to guide you through the lab assignments for ANTHRO50.03 Digital Archaeology (2026 Fall Term). There will be eight graded lab assignments, added to this website throughout the term. All completed assignments should be uploaded to the Canvas site, unless otherwise noted.\n\n\n\nCan you find the hidden “archaeology” in this paining? Hans Holbein the Younger, The Ambassadors, 1533, oil on oak",
     "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+      "Welcome"
     ]
   },
   {
-    "objectID": "Vectors.html#adding-vectors",
-    "href": "Vectors.html#adding-vectors",
-    "title": "Vectors",
-    "section": "Adding Vectors",
-    "text": "Adding Vectors\nDownload a shapefile of all archaeological sites in this region: Lab1_All_Sites.zip. Similar to adding rasters, navigate to Layer -&gt; Add Layer -&gt; Add Vector Layer.... In the window, select AllSites.shp under Source and add to the map.\nRight-click on the newly added vector layer and select Zoom to Layer(s) to see its full extent.\nZoom to Layer(s) allows you to see the full extent of a vector layer, but sometimes an outlier can unduly affect the map view. In this case, there seems to be a data point in an unlikely place in the southern end of the map view.\n\n\n\nZoom to all sites in QGIS\n\n\nUse the Identify Features  in the top toolbar and click on this outlier to examine it.\n\n\n\n\n\n\nImportantEXERCISE 5\n\n\n\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude. Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong?",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
-    ]
-  },
-  {
-    "objectID": "Vectors.html#vector-attributes",
-    "href": "Vectors.html#vector-attributes",
-    "title": "Vectors",
-    "section": "Vector Attributes",
-    "text": "Vector Attributes\nFor now, let us focus on the region near Tell Beydar. Toggle on only three layers: AllSites, ds1105-1025df057, and the basemap. Zoom to ds1105-1025df057. Examine the general distribution of these sites and answer the following question:\n\n\n\n\n\n\nImportantEXERCISE 6\n\n\n\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography?\n\n\nSometimes, we want to examine archaeological features of a particular type. To do that, right-click on AllSites and select Open Attribute Table.\nIn the Attribute Table, you can see each data point has some values or “attributes” associate to it. In the table, locate the column/field Type, which contains string/text values such as mound, other, flat.\n\n\n\nAttribute table in QGIS\n\n\nTo select all features that are of the mound type, click on Select by Expression tool () in the top toolbar. In the expression window, type in the following expression and press Select Features.\n\"Type\" = 'Mound'\nClose the Select by Expression window. Now, all the features that contain a Type value of Mound should be highlighted in the attributes table.\nWith the attributes table open, go back to the map view and right-click on the vector layer. Select Export -&gt; Save Selected Features As...\n\n\n\nExport selected data\n\n\nIn the window, select Esri Shapefile as the Format and use the ... button next to File name to save it in your computer with a name such as Lab1_mounds_2609.shp. Change the CRS to Project CRS. Click OK.\n\n\n\nExportation in QGIS\n\n\nThe new selected dataset should be added to your map. Toggle off the original vector layer, and you should be able to see all mounded sites in the region.\n\n\n\nMound features in the region\n\n\n\n\n\n\n\n\nImportantEXERCISE 7\n\n\n\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites? As a bonus question, what is the percentage of the mounded site surveyed by Tuna?",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
-    ]
-  },
-  {
-    "objectID": "Vectors.html#image-analysis",
-    "href": "Vectors.html#image-analysis",
-    "title": "Vectors",
-    "section": "Image Analysis",
-    "text": "Image Analysis\nNow you have created all layers needed for this lab. Toggle on and off the layers, change opacity and symbology of these layers, and answer the following questions.\n\n\n\n\n\n\nImportantEXERCISE 8\n\n\n\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area? A qualitative description is fine for this exercise.\n\n\n\n\n\n\n\n\nImportantEXERCISE 9\n\n\n\nTony Wilkinson (2003) argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution.\n\n\n\n\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near East. University of Arizona Press.",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
-    ]
-  },
-  {
-    "objectID": "Lab1.html",
-    "href": "Lab1.html",
-    "title": "Questions (Due: Oct 1)",
+    "objectID": "QGIS.html",
+    "href": "QGIS.html",
+    "title": "Installing QGIS",
     "section": "",
-    "text": "Please answer the following questions in a separate Word document and submit it to course Canvas site by 11:59pm, Oct 1, 2026.\nQuestion 1\nIn CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (40.5872, 36.7382), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response.\nQuestion 2\nAt least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility? Why?\nQuestion 3\nIn QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes and what you think may have caused them. Be sure to describe their location relative to the Tell.\nQuestion 4\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map. Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels.\nQuestion 5\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude. Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong?\nQuestion 6\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography?\nQuestion 7\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites? As a bonus question, what is the percentage of the mounded site surveyed by Tuna?\nQuestion 8\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area? A qualitative description is fine for this exercise.\nQuestion 9\nTony Wilkinson (2003) argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution.\n\n\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near East. University of Arizona Press.",
+    "text": "QGIS Version\nThroughout this course, one of the software that we will be using is QGIS. Compared to ArcGIS Pro, which is a proprietary commercial software requiring (expensive) annual subscriptions, QGIS is free and open-source. ArcGIS Pro natively runs on Windows; QGIS runs on Windows, macOS, and Linux. Although QGIS might not be as polished and intuitive as ArcGIS Pro, the skills you build here will make it very easy to switch to ArcGIS Pro later, if needed.\nWe will be using the Long Term Release (LTR) of the software, specifically 3.44. This version will support a vast library of Python plugins that we may need in this course. QGIS 4.x may experience plugin incompatibilities and still require developers to update some of the tools.",
     "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+      "Getting Started",
+      "Installing QGIS"
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Wilkinson, T. J. 2003. Archaeological Landscapes of the Near\nEast. University of Arizona Press.",
+    "objectID": "QGIS.html#download-qgis",
+    "href": "QGIS.html#download-qgis",
+    "title": "Installing QGIS",
+    "section": "Download QGIS",
+    "text": "Download QGIS\nUse this link (https://www.qgis.org/download/) to download QGIS. Select your operating system from the drop-down list.\n\n\n\nSelecting platform for QGIS\n\n\nFor Windows users, follow the steps in the installer to install QGIS. For macOS, drag app packages into your Applications folder.\n\n\n\n\n\n\nImportant\n\n\n\nPlease make sure that you are using QGIS LTR 3.44 for this course.",
     "crumbs": [
-      "Appendices",
-      "References"
-    ]
-  },
-  {
-    "objectID": "Rasters.html",
-    "href": "Rasters.html",
-    "title": "Rasters",
-    "section": "",
-    "text": "Background\nThe central power of GIS is in the ability to load multiple spatial datasets into a single map frame, and then compare them to one another, either visually or quantitatively. Raster graphics are grids of pixels, such as CORONA imagery, scanned maps, and elevation models. Vectors are composed of discrete data points, such as points, lines, and polygons, which include archaeological sites, rivers, and soil types. Rasters are usually larger files and require more computing power to process.\nThis page will guide you to load a Bing basemap and three rasters into a new project in QGIS.",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
-    ]
-  },
-  {
-    "objectID": "Rasters.html#basemaps",
-    "href": "Rasters.html#basemaps",
-    "title": "Rasters",
-    "section": "Basemaps",
-    "text": "Basemaps\nIn QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.\nStart a new project in QGIS using Project -&gt; New and save it in a folder for ANTHRO_50_03_LAB1. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: e.g., DA2609_Lab1_YourName_1. Start your filename with a letter and not a number.\n\n\n\nStart a new project in QGIS\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure to save your project regularly by pressing Ctrl/CMD + s or the button  near the top.\n\n\nYou will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the “Browser” panel on the left side of the screen.\n\n\n\nBrowser panel in QGIS\n\n\nRight-click on XYZ Tiles and select New Connection. Type a name for the layer, such as Bing Satellite. Paste the following into the URL field and click OK: http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1.\nDouble click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.\n\n\n\nBing Maps loaded in QGIS\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMake sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a projected coordinate system that flattens the 3D, curved surface of the Earth (a geographic coordinate system).",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
-    ]
-  },
-  {
-    "objectID": "Rasters.html#adding-raster-layers",
-    "href": "Rasters.html#adding-raster-layers",
-    "title": "Rasters",
-    "section": "Adding Raster Layers",
-    "text": "Adding Raster Layers\n\nCORONA ds1105-1025df057.tif\nTo add a raster in QGIS, select Layer -&gt; Add Layer -&gt; Add Raster Layer.\n\n\n\nAdding a raster in QGIS\n\n\nIn the Data Source Manager, under Source, locate ds1105-1025df057.tif stored in your computer and click Add.\n\n\n\nQGIS — Data Source Manager (directory may be different in your computer)\n\n\nReturn to the map view. In the Layers window, right-click on the raster layer we just added and select Zoom to Layer(s). Wait for a few moments for the image to load.\n\n\n\nRight-click on a raster layer\n\n\n\n\n\n\n\n\nCaution\n\n\n\nFiles are linked to a GIS — not stored — and any moved files must be re-linked in QGIS.\n\n\nIn the Layers window, toggle off the raster layer to see the underlying satellite imagery. Toggle it on again. In the coordinate near the bottom of the interface, type in 4518140.3,4402634.6 to find Tell Beydar again. In scale, type in 1:5000 (1 cm on the screen represents 5,000 cm on the ground).\n\n\n\n\n\n\nImportantEXERCISE 3\n\n\n\nToggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes and what you think may have caused them. Be sure to describe their location relative to the Tell.\n\n\n\n\nSurvey Map from Tony Wilkinson (1948-2014)\nDownload Lab1Wilkinson.zip and unzip it in your computer. Add a raster layer that links to Wilkinson_2002.tif. This map was produced by an archaeologist, Tony Wilkinson, who did an archaeological survey in the area around Tell Beydar. The map has already been georeferenced, meaning that it has been transformed to match the other geographical data.\nThe imported map may look funny in QGIS. This is because the raster only contains pixels with two values, 0 and 255, and the program automatically assigns a color to each of these two colors.\nTo correct this, right-click on Wilkinson_2002 layer, select Symbology, and change Render type to Singleband gray.\n\n\n\nChange layer symbology in QGIS\n\n\nWhile you are at it, locate Transparency tab on the right side of the layer properties window, adjust the opacity of this layer to 50%.\n\n\n\nChange layer opacity in QGIS\n\n\n\n\n1938 Historical Map\nNow it is time to put what you learned about rasters to practice! Download 1938_FrenchMap.zip and unzip it. Add 1014562_LVT2_Hassetche_NJ_37_XI_partie_sud_NJ_37_V_1938.TIF as a raster layer. Change the layer’s opacity to 60%. Toggle off layer Wilkinson_2002.\nWhile the map has been similarly georeferenced, the georeferencing is not perfect for this historical map.\n\n\n\nThe 1938 historical map is not perfectly georeferenced\n\n\nIn QGIS, you can also measure distance and area in the map view. To do so, use the Measure Line tool in the top toolbar and click on the points in the map view.\n\n\n\nMeasure toolbar in QGIS\n\n\n\n\n\n\n\n\nImportantEXERCISE 4\n\n\n\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map. Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels.",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+      "Getting Started",
+      "Installing QGIS"
     ]
   },
   {
@@ -151,6 +84,105 @@
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
+    ]
+  },
+  {
+    "objectID": "Rasters.html",
+    "href": "Rasters.html",
+    "title": "Rasters",
+    "section": "",
+    "text": "Background\nThe central power of GIS is in the ability to load multiple spatial datasets into a single map frame, and then compare them to one another, either visually or quantitatively. Raster graphics are grids of pixels, such as CORONA imagery, scanned maps, and elevation models. Vectors are composed of discrete data points, such as points, lines, and polygons, which include archaeological sites, rivers, and soil types. Rasters are usually larger files and require more computing power to process.\nThis page will guide you to load a Bing basemap and three rasters into a new project in QGIS.",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+    ]
+  },
+  {
+    "objectID": "Rasters.html#basemaps",
+    "href": "Rasters.html#basemaps",
+    "title": "Rasters",
+    "section": "Basemaps",
+    "text": "Basemaps\nIn QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.\nStart a new project in QGIS using Project -&gt; New and save it in a folder for ANTHRO_50_03_LAB1. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: e.g., DA2609_Lab1_YourName_1. Start your filename with a letter and not a number.\n\n\n\nStart a new project in QGIS\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure to save your project regularly by pressing Ctrl/CMD + s or the button  near the top.\n\n\nYou will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the “Browser” panel on the left side of the screen.\n\n\n\nBrowser panel in QGIS\n\n\nRight-click on XYZ Tiles and select New Connection. Type a name for the layer, such as Bing Satellite. Paste the following into the URL field and click OK: http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1.\nDouble click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.\n\n\n\nBing Maps loaded in QGIS\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMake sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a projected coordinate system that flattens the 3D, curved surface of the Earth (a geographic coordinate system).",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+    ]
+  },
+  {
+    "objectID": "Rasters.html#adding-raster-layers",
+    "href": "Rasters.html#adding-raster-layers",
+    "title": "Rasters",
+    "section": "Adding Raster Layers",
+    "text": "Adding Raster Layers\n\nCORONA ds1105-1025df057.tif\nTo add a raster in QGIS, select Layer -&gt; Add Layer -&gt; Add Raster Layer.\n\n\n\nAdding a raster in QGIS\n\n\nIn the Data Source Manager, under Source, locate ds1105-1025df057.tif stored in your computer and click Add.\n\n\n\nQGIS — Data Source Manager (directory may be different in your computer)\n\n\nReturn to the map view. In the Layers window, right-click on the raster layer we just added and select Zoom to Layer(s). Wait for a few moments for the image to load.\n\n\n\nRight-click on a raster layer\n\n\n\n\n\n\n\n\nCaution\n\n\n\nFiles are linked to a GIS — not stored — and any moved files must be re-linked in QGIS.\n\n\nIn the Layers window, toggle off the raster layer to see the underlying satellite imagery. Toggle it on again. In the coordinate near the bottom of the interface, type in 4518140.3,4402634.6 to find Tell Beydar again. In scale, type in 1:5000 (1 cm on the screen represents 5,000 cm on the ground).\n\n\n\n\n\n\nImportantEXERCISE 3\n\n\n\nToggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes and what you think may have caused them. Be sure to describe their location relative to the Tell.\n\n\n\n\nSurvey Map from Tony Wilkinson (1948-2014)\nDownload Lab1Wilkinson.zip and unzip it in your computer. Add a raster layer that links to Wilkinson_2002.tif. This map was produced by an archaeologist, Tony Wilkinson, who did an archaeological survey in the area around Tell Beydar. The map has already been georeferenced, meaning that it has been transformed to match the other geographical data.\nThe imported map may look funny in QGIS. This is because the raster only contains pixels with two values, 0 and 255, and the program automatically assigns a color to each of these two colors.\nTo correct this, right-click on Wilkinson_2002 layer, select Symbology, and change Render type to Singleband gray.\n\n\n\nChange layer symbology in QGIS\n\n\nWhile you are at it, locate Transparency tab on the right side of the layer properties window, adjust the opacity of this layer to 50%.\n\n\n\nChange layer opacity in QGIS\n\n\n\n\n1938 Historical Map\nNow it is time to put what you learned about rasters to practice! Download 1938_FrenchMap.zip and unzip it. Add 1014562_LVT2_Hassetche_NJ_37_XI_partie_sud_NJ_37_V_1938.TIF as a raster layer. Change the layer’s opacity to 60%. Toggle off layer Wilkinson_2002.\nWhile the map has been similarly georeferenced, the georeferencing is not perfect for this historical map.\n\n\n\nThe 1938 historical map is not perfectly georeferenced\n\n\nIn QGIS, you can also measure distance and area in the map view. To do so, use the Measure Line tool in the top toolbar and click on the points in the map view.\n\n\n\nMeasure toolbar in QGIS\n\n\n\n\n\n\n\n\nImportantEXERCISE 4\n\n\n\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map. Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels.",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+    ]
+  },
+  {
+    "objectID": "Vectors.html",
+    "href": "Vectors.html",
+    "title": "Vectors",
+    "section": "",
+    "text": "Background\nVector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (.shp).",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+    ]
+  },
+  {
+    "objectID": "Vectors.html#adding-vectors",
+    "href": "Vectors.html#adding-vectors",
+    "title": "Vectors",
+    "section": "Adding Vectors",
+    "text": "Adding Vectors\nDownload a shapefile of all archaeological sites in this region: Lab1_AllSites.zip. Similar to adding rasters, navigate to Layer -&gt; Add Layer -&gt; Add Vector Layer.... In the window, select AllSites.shp under Source and add to the map.\nRight-click on the newly added vector layer and select Zoom to Layer(s) to see its full extent.\nZoom to Layer(s) allows you to see the full extent of a vector layer, but sometimes an outlier can unduly affect the map view. In this case, there seems to be a data point in an unlikely place in the southern end of the map view.\n\n\n\nZoom to all sites in QGIS\n\n\nUse the Identify Features  in the top toolbar and click on this outlier to examine it.\n\n\n\n\n\n\nImportantEXERCISE 5\n\n\n\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude. Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong?",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+    ]
+  },
+  {
+    "objectID": "Vectors.html#vector-attributes",
+    "href": "Vectors.html#vector-attributes",
+    "title": "Vectors",
+    "section": "Vector Attributes",
+    "text": "Vector Attributes\nFor now, let us focus on the region near Tell Beydar. Toggle on only three layers: AllSites, ds1105-1025df057, and the basemap. Zoom to ds1105-1025df057. Examine the general distribution of these sites and answer the following question:\n\n\n\n\n\n\nImportantEXERCISE 6\n\n\n\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography?\n\n\nSometimes, we want to examine archaeological features of a particular type. To do that, right-click on AllSites and select Open Attribute Table.\nIn the Attribute Table, you can see each data point has some values or “attributes” associate to it. In the table, locate the column/field Type, which contains string/text values such as Mound, Other, Flat.\n\n\n\nAttribute table in QGIS\n\n\nTo select all features that are of the mound type, click on Select by Expression tool () in the top toolbar. In the expression window, type in the following expression and press Select Features.\n\"Type\" = 'Mound'\nClose the Select by Expression window. Now, all the features that contain a Type value of Mound should be highlighted in the attributes table.\nWith the attributes table open, go back to the map view and right-click on the vector layer. Select Export -&gt; Save Selected Features As...\n\n\n\nExport selected data\n\n\nIn the window, select Esri Shapefile as the Format and use the ... button next to File name to save it in your computer with a name such as Lab1_mounds_2609.shp. Change the CRS to Project CRS. Click OK.\n\n\n\nExportation in QGIS\n\n\nThe new selected dataset should be added to your map. Toggle off the original vector layer, and you should be able to see all mounded sites in the region.\n\n\n\nMound features in the region\n\n\n\n\n\n\n\n\nImportantEXERCISE 7\n\n\n\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites? As a bonus question, what is the percentage of the mounded site surveyed by Tuna?",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+    ]
+  },
+  {
+    "objectID": "Vectors.html#image-analysis",
+    "href": "Vectors.html#image-analysis",
+    "title": "Vectors",
+    "section": "Image Analysis",
+    "text": "Image Analysis\nNow you have created all layers needed for this lab. Toggle on and off the layers, change opacity and symbology of these layers, and answer the following questions.\n\n\n\n\n\n\nImportantEXERCISE 8\n\n\n\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area? A qualitative description is fine for this exercise.\n\n\n\n\n\n\n\n\nImportantEXERCISE 9\n\n\n\nTony Wilkinson (2003) argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution.\n\n\n\n\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near East. University of Arizona Press.",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+    ]
+  },
+  {
+    "objectID": "Lab1.html",
+    "href": "Lab1.html",
+    "title": "Questions (Due: Oct 1)",
+    "section": "",
+    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Oct 1, 2026.\nQuestion 1\nIn CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (coordinate 40.5872, 36.7382), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response (5 points).\nQuestion 2\nAt least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility (5 points)? Why (5 points)?\nQuestion 3\nIn QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes (5 points) and what you think may have caused them (5 points). Be sure to describe their location relative to the Tell.\nQuestion 4\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (5 points). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels (5 points).\nQuestion 5\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (5 points). Do you think this point was there by design, or is it an error (5 points)? If it is an error, what value seems to have been wrong?\nQuestion 6\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography (5 points)?\nQuestion 7\nExamine the attribute tables of both vector layers, how many features are there in each dataset (5 points)? What is the percentage of mounds among all sites (5 points)? As a bonus question, what is the percentage of the mounded site surveyed by Tuna (BONUS 5 points)?\nQuestion 8\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (5 points)? A qualitative description is fine for this exercise.\nQuestion 9\nTony Wilkinson (2003) argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution (5 points).\n\n\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near East. University of Arizona Press.",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Casana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near\nEast. University of Arizona Press.",
+    "crumbs": [
+      "Appendices",
+      "References"
     ]
   }
 ]
