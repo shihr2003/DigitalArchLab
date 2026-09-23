@@ -1,0 +1,16 @@
+---
+title: "Rasters"
+format: html
+---
+
+## Background
+
+The central power of GIS is in the ability to load multiple spatial datasets into a single map frame, and then compare them to one another, either visually or quantitatively. [Raster graphics](https://en.wikipedia.org/wiki/Raster_graphics) are grids of pixels, such as CORONA imagery, scanned maps, and elevation models. [Vectors](https://en.wikipedia.org/wiki/Vector_graphics) are composed of discrete data points, such as lines, points, and polygons, and include archaeological sites, rivers, and soil types. Rasters are usually larger files and require more computing power to process.
+
+This page will guide you to load a Bing basemap and three rasters into a new project in QGIS.
+
+## Basemaps
+
+In QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.
+
+Open QGIS,

@@ -1,0 +1,42 @@
+project:
+  type: book
+
+number-sections: false
+
+book:
+  title: "Digital Archaeology Labs"
+  date: "9/22/2026"
+  page-navigation: true
+  
+  chapters:
+    - index.qmd
+    - part: "Getting Started"
+      chapters: [QGIS.qmd]
+    - part: "Lab 1 Historical Satellite Imagery and GIS Basics"
+      chapters: [CORONA.qmd, Rasters.qmd]
+    - part: "Lab 2 Drone Imagery"
+    - part: "Lab 3 LiDAR Data"
+    - part: "Lab 4 Multispectral Sensors"
+    - part: "Lab 5 Geophysical Surveys"
+    - part: "Lab 6 Underwater Archaeology"
+    - part: "Lab 7 AI and Deep Learning"
+    - part: "Lab 8 3D Models"
+    
+  
+  appendices: 
+    - references.qmd
+    
+  page-footer: "Copyright 2026, Casey H. Shi"
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: { light: cosmo, dark: darkly }
+    code-copy: true
+    
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

@@ -1,0 +1,9 @@
+---
+toc: false
+---
+
+# Welcome {.unnumbered}
+
+This website is designed to guide you through the lab assignments for ANTHRO50.03 Digital Archaeology (2026 Fall Term). There will be eight graded lab assignments, added to this website throughout the term. All completed assignments should be uploaded to the Canvas site, unless otherwise noted.
+
+![A Roman fort found in Northern Syria [@casana2023].](imgs/welcome/CRN_3201-2.jpg){#0.1 fig-align="left" width="80%"}

@@ -1,0 +1,19 @@
+# Installing QGIS {.unnumbered}
+
+[![Logo of QGIS](https://www.qgis.org/img/logosign.svg){fig-align="center" width="30%"}](https://www.qgis.org/)
+
+Throughout this course, one of the software that we will be using is QGIS. Compared to [ArcGIS Pro](https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview), which is a proprietary commercial software requiring (expensive) annual subscriptions, QGIS is free and open-source. ArcGIS Pro natively runs on Windows; QGIS runs on Windows, macOS, and Linux. Although QGIS might not be as polished and intuitive as ArcGIS Pro, the skills you build here will make it very easy to switch to ArcGIS Pro later, if needed.
+
+## QGIS Version
+
+We will be using the Long Term Release (LTR) of the software, specifically 3.44. This version will support a vast library of Python plugins that we may need in this course. QGIS 4.x may experience plugin incompatibilities and still require developers to update some of the tools.
+
+## Download QGIS
+
+Use this link (<https://www.qgis.org/download/>) to download QGIS. Select your operating system from the drop-down list.
+
+For Windows users, follow the steps in the installer to install QGIS. For macOS, drag app packages into your Applications folder. 
+
+::: callout-important
+Please make sure that you are using QGIS LTR 3.44 for this course.
+:::
