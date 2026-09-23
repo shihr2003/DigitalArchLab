@@ -22,7 +22,7 @@ Use the `Identify Features` ![](images/clipboard-244210898.png){width="5%"} in t
 ::: callout-important
 ## EXERCISE 5
 
-Find the point that lies far from the rest of the dataset. Using the Identify Results panel, **report** its name, latitude, and longitude. Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong?
+Find the point that lies far from the rest of the dataset. Using the `Identify Results` panel, **report** its name, latitude, and longitude. Do you think this point was there by design, or is it an error? If it is an error, what value is likely to be wrong?
 :::
 
 ## Vector Attributes
@@ -32,7 +32,7 @@ For now, let us focus on the region near Tell Beydar. Toggle on only three layer
 ::: callout-important
 ## EXERCISE 6
 
-Are there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography?
+Are there any patterns in the general distribution of all archaeological sites *vis-à-vis* geographical features such as water and topography?
 :::
 
 Sometimes, we want to examine archaeological features of a particular type. To do that, right-click on `AllSites` and select `Open Attribute Table`.
@@ -64,21 +64,15 @@ The new selected dataset should be added to your map. Toggle off the original ve
 ::: callout-important
 ## EXERCISE 7
 
-Examine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites? As a bonus question, what is the percentage of the mounded site surveyed by `Tuna`?
+Examine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites? As a bonus question, what is the percentage of the mounded site surveyed by a trustworthy surveyor such as `Tuna`?
 :::
 
 ## Image Analysis
 
-Now you have created all layers needed for this lab. Toggle on and off the layers, change opacity and symbology of these layers, and answer the following questions.
+Now you have created all layers needed for this lab. Toggle on and off the layers, change opacity and symbology of these layers, and answer the following question.
 
 ::: callout-important
 ## EXERCISE 8
 
-How commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area? A qualitative description is fine for this exercise.
-:::
-
-::: callout-important
-## EXERCISE 9
-
-Tony @wilkinson2003 argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution.
+How commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area? A concise qualitative description is fine for this exercise.
 :::

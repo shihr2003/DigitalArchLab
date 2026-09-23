@@ -35,7 +35,7 @@ Find the point that lies far from the rest of the dataset. Using the Identify Re
 
 **Question 6**
 
-Are there any patterns in the general distribution of all archaeological sites *vis-à-vis* geographical features such as water and topography (**10 points**)?
+Are there any patterns in the general distribution of all archaeological sites *vis-à-vis* geographical features such as water and topography (**5 points**)?
 
 **Question 7**
 
@@ -47,8 +47,4 @@ Examine the attribute tables of both vector layers, how many features are there 
 
 How commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (**5 points**)? Provide a concise qualitative description.
 
-**Question 9**
-
-Tony @wilkinson2003 argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution (**5 points**).
-
-**Total** 80 Points + 5 Points
+**Total** 70 Points + 5 Points
