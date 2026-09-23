@@ -2,7 +2,7 @@
 
 ## Background and Objectives
 
-In this lab we will learn how to find and use declassified CORONA and HEXAGON satellite imagery. We will learn some basic tools for using raster and vector data in a GIS framework and will explore the ways in which archaeological features appear on historical imagery. We will then attempt to identify sites and ancient roadways in a region of eastern Syria.
+In this lab we will learn how to find and use declassified CORONA and HEXAGON satellite imagery. We will learn some basic tools for using raster and vector data in a GIS framework and will explore the ways in which archaeological features appear on historical imagery. We will then attempt to identify sites in a region of eastern Syria.
 
 ![A Roman fort found in Northern Syria using CORONA imagery [@casana2023].](imgs/welcome/CRN_3201-2.jpg){#0.1 fig-align="left" width="80%"}
 
@@ -31,7 +31,7 @@ By checking the `Stereo High` option under `Additional Criteria` -\> `Camera Res
 ::: callout-tip
 **How to choose the best image?** For each image, use the footprint tool to see the approximate area covered by each frame. You can also press the `Show Metadata and Browse` icon under each image to see image details. Pay close attention to the acquisition date.
 
-![EarthExplorer Tools](images/clipboard-3908519560.png){fig-align="left" width="33%"}
+![EarthExplorer Tools](images/clipboard-3908519560.png){fig-align="center" width="33%"}
 :::
 
 ### CORONA and HEXAGON Nomenclature

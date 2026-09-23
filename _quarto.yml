@@ -15,12 +15,13 @@ book:
       chapters: [QGIS.qmd]
     - part: "Lab 1 Historical Satellite Imagery and GIS Basics"
       chapters: [CORONA.qmd, Rasters.qmd, Vectors.qmd, Lab1.qmd]
+    - part: "Lab 2 Drone Data"
     
   
   appendices: 
     - references.qmd
     
-  page-footer: "Copyright 2026, Casey H. Shi"
+  page-footer: "Copyright 2026, Casey H. Shi || Do not share course materials"
 
 bibliography: references.bib
 
