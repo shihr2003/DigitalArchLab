@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Vectors.html" rel="next">
 <link href="./CORONA.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -271,6 +271,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Digital Archaeology Labs</a> 
         <div class="sidebar-tools-main">
+    <a href="./Digital-Archaeology-Labs.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -324,45 +325,27 @@ ul.task-list li input[type="checkbox"] {
   <a href="./Rasters.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Rasters</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Questions (Due: Oct 1)</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 2 Drone Imagery</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 3 LiDAR Data</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 4 Multispectral Sensors</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 5 Geophysical Surveys</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 6 Underwater Archaeology</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 7 AI and Deep Learning</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 8 3D Models</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -383,6 +366,12 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#basemaps" id="toc-basemaps" class="nav-link" data-scroll-target="#basemaps">Basemaps</a></li>
+  <li><a href="#adding-raster-layers" id="toc-adding-raster-layers" class="nav-link" data-scroll-target="#adding-raster-layers">Adding Raster Layers</a>
+  <ul class="collapse">
+  <li><a href="#corona-ds1105-1025df057.tif" id="toc-corona-ds1105-1025df057.tif" class="nav-link" data-scroll-target="#corona-ds1105-1025df057.tif">CORONA <code>ds1105-1025df057.tif</code></a></li>
+  <li><a href="#survey-map-from-tony-wilkinson-1948-2014" id="toc-survey-map-from-tony-wilkinson-1948-2014" class="nav-link" data-scroll-target="#survey-map-from-tony-wilkinson-1948-2014">Survey Map from Tony Wilkinson (1948-2014)</a></li>
+  <li><a href="#historical-map" id="toc-historical-map" class="nav-link" data-scroll-target="#historical-map">1938 Historical Map</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -411,15 +400,166 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>The central power of GIS is in the ability to load multiple spatial datasets into a single map frame, and then compare them to one another, either visually or quantitatively. <a href="https://en.wikipedia.org/wiki/Raster_graphics">Raster graphics</a> are grids of pixels, such as CORONA imagery, scanned maps, and elevation models. <a href="https://en.wikipedia.org/wiki/Vector_graphics">Vectors</a> are composed of discrete data points, such as lines, points, and polygons, and include archaeological sites, rivers, and soil types. Rasters are usually larger files and require more computing power to process.</p>
+<p>The central power of GIS is in the ability to load multiple spatial datasets into a single map frame, and then compare them to one another, either visually or quantitatively. <a href="https://en.wikipedia.org/wiki/Raster_graphics">Raster graphics</a> are grids of pixels, such as CORONA imagery, scanned maps, and elevation models. <a href="https://en.wikipedia.org/wiki/Vector_graphics">Vectors</a> are composed of discrete data points, such as points, lines, and polygons, which include archaeological sites, rivers, and soil types. Rasters are usually larger files and require more computing power to process.</p>
 <p>This page will guide you to load a Bing basemap and three rasters into a new project in QGIS.</p>
 </section>
 <section id="basemaps" class="level2">
 <h2 class="anchored" data-anchor-id="basemaps">Basemaps</h2>
 <p>In QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.</p>
-<p>Open QGIS,</p>
+<p>Start a new project in QGIS using <code>Project</code> -&gt; <code>New</code> and save it in a folder for <code>ANTHRO_50_03_LAB1</code>. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: <em>e.g.</em>, <code>DA2609_Lab1_YourName_1</code>. Start your filename with a letter and not a number.</p>
+<div id="Q-new_project" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-2973543749.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Start a new project in QGIS</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure to save your project regularly by pressing <code>Ctrl/CMD</code> + <code>s</code> or the button <img src="images/clipboard-2523291974.png" class="img-fluid" style="width:5.0%"> near the top.</p>
+</div>
+</div>
+<p>You will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the <a href="#Q-browser">“Browser” panel</a> on the left side of the screen.</p>
+<div id="Q-browser" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-436257994.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Browser panel in QGIS</figcaption>
+</figure>
+</div>
+<p>Right-click on <strong>XYZ Tiles</strong> and select <strong>New Connection</strong>. Type a name for the layer, such as <code>Bing Satellite</code>. Paste the following into the <strong>URL</strong> field and click OK: <code>http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1</code>.</p>
+<p>Double click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.</p>
+<div id="QGIS-basemap" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-2631798069.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Bing Maps loaded in QGIS</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a <a href="https://en.wikipedia.org/wiki/Projected_coordinate_system">projected coordinate system</a> that flattens the 3D, curved surface of the Earth (a <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographic coordinate system</a>).</p>
+</div>
+</div>
+</section>
+<section id="adding-raster-layers" class="level2">
+<h2 class="anchored" data-anchor-id="adding-raster-layers">Adding Raster Layers</h2>
+<section id="corona-ds1105-1025df057.tif" class="level3">
+<h3 class="anchored" data-anchor-id="corona-ds1105-1025df057.tif">CORONA <code>ds1105-1025df057.tif</code></h3>
+<p>To add a raster in QGIS, select <code>Layer</code> -&gt; <code>Add Layer</code> -&gt; <code>Add Raster Layer</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-806370667.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Adding a raster in QGIS</figcaption>
+</figure>
+</div>
+<p>In the <a href="#Q-data-source">Data Source Manager</a>, under <code>Source</code>, locate <code>ds1105-1025df057.tif</code> stored in your computer and click <code>Add</code>.</p>
+<div id="Q-data-source" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-3041112017.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>QGIS — Data Source Manager (directory may be different in your computer)</figcaption>
+</figure>
+</div>
+<p>Return to the map view. In the <code>Layers</code> window, right-click on the raster layer we just added and select <code>Zoom to Layer(s)</code>. Wait for a few moments for the image to load.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-842401135.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Right-click on a raster layer</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Files are linked to a GIS — not stored — and any moved files must be re-linked in QGIS.</p>
+</div>
+</div>
+<p>In the <code>Layers</code> window, toggle off the raster layer to see the underlying satellite imagery. Toggle it on again. In the <code>coordinate</code> near the bottom of the interface, type in <code>4518140.3,4402634.6</code> to find Tell Beydar again. In <code>scale</code>, type in <code>1:5000</code> (1 cm on the screen represents 5,000 cm on the ground).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>EXERCISE 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes and what you think may have caused them. Be sure to describe their location relative to the Tell.</p>
+</div>
+</div>
+</section>
+<section id="survey-map-from-tony-wilkinson-1948-2014" class="level3">
+<h3 class="anchored" data-anchor-id="survey-map-from-tony-wilkinson-1948-2014">Survey Map from Tony Wilkinson (1948-2014)</h3>
+<p>Download <a href="https://drive.google.com/file/d/16yFWV53wTq_G2dXX2GcJkw123Q21ntRL/view?usp=drive_link"><code>Lab1Wilkinson.zip</code></a> and unzip it in your computer. Add a raster layer that links to <code>Wilkinson_2002.tif</code>. This map was produced by an archaeologist, Tony Wilkinson, who did an archaeological survey in the area around Tell Beydar. The map has already been <a href="https://en.wikipedia.org/wiki/Georeferencing">georeferenced</a>, meaning that it has been transformed to match the other geographical data.</p>
+<p>The imported map may look funny in QGIS. This is because the raster only contains pixels with two values, 0 and 255, and the program automatically assigns a color to each of these two colors.</p>
+<p>To correct this, right-click on <code>Wilkinson_2002</code> layer, select <code>Symbology</code>, and change <code>Render type</code> to Singleband gray.</p>
+<div id="qgis-symbology" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-2281007801.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Change layer symbology in QGIS</figcaption>
+</figure>
+</div>
+<p>While you are at it, locate <code>Transparency</code> tab on the right side of the layer properties window, adjust the opacity of this layer to 50%.</p>
+<div id="qgis-opacity" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-4293550462.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Change layer opacity in QGIS</figcaption>
+</figure>
+</div>
+</section>
+<section id="historical-map" class="level3">
+<h3 class="anchored" data-anchor-id="historical-map">1938 Historical Map</h3>
+<p>Now it is time to put what you learned about rasters to practice! Download <a href="https://drive.google.com/file/d/11YXCK4UQl-P3wwYI_Iw9eOlBaM5fp97W/view?usp=drive_link"><code>1938_FrenchMap.zip</code></a> and unzip it. Add <code>1014562_LVT2_Hassetche_NJ_37_XI_partie_sud_NJ_37_V_1938.TIF</code> as a raster layer. Change the layer’s opacity to 60%. Toggle off layer <code>Wilkinson_2002</code>.</p>
+<p>While the map has been similarly georeferenced, the georeferencing is not perfect for <a href="#1938-historical">this historical map</a>.</p>
+<div id="1938-historical" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-873292635.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>The 1938 historical map is not perfectly georeferenced</figcaption>
+</figure>
+</div>
+<p>In QGIS, you can also measure distance and area in the map view. To do so, use the <code>Measure Line</code> tool in the top toolbar and click on the points in the map view.</p>
+<div id="measure-q" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-1390265978.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Measure toolbar in QGIS</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>EXERCISE 4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With both the CORONA image and the 1938 map toggled visible in the Layers panel, measure the georeferencing error of the 1938 map. To do so, first measure and <strong>report</strong> the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map. Recall that the CORONA image has a <a href="https://en.wikipedia.org/wiki/Spatial_resolution">spatial resolution</a> of about 2 meters per pixel here. <strong>Report</strong> error/offset between the map and the CORONA image in CORONA pixels.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -843,8 +983,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Vectors.html" class="pagination-link" aria-label="Vectors">
+        <span class="nav-page-text"><span class="chapter-title">Vectors</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

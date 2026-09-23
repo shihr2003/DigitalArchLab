@@ -6,4 +6,4 @@ toc: false
 
 This website is designed to guide you through the lab assignments for ANTHRO50.03 Digital Archaeology (2026 Fall Term). There will be eight graded lab assignments, added to this website throughout the term. All completed assignments should be uploaded to the Canvas site, unless otherwise noted.
 
-![A Roman fort found in Northern Syria [@casana2023].](imgs/welcome/CRN_3201-2.jpg){#0.1 fig-align="left" width="80%"}
+![Can you find the hidden "archaeology" in this paining? Hans Holbein the Younger, The Ambassadors, 1533, oil on oak](imgs/welcome/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg){#Ambassador fig-align="center" width="100%"}
