@@ -94,5 +94,5 @@ In QGIS, you can also measure distance and area in the map view. To do so, use t
 
 With both the CORONA image and the 1938 map toggled visible in the Layers panel, measure the georeferencing error of the 1938 map. To do so, first measure and **report** the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map. Recall that the CORONA image has a [spatial resolution](https://en.wikipedia.org/wiki/Spatial_resolution) of about 2 meters per pixel here. **Report** error/offset between the map and the CORONA image in CORONA pixels.
 
-Now look at the western and eastern ends of the ribbon-shaped corrected CORONA image. Is the pixel size there larger than, smaller than, or about equal to 2 meters?
+Now look at the western and eastern ends of the ribbon-shaped corrected CORONA image. Compared with the area around Tell Beydar, is the level of detail there finer, coarser, or about the same? Why?
 :::
