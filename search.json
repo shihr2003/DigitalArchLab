@@ -168,7 +168,40 @@
     "href": "Lab1.html",
     "title": "Questions (Due: Oct 1)",
     "section": "",
-    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Oct 1, 2026.\nQuestion 1\nIn CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (coordinate 40.5872, 36.7382), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response (5 points).\nQuestion 2\nAt least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility (5 points)? Why (5 points)?\nQuestion 3\nIn QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes (5 points) and what you think may have caused them (5 points). Be sure to describe their location relative to the Tell.\nQuestion 4\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (5 points). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels (5 points).\nQuestion 5\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (5 points). Do you think this point was there by design, or is it an error (5 points)? If it is an error, what value seems to have been wrong?\nQuestion 6\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography (5 points)?\nQuestion 7\nExamine the attribute tables of both vector layers, how many features are there in each dataset (5 points)? What is the percentage of mounds among all sites (5 points)? As a bonus question, what is the percentage of the mounded site surveyed by Tuna (BONUS 5 points)?\nQuestion 8\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (5 points)? A qualitative description is fine for this exercise.\nQuestion 9\nTony Wilkinson (2003) argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution (5 points).\n\n\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near East. University of Arizona Press.",
+    "text": "CORONA Imagery\nPlease answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Oct 1, 2026.\nQuestion 1\nIn CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (coordinate 40.5872, 36.7382), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response (5 points).\nQuestion 2\nAt least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility (5 points)? Why (5 points)?",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+    ]
+  },
+  {
+    "objectID": "Lab1.html#qgis-basics-and-raster-data",
+    "href": "Lab1.html#qgis-basics-and-raster-data",
+    "title": "Questions (Due: Oct 1)",
+    "section": "QGIS Basics and Raster Data",
+    "text": "QGIS Basics and Raster Data\nQuestion 3\nIn QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes (5 points) and what you think may have caused them (5 points). Be sure to describe their location relative to the Tell.\nQuestion 4\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (5 points). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels (5 points).",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+    ]
+  },
+  {
+    "objectID": "Lab1.html#vector-data",
+    "href": "Lab1.html#vector-data",
+    "title": "Questions (Due: Oct 1)",
+    "section": "Vector Data",
+    "text": "Vector Data\nQuestion 5\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (5 points). Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong (5 points)?\nQuestion 6\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography (5 points)?\nQuestion 7\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites (10 points)? As a bonus question, what is the percentage of the mounded site surveyed by Tuna (BONUS 5 points)?",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+    ]
+  },
+  {
+    "objectID": "Lab1.html#image-analysis",
+    "href": "Lab1.html#image-analysis",
+    "title": "Questions (Due: Oct 1)",
+    "section": "Image Analysis",
+    "text": "Image Analysis\nQuestion 8\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (5 points)? Provide a concise qualitative description.\nQuestion 9\nTony Wilkinson (2003) argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution (5 points).\nTotal 70 Points + 5 Points\n\n\n\n\nWilkinson, T. J. 2003. Archaeological Landscapes of the Near East. University of Arizona Press.",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"

@@ -357,14 +357,18 @@ div.csl-indent {
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Lab 2 Drone Data</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -378,8 +382,17 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#corona-imagery" id="toc-corona-imagery" class="nav-link active" data-scroll-target="#corona-imagery">CORONA Imagery</a></li>
+  <li><a href="#qgis-basics-and-raster-data" id="toc-qgis-basics-and-raster-data" class="nav-link" data-scroll-target="#qgis-basics-and-raster-data">QGIS Basics and Raster Data</a></li>
+  <li><a href="#vector-data" id="toc-vector-data" class="nav-link" data-scroll-target="#vector-data">Vector Data</a></li>
+  <li><a href="#image-analysis" id="toc-image-analysis" class="nav-link" data-scroll-target="#image-analysis">Image Analysis</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -405,24 +418,36 @@ div.csl-indent {
 
 
 <p>Please answer the following questions in a separate Word document and submit it to the course Canvas site by <strong>11:59pm, Oct 1, 2026</strong>.</p>
+<section id="corona-imagery" class="level2">
+<h2 class="anchored" data-anchor-id="corona-imagery">CORONA Imagery</h2>
 <p><strong>Question 1</strong></p>
 <p>In CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (coordinate <code>40.5872, 36.7382</code>), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response (<strong>5 points</strong>).</p>
 <p><strong>Question 2</strong></p>
 <p>At least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility (<strong>5 points</strong>)? Why (<strong>5 points</strong>)?</p>
+</section>
+<section id="qgis-basics-and-raster-data" class="level2">
+<h2 class="anchored" data-anchor-id="qgis-basics-and-raster-data">QGIS Basics and Raster Data</h2>
 <p><strong>Question 3</strong></p>
 <p>In QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes (<strong>5 points</strong>) and what you think may have caused them (<strong>5 points</strong>). Be sure to describe their location relative to the Tell.</p>
 <p><strong>Question 4</strong></p>
 <p>With both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (<strong>5 points</strong>). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels (<strong>5 points</strong>).</p>
+</section>
+<section id="vector-data" class="level2">
+<h2 class="anchored" data-anchor-id="vector-data">Vector Data</h2>
 <p><strong>Question 5</strong></p>
-<p>Find the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (<strong>5 points</strong>). Do you think this point was there by design, or is it an error (<strong>5 points</strong>)? If it is an error, what value seems to have been wrong?</p>
+<p>Find the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (<strong>5 points</strong>). Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong (<strong>5 points</strong>)?</p>
 <p><strong>Question 6</strong></p>
-<p>Are there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography (<strong>5 points</strong>)?</p>
+<p>Are there any patterns in the general distribution of all archaeological sites <em>vis-à-vis</em> geographical features such as water and topography (<strong>5 points</strong>)?</p>
 <p><strong>Question 7</strong></p>
-<p>Examine the attribute tables of both vector layers, how many features are there in each dataset (<strong>5 points</strong>)? What is the percentage of mounds among all sites (<strong>5 points</strong>)? As a bonus question, what is the percentage of the mounded site surveyed by <code>Tuna</code> (BONUS <strong>5 points</strong>)?</p>
+<p>Examine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites (<strong>10 points</strong>)? As a bonus question, what is the percentage of the mounded site surveyed by <code>Tuna</code> (<strong>BONUS</strong> <strong>5 points</strong>)?</p>
+</section>
+<section id="image-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="image-analysis">Image Analysis</h2>
 <p><strong>Question 8</strong></p>
-<p>How commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (<strong>5 points</strong>)? A qualitative description is fine for this exercise.</p>
+<p>How commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (<strong>5 points</strong>)? Provide a concise qualitative description.</p>
 <p><strong>Question 9</strong></p>
 <p>Tony <span class="citation" data-cites="wilkinson2003">Wilkinson (<a href="references.html#ref-wilkinson2003" role="doc-biblioref">2003</a>)</span> argues that the large, radial route systems found surrounding many sites in northern Mesopotamia are generally only associated with sites of the Early Bronze Age. Evaluate this theory using the CORONA imagery and your mounded site distribution (<strong>5 points</strong>).</p>
+<p><strong>Total</strong> 70 Points + 5 Points</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -430,6 +455,7 @@ div.csl-indent {
 Wilkinson, T. J. 2003. <em>Archaeological Landscapes of the Near East</em>. University of Arizona Press.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -864,7 +890,7 @@ Wilkinson, T. J. 2003. <em>Archaeological Landscapes of the Near East</em>. Univ
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright 2026, Casey H. Shi</p>
+<p>Copyright 2026, Casey H. Shi || Do not share course materials</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
