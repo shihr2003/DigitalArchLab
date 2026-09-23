@@ -415,16 +415,16 @@ div.csl-indent {
 
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>Vector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (.shp).</p>
+<p>Vector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (<code>.shp</code>).</p>
 </section>
 <section id="adding-vectors" class="level2">
 <h2 class="anchored" data-anchor-id="adding-vectors">Adding Vectors</h2>
-<p>Download a shapefile of all archaeological sites in this region: <a href="https://drive.google.com/file/d/1wTdCl3f3wcVAkd2wMedKyv0yE_wreJ6l/view?usp=sharing"><code>Lab1_All_Sites.zip</code></a>. Similar to adding rasters, navigate to <code>Layer</code> -&gt; <code>Add Layer</code> -&gt; <code>Add Vector Layer...</code>. In the window, select <code>AllSites.shp</code> under <code>Source</code> and add to the map.</p>
+<p>Download a shapefile of all archaeological sites in this region: <a href="https://drive.google.com/file/d/1wTdCl3f3wcVAkd2wMedKyv0yE_wreJ6l/view?usp=drive_link"><code>Lab1_AllSites.zip</code></a>. Similar to adding rasters, navigate to <code>Layer</code> -&gt; <code>Add Layer</code> -&gt; <code>Add Vector Layer...</code>. In the window, select <code>AllSites.shp</code> under <code>Source</code> and add to the map.</p>
 <p>Right-click on the newly added vector layer and select <code>Zoom to Layer(s)</code> to see its full extent.</p>
 <p><code>Zoom to Layer(s)</code> allows you to see the full extent of a vector layer, but sometimes an outlier can unduly affect the map view. In this case, there seems to be a data point in an unlikely place in the southern end of the map view.</p>
-<div id="zoom-all-sites" class="quarto-figure quarto-figure-center anchored">
+<div id="zoom-sites" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/clipboard-1383867738.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="images/clipboard-2814145598.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Zoom to all sites in QGIS</figcaption>
 </figure>
 </div>
@@ -460,7 +460,7 @@ div.csl-indent {
 </div>
 </div>
 <p>Sometimes, we want to examine archaeological features of a particular type. To do that, right-click on <code>AllSites</code> and select <code>Open Attribute Table</code>.</p>
-<p>In the <code>Attribute Table</code>, you can see each data point has some values or “attributes” associate to it. In the table, locate the column/field <code>Type</code>, which contains string/text values such as <code>mound</code>, <code>other</code>, <code>flat</code>.</p>
+<p>In the <code>Attribute Table</code>, you can see each data point has some values or “attributes” associate to it. In the table, locate the column/field <code>Type</code>, which contains string/text values such as <code>Mound</code>, <code>Other</code>, <code>Flat</code>.</p>
 <div id="attribute-table" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/clipboard-4111578544.png" class="img-fluid figure-img" style="width:100.0%"></p>
