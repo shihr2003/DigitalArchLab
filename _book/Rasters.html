@@ -373,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#adding-raster-layers" id="toc-adding-raster-layers" class="nav-link" data-scroll-target="#adding-raster-layers">Adding Raster Layers</a>
   <ul class="collapse">
   <li><a href="#corona-ds1105-1025df057.tif" id="toc-corona-ds1105-1025df057.tif" class="nav-link" data-scroll-target="#corona-ds1105-1025df057.tif">CORONA <code>ds1105-1025df057.tif</code></a></li>
-  <li><a href="#survey-map-from-tony-wilkinson-1948-2014" id="toc-survey-map-from-tony-wilkinson-1948-2014" class="nav-link" data-scroll-target="#survey-map-from-tony-wilkinson-1948-2014">Survey Map from Tony Wilkinson (1948-2014)</a></li>
+  <li><a href="#survey-map-from-tony-wilkinson-2002" id="toc-survey-map-from-tony-wilkinson-2002" class="nav-link" data-scroll-target="#survey-map-from-tony-wilkinson-2002">Survey Map from Tony Wilkinson (2002)</a></li>
   <li><a href="#historical-map" id="toc-historical-map" class="nav-link" data-scroll-target="#historical-map">1938 Historical Map</a></li>
   </ul></li>
   </ul>
@@ -427,7 +427,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure to save your project regularly by pressing <code>Ctrl/CMD</code> + <code>s</code> or the button <img src="images/clipboard-2523291974.png" class="img-fluid" style="width:5.0%"> near the top.</p>
+<p>Make sure to save your project regularly by pressing <code>Ctrl/CMD</code> + <code>s</code> or the button <img src="images/clipboard-2523291974.png" class="img-fluid" style="width:5.0%"> near the top. Alternatively, use an <a href="https://plugins.qgis.org/plugins/Auto_save/">autosave plugin</a>.</p>
 </div>
 </div>
 <p>You will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the <a href="#Q-browser">“Browser” panel</a> on the left side of the screen.</p>
@@ -455,7 +455,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a <a href="https://en.wikipedia.org/wiki/Projected_coordinate_system">projected coordinate system</a> that flattens the 3D, curved surface of the Earth (a <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographic coordinate system</a>).</p>
+<p>Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857 for now, used for display by many web-based mapping tools. This is a <a href="https://en.wikipedia.org/wiki/Projected_coordinate_system">projected coordinate system</a> that flattens the curved surface of the Earth (as opposed to a <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographic coordinate system</a>), and should not be used for rigorous analysis.</p>
 </div>
 </div>
 </section>
@@ -512,8 +512,8 @@ Caution
 </div>
 </div>
 </section>
-<section id="survey-map-from-tony-wilkinson-1948-2014" class="level3">
-<h3 class="anchored" data-anchor-id="survey-map-from-tony-wilkinson-1948-2014">Survey Map from Tony Wilkinson (1948-2014)</h3>
+<section id="survey-map-from-tony-wilkinson-2002" class="level3">
+<h3 class="anchored" data-anchor-id="survey-map-from-tony-wilkinson-2002">Survey Map from Tony Wilkinson (2002)</h3>
 <p>Download <a href="https://drive.google.com/file/d/16yFWV53wTq_G2dXX2GcJkw123Q21ntRL/view?usp=drive_link"><code>Lab1Wilkinson.zip</code></a> and unzip it in your computer. Add a raster layer that links to <code>Wilkinson_2002.tif</code>. This map was produced by an archaeologist, Tony Wilkinson, who did an archaeological survey in the area around Tell Beydar. The map has already been <a href="https://en.wikipedia.org/wiki/Georeferencing">georeferenced</a>, meaning that it has been transformed to match the other geographical data.</p>
 <p>The imported map may look funny in QGIS. This is because the raster only contains pixels with two values, 0 and 255, and the program automatically assigns a color to each of these two colors.</p>
 <p>To correct this, right-click on <code>Wilkinson_2002</code> layer, select <code>Symbology</code>, and change <code>Render type</code> to Singleband gray.</p>

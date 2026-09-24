@@ -18,7 +18,7 @@ Start a new project in QGIS using `Project` -\> `New` and save it in a folder fo
 ![Start a new project in QGIS](images/clipboard-2973543749.png){#Q-new_project fig-align="center" width="50%"}
 
 ::: callout-tip
-Make sure to save your project regularly by pressing `Ctrl/CMD` + `s` or the button ![](images/clipboard-2523291974.png){width="5%"} near the top.
+Make sure to save your project regularly by pressing `Ctrl/CMD` + `s` or the button ![](images/clipboard-2523291974.png){width="5%"} near the top. Alternatively, use an [autosave plugin](https://plugins.qgis.org/plugins/Auto_save/).
 :::
 
 You will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the ["Browser" panel](#Q-browser) on the left side of the screen.
@@ -32,7 +32,7 @@ Double click on the XYZ Tiles Connection you just created, and you should be abl
 ![Bing Maps loaded in QGIS](images/clipboard-2631798069.png){#QGIS-basemap width="100%"}
 
 ::: callout-caution
-Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a [projected coordinate system](https://en.wikipedia.org/wiki/Projected_coordinate_system) that flattens the 3D, curved surface of the Earth (a [geographic coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system)).
+Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857 for now, used for display by many web-based mapping tools. This is a [projected coordinate system](https://en.wikipedia.org/wiki/Projected_coordinate_system) that flattens the curved surface of the Earth (as opposed to a [geographic coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system)), and should not be used for rigorous analysis.
 :::
 
 ## Adding Raster Layers
@@ -63,7 +63,7 @@ In the `Layers` window, toggle off the raster layer to see the underlying satell
 Toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes and what you think may have caused them. Be sure to describe their location relative to the Tell.
 :::
 
-### Survey Map from Tony Wilkinson (1948-2014)
+### Survey Map from Tony Wilkinson (2002)
 
 Download [`Lab1Wilkinson.zip`](https://drive.google.com/file/d/16yFWV53wTq_G2dXX2GcJkw123Q21ntRL/view?usp=drive_link) and unzip it in your computer. Add a raster layer that links to `Wilkinson_2002.tif`. This map was produced by an archaeologist, Tony Wilkinson, who did an archaeological survey in the area around Tell Beydar. The map has already been [georeferenced](https://en.wikipedia.org/wiki/Georeferencing), meaning that it has been transformed to match the other geographical data.
 

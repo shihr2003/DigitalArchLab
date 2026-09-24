@@ -13,7 +13,7 @@ In CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria
 
 **Question 2**
 
-At least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility (**5 points**)? Why (**5 points**)?
+At least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility? Why (**10 points**)?
 
 ## QGIS Basics and Raster Data
 
@@ -25,7 +25,7 @@ In QGIS, toggle on and off the CORONA image, look for changes evident in the clo
 
 With both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (**5 points**). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here near the nadir. Report error/offset between the map and the CORONA image in CORONA pixels (**5 points**).
 
-Compared with the area around Tell Beydar, is the level of detail there finer, coarser, or about the same? Why? (**5 points**)
+Now look at the western and eastern ends of the ribbon-shaped corrected CORONA image. Compared with the area around Tell Beydar, is the level of detail there finer, coarser, or about the same? Why? (**5 points**)
 
 ## Vector Data
 

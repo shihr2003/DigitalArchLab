@@ -39,7 +39,7 @@ By checking the `Stereo High` option under `Additional Criteria` -\> `Camera Res
 All CORONA images have a unique entity ID number that looks like this: `DS 1102-1025D A042`. These numbers can be parsed as follows:
 
 | PART | ID | MEANING |
-|------------------|------------------|------------------------------------|
+|----|----|----|
 | DD | `D3` | “Declassified Satellite” so all of them are “DS” |
 | SS | `11` | Sensor generation. KH4B is 11xx, KH4A is 10xx, KH4 is 90xx, etc… |
 | MM | `02` | Mission number. KH4B range from 1101-1117, KH4A range from 1001-1064 |
@@ -52,7 +52,7 @@ All CORONA images have a unique entity ID number that looks like this: `DS 1102-
 Similarly, an entity ID for HEXAGON images, such as `D3C 1219-300919 A026`, can be decoded as such:
 
 | PART | ID | MEANING |
-|------------------|------------------|------------------------------------|
+|----|----|----|
 | DD | `D3` | Declassified Satellite Imagery 3 ("Declass 3"), the KH-9 HEXAGON collection |
 | S | `C` | Status, where C indicates Complete |
 | SSMM-B | `1219-3` | Sensor, mission, and bucket number |

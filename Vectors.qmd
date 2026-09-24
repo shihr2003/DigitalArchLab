@@ -37,7 +37,7 @@ Are there any patterns in the general distribution of all archaeological sites *
 
 Sometimes, we want to examine archaeological features of a particular type. To do that, right-click on `AllSites` and select `Open Attribute Table`.
 
-In the `Attribute Table`, you can see each data point has some values or "attributes" associate to it. In the table, locate the column/field `Type`, which contains string/text values such as `Mound`, `Other`, `Flat`.
+In the `Attribute Table`, you can see each data point has some values or "attributes" associate with it. In the table, locate the column/field `Type`, which contains string/text values such as `Mound`, `Other`, `Flat`.
 
 ![Attribute table in QGIS](images/clipboard-4111578544.png){#attribute-table width="100%"}
 
