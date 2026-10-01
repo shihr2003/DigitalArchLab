@@ -304,6 +304,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Installing QGIS</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Metashape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installing Metashape</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -338,8 +343,30 @@ ul.task-list li input[type="checkbox"] {
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lab 2 Drone Data</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lab 2 Drone-based Mapping</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Drone_photogrammetry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Drone Photogrammetry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Orthomosaic.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orthomosaic in QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Questions (Due: Oct 8)</span></a>
+  </div>
+</li>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -427,7 +454,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure to save your project regularly by pressing <code>Ctrl/CMD</code> + <code>s</code> or the button <img src="images/clipboard-2523291974.png" class="img-fluid" style="width:5.0%"> near the top.</p>
+<p>Make sure to save your project regularly by pressing <code>Ctrl/CMD</code> + <code>s</code> or the button <img src="images/clipboard-2523291974.png" class="img-fluid" style="width:5.0%"> near the top. Alternatively, use an <a href="https://plugins.qgis.org/plugins/Auto_save/">autosave plugin</a>.</p>
 </div>
 </div>
 <p>You will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the <a href="#Q-browser">“Browser” panel</a> on the left side of the screen.</p>
@@ -455,7 +482,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a <a href="https://en.wikipedia.org/wiki/Projected_coordinate_system">projected coordinate system</a> that flattens the 3D, curved surface of the Earth (as opposed to a <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographic coordinate system</a>).</p>
+<p>Make sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857 for now, used for display by many web-based mapping tools. This is a <a href="https://en.wikipedia.org/wiki/Projected_coordinate_system">projected coordinate system</a> that flattens the curved surface of the Earth (as opposed to a <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographic coordinate system</a>), and should not be used for rigorous analysis.</p>
 </div>
 </div>
 </section>
