@@ -39,7 +39,7 @@
     "text": "Background and Objectives\nIn this lab we will learn how to find and use declassified CORONA and HEXAGON satellite imagery. We will learn some basic tools for using raster and vector data in a GIS framework and will explore the ways in which archaeological features appear on historical imagery. We will then attempt to identify sites in a region of eastern Syria.\nThis first page will guide you to acquire a corrected CORONA image.",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
     ]
   },
   {
@@ -50,7 +50,7 @@
     "text": "A Roman fort found in Northern Syria using CORONA imagery (Casana et al. 2023).",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
     ]
   },
   {
@@ -61,7 +61,7 @@
     "text": "Files for this lab\nFor this lab, you will need to download the following files. Please make sure to log in using your Dartmouth credentials before downloading.\n\nOne CORONA frame: ds1105-1025df057.tif\nTony Wilkinson’s survey map near Tell Beydar: Lab1Wilkinson.zip\n1938 French Mandate period map of Tell Beydar, produced at 1:200,000 scale: 1938_FrenchMap.zip\nA vector dataset that contains all surveyed archaeological sites in the region: Lab1_AllSites.zip",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
     ]
   },
   {
@@ -72,7 +72,7 @@
     "text": "Acquiring Raw Imagery (Optional)\nCORONA images can be searched and downloaded or purchased from the USGS through their EarthExplorer site: http://earthexplorer.usgs.gov/. If you want to see all the available CORONA images, you can find them under Data Sets -&gt; Declassified Data -&gt; Declass 1 (1996). HEXAGON images can be found under Declass 3 (2013).\n\n\n\nUSGS EarthExplorer\n\n\nBy checking the Stereo High option under Additional Criteria -&gt; Camera Resolution, you can search for only the latest generation KH-4B CORONA imagery, by checking Stereo Medium you can see KH-4A imagery. Note however that none of this imagery has been orthorectified. It is highly distorted and cannot be used for mapping purposes. By selecting a single point in your area of interest in the Search Criteria tab, EarthExplorer will return all possible images that cover the point.\n\n\n\n\n\n\nTip\n\n\n\nHow to choose the best image? For each image, use the footprint tool to see the approximate area covered by each frame. You can also press the Show Metadata and Browse icon under each image to see image details. Pay close attention to the acquisition date.\n\n\n\nEarthExplorer Tools\n\n\n\n\n\nCORONA and HEXAGON Nomenclature\nAll CORONA images have a unique entity ID number that looks like this: DS 1102-1025D A042. These numbers can be parsed as follows:\n\n\n\n\n\n\n\n\nPART\nID\nMEANING\n\n\n\n\nDD\nD3\n“Declassified Satellite” so all of them are “DS”\n\n\nSS\n11\nSensor generation. KH4B is 11xx, KH4A is 10xx, KH4 is 90xx, etc…\n\n\nMM\n02\nMission number. KH4B range from 1101-1117, KH4A range from 1001-1064\n\n\n-B\n-1\nBucket number. Satellites were equipped with 2 buckets\n\n\nRRR\n025\nRevolution number. Satellite orbited up to 275 times\n\n\nO\nD\n“Descending” orbit; most CORONA missions following a descending polar orbit\n\n\nC\nA\nA or F indicates Aft or Forward camera\n\n\nFFF\n042\nFrame number. A running frame number for each bucket\n\n\n\nSimilarly, an entity ID for HEXAGON images, such as D3C 1219-300919 A026, can be decoded as such:\n\n\n\n\n\n\n\n\nPART\nID\nMEANING\n\n\n\n\nDD\nD3\nDeclassified Satellite Imagery 3 (“Declass 3”), the KH-9 HEXAGON collection\n\n\nS\nC\nStatus, where C indicates Complete\n\n\nSSMM-B\n1219-3\nSensor, mission, and bucket number\n\n\nOOOOO\n00919\nOperations number, zero-padded to five digits\n\n\nC\nA\nCamera\n\n\nFFF\n026\nFrame number",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
     ]
   },
   {
@@ -83,7 +83,7 @@
     "text": "Getting Orthorectified Images\nCORONA and HEXAGON satellites used a cross-path panoramic camera that produced elongated film strips. The imaging geometry of the camera and the surface of the earth result in a “bow tie” area of the ground being compressed into the rectangular area of the film. Further, the image motion compensators built into the imaging system did not fully account for the satellites motion during the image scan, which creates an “S” shaped pattern of distortion from one side of the image to the other. A third source of image distortion is derived from the topography of the ground as the parallax changes between the ground and the imaging surface inside the camera. These characteristics result in severe spatial distortions that radically alter the shape and size of individual features, in opposite directions on forward and aft cameras.\n\n\n\nSpatial distortions of the CORONA images\n\n\n\n\n\n\n\n\nNote\n\n\n\nTools such as SUNSPOT allow you to correct these distortions by selecting multiple ground-control points against contemporary satellite imagery.\n\n\n\nCORONA Atlas\nFor this lab, we will use previously orthorectified CORONA images from the CORONA Atlas Project (http://corona.cast.uark.edu/index.html).\nOpen the link above and explore the Atlas. Areas with available CORONA imagery are shown outlined in red, and mission numbers indicated (if you zoom in), overlaid on modern Google Maps data:\nIn the drop-down Map Contents window, sites and mission numbers can be toggled on and off. Drop down the CORONA tab to reveal mission numbers and dates of imagery available in the display window.\n\n\n\n\n\n\nTip\n\n\n\nSlider bars appearing to the right of each image series can be used to fade on or off individual missions, or all CORONA simultaneously to facilitate comparison with modern imagery. At the bottom of the screen there is also a swipe tool to reveal modern imagery on the right and CORONA on the left.\n\n\n\n\n\nMap Contents window in CORONA Atlas\n\n\nUsing the Tools Menu The tools menu offers several important functions. You can enter coordinates in Lat/Long (decimal degrees) to zoom to a particular location. You may also change the basemap to several different options. The Atlas also offers a basic archaeological site database for certain regions of the world, to aid as a navigational guide for archaeological research. At the bottom of the tools menu there are several measurement and mapping tools, enabling you to measure distance, area and points.\n\n\n\nTools in CORONA Atlas\n\n\n\n\n\n\n\n\nImportantEXERCISE 1\n\n\n\nIn CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (40.5872, 36.7382), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response.\n\n\n\n\n\n\n\n\nImportantEXERCISE 2\n\n\n\nAt least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility? Why?\n\n\n\n\nDownload CORONA imagery from the Atlas\nIn order to download imagery from the CORONA Atlas, go to the Map Contents menu, drop down the CORONA imagery tab, and then drop down the Mission/Revolution series. Simply push the download button to the right of an individual frame to begin the download.\nFor this lab, we will be using the CORONA image 1105-1025F057, which covers the Tell Beidar area. Download it from the Map Contents window. You will be given a prompt to select a download for either a GeoTIFF image or an NITF — select GeoTIFF.\n\n\n\n\n\n\nNote\n\n\n\nYou can also use this link to download the image: https://drive.google.com/file/d/14eqZTAxHDJDMNHID_UMSVgaNf0vhYwiu/view?usp=drive_link\n\n\n\n\n\n\nCasana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A Wall or a Road? A Remote Sensing-Based Investigation of Fortifications on Rome’s Eastern Frontier.” Antiquity 97 (396): 1516–33. https://doi.org/10.15184/aqy.2023.153.",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>CORONA and HEXAGON Imagery</span>"
     ]
   },
   {
@@ -102,7 +102,7 @@
     "href": "Rasters.html#basemaps",
     "title": "Rasters",
     "section": "Basemaps",
-    "text": "Basemaps\nIn QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.\nStart a new project in QGIS using Project -&gt; New and save it in a folder for ANTHRO_50_03_LAB1. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: e.g., DA2609_Lab1_YourName_1. Start your filename with a letter and not a number.\n\n\n\nStart a new project in QGIS\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure to save your project regularly by pressing Ctrl/CMD + s or the button  near the top. Alternatively, use an autosave plugin.\n\n\nYou will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the “Browser” panel on the left side of the screen.\n\n\n\nBrowser panel in QGIS\n\n\nRight-click on XYZ Tiles and select New Connection. Type a name for the layer, such as Bing Satellite. Paste the following into the URL field and click OK: http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1.\nDouble click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.\n\n\n\nBing Maps loaded in QGIS\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMake sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857 for now, used for display by many web-based mapping tools. This is a projected coordinate system that flattens the curved surface of the Earth (as opposed to a geographic coordinate system), and should not be used for rigorous analysis.",
+    "text": "Basemaps\nIn QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.\nStart a new project in QGIS using Project -&gt; New and save it in a folder for ANTHRO_50_03_LAB1. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: e.g., DA2609_Lab1_YourName_1. Start your filename with a letter and not a number.\n\n\n\nStart a new project in QGIS\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure to save your project regularly by pressing Ctrl/CMD + s or the button  near the top.\n\n\nYou will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the “Browser” panel on the left side of the screen.\n\n\n\nBrowser panel in QGIS\n\n\nRight-click on XYZ Tiles and select New Connection. Type a name for the layer, such as Bing Satellite. Paste the following into the URL field and click OK: http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1.\nDouble click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.\n\n\n\nBing Maps loaded in QGIS\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMake sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a projected coordinate system that flattens the 3D, curved surface of the Earth (as opposed to a geographic coordinate system).",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
@@ -127,7 +127,7 @@
     "text": "Background\nVector data are discrete points, lines, and polygons, and often have tables attached to them containing ancillary information. The most common file type for storing vector data in QGIS is a “shapefile” (.shp).",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
@@ -138,7 +138,7 @@
     "text": "Adding Vectors\nDownload a shapefile of all archaeological sites in this region: Lab1_AllSites.zip. Similar to adding rasters, navigate to Layer -&gt; Add Layer -&gt; Add Vector Layer.... In the window, select AllSites.shp under Source and add to the map.\nRight-click on the newly added vector layer and select Zoom to Layer(s) to see its full extent.\nZoom to Layer(s) allows you to see the full extent of a vector layer, but sometimes an outlier can unduly affect the map view. In this case, there seems to be a data point in an unlikely place in the southern end of the map view.\n\n\n\nZoom to all sites in QGIS\n\n\nUse the Identify Features  in the top toolbar and click on this outlier to examine it.\n\n\n\n\n\n\nImportantEXERCISE 5\n\n\n\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude. Do you think this point was there by design, or is it an error? If it is an error, what value is likely to be wrong?",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
@@ -149,7 +149,7 @@
     "text": "Vector Attributes\nFor now, let us focus on the region near Tell Beydar. Toggle on only three layers: AllSites, ds1105-1025df057, and the basemap. Zoom to ds1105-1025df057. Examine the general distribution of these sites and answer the following question:\n\n\n\n\n\n\nImportantEXERCISE 6\n\n\n\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography?\n\n\nSometimes, we want to examine archaeological features of a particular type. To do that, right-click on AllSites and select Open Attribute Table.\nIn the Attribute Table, you can see each data point has some values or “attributes” associate with it. In the table, locate the column/field Type, which contains string/text values such as Mound, Other, Flat.\n\n\n\nAttribute table in QGIS\n\n\nTo select all features that are of the mound type, click on Select by Expression tool () in the top toolbar. In the expression window, type in the following expression and press Select Features.\n\"Type\" = 'Mound'\nClose the Select by Expression window. Now, all the features that contain a Type value of Mound should be highlighted in the attributes table.\nWith the attributes table open, go back to the map view and right-click on the vector layer. Select Export -&gt; Save Selected Features As...\n\n\n\nExport selected data\n\n\nIn the window, select Esri Shapefile as the Format and use the ... button next to File name to save it in your computer with a name such as Lab1_mounds_2609.shp. Change the CRS to Project CRS. Click OK.\n\n\n\nExportation in QGIS\n\n\nThe new selected dataset should be added to your map. Toggle off the original vector layer, and you should be able to see all mounded sites in the region.\n\n\n\nMound features in the region\n\n\n\n\n\n\n\n\nImportantEXERCISE 7\n\n\n\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites? As a bonus question, what is the percentage of the mounded site surveyed by a trustworthy surveyor such as Tuna?",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
@@ -160,7 +160,7 @@
     "text": "Image Analysis\nNow you have created all layers needed for this lab. Toggle on and off the layers, change opacity and symbology of these layers, and answer the following question.\n\n\n\n\n\n\nImportantEXERCISE 8\n\n\n\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area? A concise qualitative description is fine for this exercise.",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Vectors</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
@@ -171,7 +171,7 @@
     "text": "CORONA Imagery\nPlease answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Oct 1, 2026.\nQuestion 1\nIn CORONA Atlas, locate the archaeological site of Tell Beidar (Beydar) in Syria (coordinate 40.5872, 36.7382), a large Early Bronze Age (3000-2000 BC) site. Using Area Measurement Tool, measure the area within the outer wall. Report the area in your lab response (5 points).\nQuestion 2\nAt least three different CORONA missions are available for the Tell Beidar area. Use the Map Contents tool in Atals to turn on and off different options. Which missions and cameras do you think are best for archaeological visibility? Why (10 points)?",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
     ]
   },
   {
@@ -179,10 +179,10 @@
     "href": "Lab1.html#qgis-basics-and-raster-data",
     "title": "Questions (Due: Oct 1)",
     "section": "QGIS Basics and Raster Data",
-    "text": "QGIS Basics and Raster Data\nQuestion 3\nIn QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes (5 points) and what you think may have caused them (5 points). Be sure to describe their location relative to the Tell.\nQuestion 4\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (5 points). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here near the nadir. Report error/offset between the map and the CORONA image in CORONA pixels (5 points).\nNow look at the western and eastern ends of the ribbon-shaped corrected CORONA image. Compared with the area around Tell Beydar, is the level of detail there finer, coarser, or about the same? Why? (5 points)",
+    "text": "QGIS Basics and Raster Data\nQuestion 3\nIn QGIS, toggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes (5 points) and what you think may have caused them (5 points). Be sure to describe their location relative to the Tell.\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 4\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel in QGIS, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map (5 points). Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here near the nadir. Report error/offset between the map and the CORONA image in CORONA pixels (5 points).\nNow look at the western and eastern ends of the ribbon-shaped corrected CORONA image. Compared with the area around Tell Beydar, is the level of detail there finer, coarser, or about the same? Why? (5 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
     ]
   },
   {
@@ -190,10 +190,10 @@
     "href": "Lab1.html#vector-data",
     "title": "Questions (Due: Oct 1)",
     "section": "Vector Data",
-    "text": "Vector Data\nQuestion 5\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (5 points). Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong (5 points)?\nQuestion 6\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography (5 points)?\nQuestion 7\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites (10 points)? As a bonus question, what is the percentage of the mounded site surveyed by a trustworthy surveyor such as Tuna (BONUS 5 points)?",
+    "text": "Vector Data\nQuestion 5\nFind the point that lies far from the rest of the dataset. Using the Identify Results panel, report its name, latitude, and longitude (5 points). Do you think this point was there by design, or is it an error? If it is an error, what value seems to have been wrong (5 points)?\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 6\nAre there any patterns in the general distribution of all archaeological sites vis-à-vis geographical features such as water and topography (5 points)?\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 7\nExamine the attribute tables of both vector layers, how many features are there in each dataset? What is the percentage of mounds among all sites (10 points)? As a bonus question, what is the percentage of the mounded site surveyed by a trustworthy surveyor such as Tuna (BONUS 5 points)?\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
     ]
   },
   {
@@ -201,10 +201,10 @@
     "href": "Lab1.html#image-analysis",
     "title": "Questions (Due: Oct 1)",
     "section": "Image Analysis",
-    "text": "Image Analysis\nQuestion 8\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (5 points)? Provide a concise qualitative description.\nTotal 70 Points + 5 Points",
+    "text": "Image Analysis\nQuestion 8\nHow commonly are mounded sites documented in the vector database also recorded on the 1938 French map of the Beydar area (5 points)? Provide a concise qualitative description.\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nTotal 70 Points + 5 Points",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
     ]
   },
   {
@@ -212,10 +212,175 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Casana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.",
+    "text": "Casana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
     "crumbs": [
       "Appendices",
       "References"
+    ]
+  },
+  {
+    "objectID": "Lab1.html#corona-imagery",
+    "href": "Lab1.html#corona-imagery",
+    "title": "Questions (Due: Oct 1)",
+    "section": "",
+    "text": "NoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\n\n\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html",
+    "href": "Drone_photogrammetry.html",
+    "title": "Drone Photogrammetry",
+    "section": "",
+    "text": "Background Objectives\nThe rapidly growing sophistication of small, commercial drones or “UAVs” (unpiloted aerial vehicles) combined with the increasing power of digital photogrammetry software to produce 3D models and orthoimagery has begun to transform archaeological documentation and discovery. While just a few years ago, collecting low altitude aerial imagery was costly, cumbersome, and often dangerous, today it can be done reliably, quickly, and at low cost. Moreover, a growing range of small, lightweight cameras and sensors open new possibilities not only to map sites and landscapes, but to discover new sites and features that would otherwise be invisible.\nIn this lab, we will learn to process a series of drone-acquired images to produce high-resolution orthoimagery and a digital elevation model (DEM) of an archaeological site called Echo Canyon (Echo Mesa), located on the Hopi Reservation in Arizona. Collaborating with the Hopi Cultural Preservation Office, our team from the Spatial Archaeometry Lab (SPARCL) at Dartmouth has been undertaking drone-based surveys of numerous sites in order to assist with management and locate potentially unrecorded archaeological features.\nArchaeologists Greg Schachner (UCLA) and Wes Bernardini (University of Redlands) previously did a systematic surface survey of Echo Canyon and recorded many archaeological features, including stone building foundations, circular storage pits, and refuse middens replete with artifacts. Our job is to see if we can locate any of these features and potentially find unrecorded features using drone imagery.\nFor this lab, we will be processing color drone images collected with a DJI M300 Enterprise drone, equipped with a 20MP visible light camera and a high-accuracy RTK GNSS (GPS). You will use a subset of these photos to create an orthoimage and a DEM of an area where archaeologists have previously recorded surface artifact scatters and potential building remains. We will then open these data in QGIS and compare them with a thermal image mosaic of the same site, publicly available color imagery, and observations of archaeological features that were mapped by our colleagues.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Metashape.html",
+    "href": "Metashape.html",
+    "title": "Installing Metashape",
+    "section": "",
+    "text": "Version\nOn this page, you will be guided to install Metashape, one of the leading photograpmmetric processing software. First, download their installer based on your OS: https://www.agisoft.com/downloads/installer/. Run the installer as administrator; you may need to enter your OS login credentials.\nPlease note that we will be using Agisoft Metashape 2.3.2 Professional Edition.",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Metashape</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html#file-download",
+    "href": "Drone_photogrammetry.html#file-download",
+    "title": "Drone Photogrammetry",
+    "section": "File Download",
+    "text": "File Download\nFor this lab, you will need to download the following files.\n\nRaw_Color_Photos: A folder that contains 34 color photos shot by the drone. You may need to unzip the file.\nechocanyon_thermal_8may25_utm.tif: A thermal mosaic of the study region.\nEchoMesa_GroundSurvey.gpkg: A geopackage that contains multiple vector datasets of archaeological features previously mapped.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Orthomosaic.html",
+    "href": "Orthomosaic.html",
+    "title": "Orthomosaic in QGIS",
+    "section": "",
+    "text": "Project Setup in QGIS\nThis page will guide you to analyze archaeological features in Echo Mesa using the orthomosaic you have just generated. Start QGIS and open a new project. Save it () in your Digital Archaeology Lab folder with a filename such as lab2_EchoMesa_Hopi_Your_LastName.qgz.\nChange the CRS to EPSG:32612 to match that of the orthomosaic.\nAs before, from the Browser panel, drag a basemap such as Bing maps from XYZ Tiles to your Layers.\nIf any of the panels are not there, select View -&gt; Panels to toggle them on.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "Orthomosaic.html#project-setup",
+    "href": "Orthomosaic.html#project-setup",
+    "title": "Orthomosaic in QGIS",
+    "section": "",
+    "text": "Selecting UTM zone 12N for the project\n\n\n\n\n\n\nSatellite XYZ tiles in QGIS\n\n\n\n\n\n\nPanel options\n\n\n\n\n\n\nConverting coordinates between CRSs\n\n\n\n\n\n\nGrouping layers\n\n\n\n\n\nThermal raster histogram\n\n\n\n\n\nChanging layer properties for the thermal data\n\n\n\n\n\nThermal data overlaid by mapped features",
+    "crumbs": [
+      "Lab 2 Drone Data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html#background-objectives",
+    "href": "Drone_photogrammetry.html#background-objectives",
+    "title": "Drone Photogrammetry",
+    "section": "",
+    "text": "NoteOrthoimagery\n\n\n\nAn “orthophoto” is a photograph that has had all spatial distortions, caused by both camera parallax and ground topography, corrected such that it can be used as a map. If we process a bunch of photos together to produce a larger mosaic, then we have made an “ortho-image.”\n\n\n\n\n\n\nAerial view of Echo Canyon, Hopi Reservation, AZ",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html#metashape-setup",
+    "href": "Drone_photogrammetry.html#metashape-setup",
+    "title": "Drone Photogrammetry",
+    "section": "Metashape Setup",
+    "text": "Metashape Setup\nFor this lab, we will be using Agisoft Metashape. Follow the instruction on this page to install the software.\nAfter activating the software, start a new file (File -&gt; New) and save the project with a descriptive name such as DigitalArch_EchoMesa_Your_Name in a folder with the other files that you have just downloaded.\n\n\nAdd Photos\nTo add photos to make a 3D model, right-click on Chunk 1 in the Workspace, select Add -&gt; Add Photos..., choose all 34 photos from Raw_Color_Photos, and click the Open button.\n\n\n\nAdding photos to Metashape\n\n\nBecause these photos already have GPS points, Metashape will be able to position them correctly. Toggle Show Cameras  to see these locations.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html#photogrammetry",
+    "href": "Drone_photogrammetry.html#photogrammetry",
+    "title": "Drone Photogrammetry",
+    "section": "Photogrammetry",
+    "text": "Photogrammetry\n\nBuild Point Cloud/Dense Cloud\nBased on the estimated camera positions, Metashape now creates a single dense point cloud. Select Build Point Cloud command from the Workflowmenu.\nSet the following recommended values for the parameters in the Build Dense Cloud window:\n\nQuality: Low (higher quality takes quite a long time and demands more computational resources)\nDepth filtering: Mild (if the geometry of the scene to be reconstructed is complex with numerous small details on the foreground, then it is recommended to set Mild depth filtering mode, for important features not to be sorted out)\n\nClick OK button to start building dense point cloud. When finished, be sure to turn on the Point Cloud option  at the top, and turn off Show Cameras to see the results better.\n\n\n\nBuild point cloud in Metashape\n\n\n\n\nBuild a Model/Mesh\nAfter the dense point cloud has been reconstructed it is possible to generate a high-quality polygonal mesh model based on the dense cloud data, basically filling in areas between points in the point cloud to create a continuous surface. Select Build Model command from the Workflow menu.\nSet the following recommended values for the parameters in the Build Mesh dialog:\n\nSource data: Point cloud\nSurface type: Height field (2.5D)\nFace count: Medium (for faster processing)\n\nClick OK button to start mesh reconstruction and ignore the warning.\nYou can now turn on the Model - Solid option () in the toolbar. Notice the areas in the mesh that look better and worse compared to the point cloud.\n\n\nBuild Texture\nNext we will use the original photographs to map details (“texture”) onto the 3D model we are creating.  This will make it look a lot better but does not actually improve the underlying model.\nSelect Build Texture command from the Workflow menu. Use the following values for the Build Texture dialog:\n\n\n\nBuilding texture in Metashape\n\n\nClick OK button to start texture generation. This process may take a while. When it is done, turn on the textured model using the pyramid-shaped icon on the toolbar:\n\n\n\nShow textured model in Metashape\n\n\nYour model now should look approximately like this:\n\n\n\nTextured model in Metashape\n\n\n\n\nBuild a DEM\nSelect Build DEM from the Workflow menu.  \nSet the following recommended values for the parameters in the Build DEM window:\n\nProjection: WGS 84 / UTM zone 12N (EPSG:32612)\nSource data: Model/Mesh\nResolution: Default\n\nAfter DEM generation, click File -&gt; Export DEM.... Save the DEM with a descriptive name and select type TIFF/GeoTIFF. Check the Coordinate System is EPSG:32612.\n\n\nGenerate an Orthoimage\nSelect Build Orthomosaic… from the Workflow menu.\nSet the following recommended values for the parameters in the Build Orthomosaic window and Click OK to start orthophoto generation.\n\n\n\nBuild Orthomosaic in Metashape\n\n\nFinally, select File -&gt; Export -&gt; Export Orthomosaic... and select TIFF/GeoTIFF as the file type. Save your orthophoto with a descriptive name, such as DigitalArch_EchoMesa_Ortho_Date.\n\n\n\n\n\n\nImportantEXERCISE 1\n\n\n\nReport, in that order, the following values in your Metashape project: number of tie points; number of Point Cloud points; spatial resolution of DEM; image size of the orthomosaic; and the file size of the orthomosaic.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Metashape.html#activation",
+    "href": "Metashape.html#activation",
+    "title": "Installing Metashape",
+    "section": "Activation",
+    "text": "Activation\nFor now, we will be using a free 30-day trial. Open Metashape and select Start a free 30-day trial in the pop-up Activation window. Depending on your OS, you may need to enter your log-in credentials again.\n\n\n\nFree 30-day trial in Metashape\n\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that the interface/nomenclature may look different depending on your OS. The screenshots in this tutorial were captured using macOS.",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Metashape</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html#align-photos",
+    "href": "Drone_photogrammetry.html#align-photos",
+    "title": "Drone Photogrammetry",
+    "section": "Align Photos",
+    "text": "Align Photos\nAt this stage we want to refine the camera position for each photo and builds a sparse point cloud. Select Align Photos command from the Workflow menu.\nSet the following values for the parameters in the Align Photos dialogue:\n\nAccuracy: High (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nGeneric preselection and Reference preselection should be checked.\n\n\n\n\nAligning photos in Metashape\n\n\nClick OK button to start photo alignment. This may take a while, but will align the photos and produce a point cloud in which you can see some of the features from the scene, as below:\n\n\n\nPhotos aligned in Metashape\n\n\nThe Move Region  tool is used to define the area you hope to map and can be used to eliminate extraneous datapoints. It is resizable and rotatable. Adjust it to a position you think looks good. Make it approximately the same size as the sparse point cloud you generated.\n\n\n\n\n\n\nTip\n\n\n\nUse the mouse scroll or holding option/alt to pan the view.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Orthomosaic.html#project-setup-in-qgis",
+    "href": "Orthomosaic.html#project-setup-in-qgis",
+    "title": "Orthomosaic in QGIS",
+    "section": "",
+    "text": "Selecting UTM zone 12N for the project\n\n\n\n\n\n\nSatellite XYZ tiles in QGIS\n\n\n\n\n\n\nPanel options",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "Orthomosaic.html#adding-data",
+    "href": "Orthomosaic.html#adding-data",
+    "title": "Orthomosaic in QGIS",
+    "section": "Adding Data",
+    "text": "Adding Data\n\nOrthomosaic and DEM\nIn QGIS, add both the DEM and orthomosaic .tif files as raster layer. In the Layers panel, toggle off DEM and compare the resolution between the orthomosaic and the basemap.\n\n\n\n\n\n\nImportantEXERCISE 2\n\n\n\nCompare our 2-cm-resolution drone image to the basemap. List, with screenshots or coordinates, at least three additional features that are only resolved in the orthomosaic.\n\n\n\n\nArchaeological Features\nNext, add EchoMesa_GroundSurvey.gpkg that you downloaded as a vector layer. When asked, select all items to add.\n\n\n\nAdding .gpkg to QGIS\n\n\nNext, convert these vectors to UTM zone 12N:\n\n\n\nConverting coordinates between CRSs\n\n\nIn the Layers panel, select all four vector layers added, right-click on them, and choose Group Selected. Name the group as ground_survey_data. Now you can toggle on/off all archaeological features at once.\n\n\n\nGrouping layers\n\n\n\n\n\n\n\n\nImportantEXERCISE 3\n\n\n\nBased on the mapped archaeological features and Herrmann et al. (2018), discuss how ultra-high resolution orthoimagery and DEMs we produce using drones can help archaeologists discover, document, and interpret ancient sites and landscapes.\n\n\n\n\nThermal Imagery\nFinally, add echocanyon_thermal_8may25_utm.tif as a raster layer. You may notice that the image looks rather “muted.”\n\n\n\nThermal image initially added to QGIS\n\n\nTo troubleshoot, we may need to examine the distribution of the pixel values. Right click on the thermal layer and select Properties. In Layer Properties window, go to Histogram and click Computer Histogram.\n\n\n\n\n\n\nNote\n\n\n\nFor a single-band image such as this thermal image, a GIS program typically maps the range of pixel values onto a grayscale (0-255), from black for the lowest value to white for the highest.\n\n\nAs you can see here, the raster displays poorly because a few outlying values stretch this range. Most pixels fall within only about 10% of it, so they are squeezed into a narrow band of grays, and the variation within the histogram’s main peak is hard to see.\n\n\n\nThermal raster histogram\n\n\n\n\n\nThermal raster ideal histogram\n\n\nTo change this, go to Symbology dialog in Layer Properties. In the Min/Max Value Settings, select Cumulative count cut and choose 10 - 90%.\n\n\n\nChanging layer symbology in QGIS\n\n\nYou should now have a much better visualization of the thermal data.\n\n\n\nThermal data overlaid by mapped features",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "Orthomosaic.html#archaeology-of-echo-mesa",
+    "href": "Orthomosaic.html#archaeology-of-echo-mesa",
+    "title": "Orthomosaic in QGIS",
+    "section": "Archaeology of Echo Mesa",
+    "text": "Archaeology of Echo Mesa\nA typical archaeological site in Echo Canyon consists of stone building foundations and artifact scatter at the surface:\n\n\n\nA typical archaeological site in the study region\n\n\nIn QGIS map view, one similar site can be found near coordinates 570324.3092,3972901.0257. Locate this point and set the scale to 1:30.\n\n\n\nLocating an archaeological site in Echo Mesa\n\n\nToggle off all layers except for the orthomosaic. Can you see the archaeological feature here?\n\n\n\nAn archaeological site in Echo Mesa\n\n\nTo map this feature, we will need to create a new vector layer. Go to Layer -&gt; Create Layer -&gt; New GeoPackage Layer.... In the pop-up window, first click ... next to the File name and select a location to save your layer with a reasonable name.\nFor Geometry type, select Polygon, and select Project CRS. In New Field, write ID in the Name field and change Type to Integer. Press Add to Fields List. Finally, press OK.\n\n\n\n\n\nIn the Layers panel, right-click on the newly created layer and select Toggle Editing (). This will let you edit the .gpkg file directly. In the top toolbars, select Add Polygon Feature () and start tracing the boundary of the archaeological site. Once done, hold Ctrl and click anywhere on the map. In the pop-up window, put 0 in the ID field, indicating this is the first site you map.\n\n\n\nAdding new features to QGIS\n\n\nThere you go — you have just mapped your first archaeological feature in QGIS! It should look something like this:\n\n\n\nYour first mapped archaeological site!\n\n\nOnce you are done, select Save Layer Edits () in the top toolbar. Click Toggle Editing () again to exit edit mode.\n\n\n\n\n\n\nImportantEXERCISE 4\n\n\n\nAre you able to identify the archaeological feature you just mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in EchoMesa_GroundSurvey?\n\n\n\n\n\n\n\n\nImportantEXERCISE 5\n\n\n\nAre you able to recognize any other possible archaeological features? What data did you use to find these features? Please provide screenshots in your response, edit your newly created layer to include these features, and upload your .gpkg to Canvas. Make sure that the file name contains your name.\n\n\n\n\n\n\n\n\nImportantEXERCISE 6\n\n\n\nBased on your work and our readings, including Materazzi and Pacifici (2022) and Paulsen et al. (2026), describe how thermal and near-infrared imagery are used by archaeologists to reveal features that are not visible otherwise.\n\n\n\n\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter Pfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with Commercial-Grade Instruments: A Case Study from the Eastern Ḫabur Archaeological Survey, Iraq.” Journal of Field Archaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop Marks Detection Through Drone Multispectral Remote Sensing and Vegetation Indices: A New Approach Tested on the Italian Pre-Roman City of Veii.” Journal of Archaeological Science: Reports 41 (February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026. “Drone-Based Thermal Imaging of Subsurface Architecture: Methodological Insights and Discoveries at Iron Age Raki (Oman).” Journal of Archaeological Science: Reports 69 (February): 105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "Lab2.html",
+    "href": "Lab2.html",
+    "title": "Questions (Due: Oct 8)",
+    "section": "",
+    "text": "Please answer the following questions in a separate Word document and submit it (alongside a .gpkg file) to the course Canvas site by 11:59pm, Oct 8, 2026.\nQuestion 1\nReport the following values in your Metashape project: number of tie points; number of Point Cloud points; spatial resolution of DEM; image size of the orthomosaic; and the file size of the orthomosaic (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 2\nCompare our 2-cm-resolution drone image to the basemap. List, with screenshots or coordinates, at least three additional features that are only resolved in the orthomosaic (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 3\nBased on the mapped archaeological features and Herrmann et al. (2018), discuss how ultra-high resolution orthoimagery and DEMs we produce using drones can help archaeologists discover, document, and interpret ancient sites and landscapes (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 4\nAre you able to identify the archaeological feature you mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in EchoMesa_GroundSurvey (10 points)?\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 5\nAre you able to recognize any other possible archaeological features (5 points)? What data did you use to find these features (5 points)? Please provide screenshots in your response, edit your newly created layer to include these features, and upload your .gpkg to Canvas (10 points). Make sure that the file name contains your name.\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 6\nBased on your work and our readings, including Materazzi and Pacifici (2022) and Paulsen et al. (2026), describe how thermal and near-infrared imagery are used by archaeologists to reveal features that are not visible otherwise (15 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nTotal 80 points\n\n\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter Pfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with Commercial-Grade Instruments: A Case Study from the Eastern Ḫabur Archaeological Survey, Iraq.” Journal of Field Archaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop Marks Detection Through Drone Multispectral Remote Sensing and Vegetation Indices: A New Approach Tested on the Italian Pre-Roman City of Veii.” Journal of Archaeological Science: Reports 41 (February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026. “Drone-Based Thermal Imaging of Subsurface Architecture: Methodological Insights and Discoveries at Iron Age Raki (Oman).” Journal of Archaeological Science: Reports 69 (February): 105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Questions (Due: Oct 8)</span>"
     ]
   }
 ]

@@ -12,10 +12,11 @@ book:
   chapters:
     - index.qmd
     - part: "Getting Started"
-      chapters: [QGIS.qmd]
+      chapters: [QGIS.qmd, Metashape.qmd]
     - part: "Lab 1 Historical Satellite Imagery and GIS Basics"
       chapters: [CORONA.qmd, Rasters.qmd, Vectors.qmd, Lab1.qmd]
-    - part: "Lab 2 Drone Data"
+    - part: "Lab 2 Drone-based Mapping"
+      chapters: [Drone_photogrammetry.qmd, Orthomosaic.qmd, Lab2.qmd]
     
   
   appendices: 

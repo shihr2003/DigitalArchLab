@@ -1,0 +1,68 @@
+---
+title: "Questions (Due: Oct 8)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it (alongside a `.gpkg` file) to the course Canvas site by **11:59pm, Oct 8, 2026**.
+
+**Question 1**
+
+Report the following values in your Metashape project: number of tie points; number of Point Cloud points; spatial resolution of DEM; image size of the orthomosaic; and the file size of the orthomosaic (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+Compare our 2-cm-resolution drone image to the basemap. List, with screenshots or coordinates, at least three additional features that are only resolved in the orthomosaic (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Based on the mapped archaeological features and @herrmann2018, discuss how ultra-high resolution orthoimagery and DEMs we produce using drones can help archaeologists discover, document, and interpret ancient sites and landscapes (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+Are you able to identify the archaeological feature you mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in `EchoMesa_GroundSurvey` (**10 points**)?
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 5**
+
+Are you able to recognize any other possible archaeological features (**5 points**)? What data did you use to find these features (**5 points**)? Please provide screenshots in your response, edit your newly created layer to include these features, and upload your `.gpkg` to Canvas (**10 points**). Make sure that the file name contains your name.
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 6**
+
+Based on your work and our readings, including @materazzi2022 and @paulsen2026, describe how thermal and near-infrared imagery are used by archaeologists to reveal features that are not visible otherwise (**15 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Total** 80 points
