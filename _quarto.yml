@@ -7,7 +7,6 @@ book:
   title: "Digital Archaeology Labs"
   date: "9/22/2026"
   page-navigation: true
-  downloads: [pdf]
   
   chapters:
     - index.qmd
@@ -31,9 +30,9 @@ format:
     theme: { light: cosmo, dark: darkly }
     code-copy: true
     
-  pdf:
-    documentclass: scrreprt
-    toc: true
+#  pdf:
+#    documentclass: scrreprt
+#    toc: true
     
 
 editor: visual
