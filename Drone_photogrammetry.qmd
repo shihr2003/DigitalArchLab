@@ -41,7 +41,7 @@ After activating the software, start a new file (`File` -\> `New`) and save the 
 
 ### Add Photos
 
-To add photos to make a 3D model, right-click on `Chunk 1` in the `Workspace`, select `Add` -\> `Add Photos...`, choose all 34 photos from `Raw_Color_Photos`, and click the `Open` button.
+To add photos and make a 3D model, right-click on `Chunk 1` in the `Workspace`, select `Add` -\> `Add Photos...`, choose all 34 photos from `Raw_Color_Photos`, and click the `Open` button.
 
 ![Adding photos to Metashape](images/clipboard-781914814.png){fig-align="center" width="60%"}
 
@@ -49,11 +49,11 @@ Because these photos already have GPS points, Metashape will be able to position
 
 ### Align Photos
 
-At this stage we want to refine the camera position for each photo and builds a sparse point cloud. Select `Align Photos` command from the `Workflow` menu.
+At this stage we want to refine the camera position for each photo and build a sparse point cloud (tie points). Select `Align Photos` command from the `Workflow` menu.
 
 Set the following values for the parameters in the `Align Photos` dialogue:
 
-- **`Accuracy`:** High (lower accuracy settings can be used to get the rough camera positions in the shorter time)
+- **`Accuracy`:** High (lower accuracy settings can be used to get the rough camera positions in the shorter time)
 
 - **`Generic preselection`** and **`Reference preselection`** should be checked.
 
