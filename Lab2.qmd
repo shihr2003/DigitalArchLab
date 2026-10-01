@@ -37,7 +37,7 @@ Answer key will only be posted after the assignment deadline!
 
 **Question 4**
 
-Are you able to identify the archaeological feature you mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in `EchoMesa_GroundSurvey` (**10 points**)?
+Are you able to identify the archaeological feature you mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in `EchoMesa_GroundSurvey`? Can you see other previously mapped features in the rasters (**10 points**)?
 
 ::: {.callout-note collapse="true"}
 ## Click to reveal answer

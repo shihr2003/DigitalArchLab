@@ -110,7 +110,8 @@ Once you are done, select `Save Layer Edits` (![](images/clipboard-781940283.png
 ::: callout-important
 ## EXERCISE 4
 
-Are you able to identify the archaeological feature you just mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in `EchoMesa_GroundSurvey`?
+Are you able to identify the archaeological feature you just mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in `EchoMesa_GroundSurvey`? Can you see other previously mapped features in the rasters?
+
 :::
 
 ::: callout-important
