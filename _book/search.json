@@ -32,6 +32,28 @@
     ]
   },
   {
+    "objectID": "Metashape.html",
+    "href": "Metashape.html",
+    "title": "Installing Metashape",
+    "section": "",
+    "text": "Version\nOn this page, you will be guided to install Metashape, one of the leading photograpmmetric processing software. First, download their installer based on your OS: https://www.agisoft.com/downloads/installer/. Run the installer as administrator; you may need to enter your OS login credentials.\nPlease note that we will be using Agisoft Metashape 2.3.2 Professional Edition.",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Metashape</span>"
+    ]
+  },
+  {
+    "objectID": "Metashape.html#activation",
+    "href": "Metashape.html#activation",
+    "title": "Installing Metashape",
+    "section": "Activation",
+    "text": "Activation\nFor now, we will be using a free 30-day trial. Open Metashape and select Start a free 30-day trial in the pop-up Activation window. Depending on your OS, you may need to enter your log-in credentials again.\n\n\n\nFree 30-day trial in Metashape\n\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that the interface/nomenclature may look different depending on your OS. The screenshots in this tutorial were captured using macOS.",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Metashape</span>"
+    ]
+  },
+  {
     "objectID": "CORONA.html",
     "href": "CORONA.html",
     "title": "CORONA and HEXAGON Imagery",
@@ -94,7 +116,7 @@
     "text": "Background\nThe central power of GIS is in the ability to load multiple spatial datasets into a single map frame, and then compare them to one another, either visually or quantitatively. Raster graphics are grids of pixels, such as CORONA imagery, scanned maps, and elevation models. Vectors are composed of discrete data points, such as points, lines, and polygons, which include archaeological sites, rivers, and soil types. Rasters are usually larger files and require more computing power to process.\nThis page will guide you to load a Bing basemap and three rasters into a new project in QGIS.",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rasters</span>"
     ]
   },
   {
@@ -102,10 +124,10 @@
     "href": "Rasters.html#basemaps",
     "title": "Rasters",
     "section": "Basemaps",
-    "text": "Basemaps\nIn QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.\nStart a new project in QGIS using Project -&gt; New and save it in a folder for ANTHRO_50_03_LAB1. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: e.g., DA2609_Lab1_YourName_1. Start your filename with a letter and not a number.\n\n\n\nStart a new project in QGIS\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure to save your project regularly by pressing Ctrl/CMD + s or the button  near the top.\n\n\nYou will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the “Browser” panel on the left side of the screen.\n\n\n\nBrowser panel in QGIS\n\n\nRight-click on XYZ Tiles and select New Connection. Type a name for the layer, such as Bing Satellite. Paste the following into the URL field and click OK: http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1.\nDouble click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.\n\n\n\nBing Maps loaded in QGIS\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMake sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857, used for display by many web-based mapping tools. This is a projected coordinate system that flattens the 3D, curved surface of the Earth (as opposed to a geographic coordinate system).",
+    "text": "Basemaps\nIn QGIS, basemaps are background reference layers, such as the satellite imagery in CORONA Atlas. They are usually raster images streamed from an online server, so you can view them but not edit them. Basemaps provide visual context rather than data for direct spatial analysis.\nStart a new project in QGIS using Project -&gt; New and save it in a folder for ANTHRO_50_03_LAB1. Because of the highly iterative nature of GIS work, give your project a specific and descriptive name: e.g., DA2609_Lab1_YourName_1. Start your filename with a letter and not a number.\n\n\n\nStart a new project in QGIS\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure to save your project regularly by pressing Ctrl/CMD + s or the button  near the top. Alternatively, use an autosave plugin.\n\n\nYou will notice that the map view is currently blank, which makes it hard to navigate. We need to add a basemap. Locate the “Browser” panel on the left side of the screen.\n\n\n\nBrowser panel in QGIS\n\n\nRight-click on XYZ Tiles and select New Connection. Type a name for the layer, such as Bing Satellite. Paste the following into the URL field and click OK: http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1.\nDouble click on the XYZ Tiles Connection you just created, and you should be able to see the basemap loaded.\n\n\n\nBing Maps loaded in QGIS\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMake sure the coordinate reference system (CRS) in the right bottom corner is set to EPSG:3857 for now, used for display by many web-based mapping tools. This is a projected coordinate system that flattens the curved surface of the Earth (as opposed to a geographic coordinate system), and should not be used for rigorous analysis.",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rasters</span>"
     ]
   },
   {
@@ -116,7 +138,7 @@
     "text": "Adding Raster Layers\n\nCORONA ds1105-1025df057.tif\nTo add a raster in QGIS, select Layer -&gt; Add Layer -&gt; Add Raster Layer.\n\n\n\nAdding a raster in QGIS\n\n\nIn the Data Source Manager, under Source, locate ds1105-1025df057.tif stored in your computer and click Add.\n\n\n\nQGIS — Data Source Manager (directory may be different in your computer)\n\n\nReturn to the map view. In the Layers window, right-click on the raster layer we just added and select Zoom to Layer(s). Wait for a few moments for the image to load.\n\n\n\nRight-click on a raster layer\n\n\n\n\n\n\n\n\nCaution\n\n\n\nFiles are linked to a GIS — not stored — and any moved files must be re-linked in QGIS.\n\n\nIn the Layers window, toggle off the raster layer to see the underlying satellite imagery. Toggle it on again. In the coordinate near the bottom of the interface, type in 4518140.3,4402634.6 to find Tell Beydar again. In scale, type in 1:5000 (1 cm on the screen represents 5,000 cm on the ground).\n\n\n\n\n\n\nImportantEXERCISE 3\n\n\n\nToggle on and off the CORONA image, look for changes evident in the close vicinity of Tell Beydar. Please describe these changes and what you think may have caused them. Be sure to describe their location relative to the Tell.\n\n\n\n\nSurvey Map from Tony Wilkinson (2002)\nDownload Lab1Wilkinson.zip and unzip it in your computer. Add a raster layer that links to Wilkinson_2002.tif. This map was produced by an archaeologist, Tony Wilkinson, who did an archaeological survey in the area around Tell Beydar. The map has already been georeferenced, meaning that it has been transformed to match the other geographical data.\nThe imported map may look funny in QGIS. This is because the raster only contains pixels with two values, 0 and 255, and the program automatically assigns a color to each of these two colors.\nTo correct this, right-click on Wilkinson_2002 layer, select Symbology, and change Render type to Singleband gray.\n\n\n\nChange layer symbology in QGIS\n\n\nWhile you are at it, locate Transparency tab on the right side of the layer properties window, adjust the opacity of this layer to 50%.\n\n\n\nChange layer opacity in QGIS\n\n\n\n\n1938 Historical Map\nNow it is time to put what you learned about rasters to practice! Download 1938_FrenchMap.zip and unzip it. Add 1014562_LVT2_Hassetche_NJ_37_XI_partie_sud_NJ_37_V_1938.TIF as a raster layer. Change the layer’s opacity to 60%. Toggle off layer Wilkinson_2002.\nWhile the map has been similarly georeferenced, the georeferencing is not perfect for this historical map.\n\n\n\nThe 1938 historical map is not perfectly georeferenced\n\n\nIn QGIS, you can also measure distance and area in the map view. To do so, use the Measure Line tool in the top toolbar and click on the points in the map view.\n\n\n\nMeasure toolbar in QGIS\n\n\n\n\n\n\n\n\nImportantEXERCISE 4\n\n\n\nWith both the CORONA image and the 1938 map toggled visible in the Layers panel, measure the georeferencing error of the 1938 map. To do so, first measure and report the distance in meters between the center of Tell Beydar on the CORONA image and its center on the map. Recall that the CORONA image has a spatial resolution of about 2 meters per pixel here. Report error/offset between the map and the CORONA image in CORONA pixels.\nNow look at the western and eastern ends of the ribbon-shaped corrected CORONA image. Compared with the area around Tell Beydar, is the level of detail there finer, coarser, or about the same? Why?",
     "crumbs": [
       "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rasters</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rasters</span>"
     ]
   },
   {
@@ -175,6 +197,17 @@
     ]
   },
   {
+    "objectID": "Lab1.html#corona-imagery",
+    "href": "Lab1.html#corona-imagery",
+    "title": "Questions (Due: Oct 1)",
+    "section": "",
+    "text": "NoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\n\n\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!",
+    "crumbs": [
+      "Lab 1 Historical Satellite Imagery and GIS Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
+    ]
+  },
+  {
     "objectID": "Lab1.html#qgis-basics-and-raster-data",
     "href": "Lab1.html#qgis-basics-and-raster-data",
     "title": "Questions (Due: Oct 1)",
@@ -208,28 +241,6 @@
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Casana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
-    "crumbs": [
-      "Appendices",
-      "References"
-    ]
-  },
-  {
-    "objectID": "Lab1.html#corona-imagery",
-    "href": "Lab1.html#corona-imagery",
-    "title": "Questions (Due: Oct 1)",
-    "section": "",
-    "text": "NoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\n\n\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!",
-    "crumbs": [
-      "Lab 1 Historical Satellite Imagery and GIS Basics",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Questions (Due: Oct 1)</span>"
-    ]
-  },
-  {
     "objectID": "Drone_photogrammetry.html",
     "href": "Drone_photogrammetry.html",
     "title": "Drone Photogrammetry",
@@ -238,50 +249,6 @@
     "crumbs": [
       "Lab 2 Drone-based Mapping",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
-    ]
-  },
-  {
-    "objectID": "Metashape.html",
-    "href": "Metashape.html",
-    "title": "Installing Metashape",
-    "section": "",
-    "text": "Version\nOn this page, you will be guided to install Metashape, one of the leading photograpmmetric processing software. First, download their installer based on your OS: https://www.agisoft.com/downloads/installer/. Run the installer as administrator; you may need to enter your OS login credentials.\nPlease note that we will be using Agisoft Metashape 2.3.2 Professional Edition.",
-    "crumbs": [
-      "Getting Started",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Metashape</span>"
-    ]
-  },
-  {
-    "objectID": "Drone_photogrammetry.html#file-download",
-    "href": "Drone_photogrammetry.html#file-download",
-    "title": "Drone Photogrammetry",
-    "section": "File Download",
-    "text": "File Download\nFor this lab, you will need to download the following files.\n\nRaw_Color_Photos: A folder that contains 34 color photos shot by the drone. You may need to unzip the file.\nechocanyon_thermal_8may25_utm.tif: A thermal mosaic of the study region.\nEchoMesa_GroundSurvey.gpkg: A geopackage that contains multiple vector datasets of archaeological features previously mapped.",
-    "crumbs": [
-      "Lab 2 Drone-based Mapping",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
-    ]
-  },
-  {
-    "objectID": "Orthomosaic.html",
-    "href": "Orthomosaic.html",
-    "title": "Orthomosaic in QGIS",
-    "section": "",
-    "text": "Project Setup in QGIS\nThis page will guide you to analyze archaeological features in Echo Mesa using the orthomosaic you have just generated. Start QGIS and open a new project. Save it () in your Digital Archaeology Lab folder with a filename such as lab2_EchoMesa_Hopi_Your_LastName.qgz.\nChange the CRS to EPSG:32612 to match that of the orthomosaic.\nAs before, from the Browser panel, drag a basemap such as Bing maps from XYZ Tiles to your Layers.\nIf any of the panels are not there, select View -&gt; Panels to toggle them on.",
-    "crumbs": [
-      "Lab 2 Drone-based Mapping",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
-    ]
-  },
-  {
-    "objectID": "Orthomosaic.html#project-setup",
-    "href": "Orthomosaic.html#project-setup",
-    "title": "Orthomosaic in QGIS",
-    "section": "",
-    "text": "Selecting UTM zone 12N for the project\n\n\n\n\n\n\nSatellite XYZ tiles in QGIS\n\n\n\n\n\n\nPanel options\n\n\n\n\n\n\nConverting coordinates between CRSs\n\n\n\n\n\n\nGrouping layers\n\n\n\n\n\nThermal raster histogram\n\n\n\n\n\nChanging layer properties for the thermal data\n\n\n\n\n\nThermal data overlaid by mapped features",
-    "crumbs": [
-      "Lab 2 Drone Data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
     ]
   },
   {
@@ -296,11 +263,33 @@
     ]
   },
   {
+    "objectID": "Drone_photogrammetry.html#file-download",
+    "href": "Drone_photogrammetry.html#file-download",
+    "title": "Drone Photogrammetry",
+    "section": "File Download",
+    "text": "File Download\nFor this lab, you will need to download the following files.\n\nRaw_Color_Photos: A folder that contains 34 color photos shot by the drone. You may need to unzip the file.\nechocanyon_thermal_8may25_utm.tif: A thermal mosaic of the study region.\nEchoMesa_GroundSurvey.gpkg: A geopackage that contains multiple vector datasets of archaeological features previously mapped.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
     "objectID": "Drone_photogrammetry.html#metashape-setup",
     "href": "Drone_photogrammetry.html#metashape-setup",
     "title": "Drone Photogrammetry",
     "section": "Metashape Setup",
-    "text": "Metashape Setup\nFor this lab, we will be using Agisoft Metashape. Follow the instruction on this page to install the software.\nAfter activating the software, start a new file (File -&gt; New) and save the project with a descriptive name such as DigitalArch_EchoMesa_Your_Name in a folder with the other files that you have just downloaded.\n\n\nAdd Photos\nTo add photos to make a 3D model, right-click on Chunk 1 in the Workspace, select Add -&gt; Add Photos..., choose all 34 photos from Raw_Color_Photos, and click the Open button.\n\n\n\nAdding photos to Metashape\n\n\nBecause these photos already have GPS points, Metashape will be able to position them correctly. Toggle Show Cameras  to see these locations.",
+    "text": "Metashape Setup\nFor this lab, we will be using Agisoft Metashape. Follow the instruction on this page to install the software.\nAfter activating the software, start a new file (File -&gt; New) and save the project with a descriptive name such as DigitalArch_EchoMesa_Your_Name in a folder with the other files that you have just downloaded.\n\n\nAdd Photos\nTo add photos to make a 3D model, right-click on Chunk 1 in the Workspace, select Add -&gt; Add Photos..., choose all 34 photos from Raw_Color_Photos, and click the Open button.\n\n\n\nAdding photos to Metashape\n\n\nBecause these photos already have GPS points, Metashape will be able to position them correctly. Toggle Show Cameras  to see these locations.\n\n\nAlign Photos\nAt this stage we want to refine the camera position for each photo and builds a sparse point cloud. Select Align Photos command from the Workflow menu.\nSet the following values for the parameters in the Align Photos dialogue:\n\nAccuracy: High (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nGeneric preselection and Reference preselection should be checked.\n\n\n\n\nAligning photos in Metashape\n\n\nClick OK button to start photo alignment. This may take a while, but will align the photos and produce a point cloud in which you can see some of the features from the scene, as below:\n\n\n\nPhotos aligned in Metashape\n\n\nThe Move Region  tool is used to define the area you hope to map and can be used to eliminate extraneous datapoints. It is resizable and rotatable. Adjust it to a position you think looks good. Make it approximately the same size as the sparse point cloud you generated.\n\n\n\n\n\n\nTip\n\n\n\nUse the mouse scroll or holding option/alt to pan the view.",
+    "crumbs": [
+      "Lab 2 Drone-based Mapping",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+    ]
+  },
+  {
+    "objectID": "Drone_photogrammetry.html#align-photos",
+    "href": "Drone_photogrammetry.html#align-photos",
+    "title": "Drone Photogrammetry",
+    "section": "Align Photos",
+    "text": "Align Photos\nAt this stage we want to refine the camera position for each photo and builds a sparse point cloud. Select Align Photos command from the Workflow menu.\nSet the following values for the parameters in the Align Photos dialogue:\n\nAccuracy: High (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nGeneric preselection and Reference preselection should be checked.\n\n\n\n\nAligning photos in Metashape\n\n\nClick OK button to start photo alignment. This may take a while, but will align the photos and produce a point cloud in which you can see some of the features from the scene, as below:\n\n\n\nPhotos aligned in Metashape\n\n\nThe Move Region  tool is used to define the area you hope to map and can be used to eliminate extraneous datapoints. It is resizable and rotatable. Adjust it to a position you think looks good. Make it approximately the same size as the sparse point cloud you generated.\n\n\n\n\n\n\nTip\n\n\n\nUse the mouse scroll or holding option/alt to pan the view.",
     "crumbs": [
       "Lab 2 Drone-based Mapping",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
@@ -318,25 +307,14 @@
     ]
   },
   {
-    "objectID": "Metashape.html#activation",
-    "href": "Metashape.html#activation",
-    "title": "Installing Metashape",
-    "section": "Activation",
-    "text": "Activation\nFor now, we will be using a free 30-day trial. Open Metashape and select Start a free 30-day trial in the pop-up Activation window. Depending on your OS, you may need to enter your log-in credentials again.\n\n\n\nFree 30-day trial in Metashape\n\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that the interface/nomenclature may look different depending on your OS. The screenshots in this tutorial were captured using macOS.",
-    "crumbs": [
-      "Getting Started",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Metashape</span>"
-    ]
-  },
-  {
-    "objectID": "Drone_photogrammetry.html#align-photos",
-    "href": "Drone_photogrammetry.html#align-photos",
-    "title": "Drone Photogrammetry",
-    "section": "Align Photos",
-    "text": "Align Photos\nAt this stage we want to refine the camera position for each photo and builds a sparse point cloud. Select Align Photos command from the Workflow menu.\nSet the following values for the parameters in the Align Photos dialogue:\n\nAccuracy: High (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nGeneric preselection and Reference preselection should be checked.\n\n\n\n\nAligning photos in Metashape\n\n\nClick OK button to start photo alignment. This may take a while, but will align the photos and produce a point cloud in which you can see some of the features from the scene, as below:\n\n\n\nPhotos aligned in Metashape\n\n\nThe Move Region  tool is used to define the area you hope to map and can be used to eliminate extraneous datapoints. It is resizable and rotatable. Adjust it to a position you think looks good. Make it approximately the same size as the sparse point cloud you generated.\n\n\n\n\n\n\nTip\n\n\n\nUse the mouse scroll or holding option/alt to pan the view.",
+    "objectID": "Orthomosaic.html",
+    "href": "Orthomosaic.html",
+    "title": "Orthomosaic in QGIS",
+    "section": "",
+    "text": "Project Setup in QGIS\nThis page will guide you to analyze archaeological features in Echo Mesa using the orthomosaic you have just generated. Start QGIS and open a new project. Save it () in your Digital Archaeology Lab folder with a filename such as lab2_EchoMesa_Hopi_Your_LastName.qgz.\nChange the CRS to EPSG:32612 to match that of the orthomosaic.\nAs before, from the Browser panel, drag a basemap such as Bing maps from XYZ Tiles to your Layers.\nIf any of the panels are not there, select View -&gt; Panels to toggle them on.",
     "crumbs": [
       "Lab 2 Drone-based Mapping",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Drone Photogrammetry</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Orthomosaic in QGIS</span>"
     ]
   },
   {
@@ -381,6 +359,17 @@
     "crumbs": [
       "Lab 2 Drone-based Mapping",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Questions (Due: Oct 8)</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Casana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
+    "crumbs": [
+      "Appendices",
+      "References"
     ]
   }
 ]

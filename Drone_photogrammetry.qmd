@@ -47,7 +47,7 @@ To add photos to make a 3D model, right-click on `Chunk 1` in the `Workspace`, s
 
 Because these photos already have GPS points, Metashape will be able to position them correctly. Toggle `Show Cameras` ![](images/clipboard-1655620362.png){width="5%"} to see these locations.
 
-## Align Photos
+### Align Photos
 
 At this stage we want to refine the camera position for each photo and builds a sparse point cloud. Select `Align Photos` command from the `Workflow` menu.
 
