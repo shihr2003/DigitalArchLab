@@ -351,11 +351,110 @@
     ]
   },
   {
+    "objectID": "public_lidar.html",
+    "href": "public_lidar.html",
+    "title": "Public Lidar Data",
+    "section": "",
+    "text": "Background and Objectives\nIn the common imagination, forests are often thought of as wild and natural places, unchanging and pristine, but archaeology tells a different story. Forests have often been a cultivated and managed part of the landscape, relied upon for industrial fuel, timber harvesting, and grazing of animals. In other instances, forests have undergone cycles of clearance for conversion into farmland, such that the seemingly wild woodlands of today are in fact quite recent regrowth.\nIn this lab, we we utilize a series of public and drone lidar datasets from Hanover Conservancy properties in our local area, including Mink Brook and others. First, we will explore publicly available lidar using an online viewer. Second, we will examine a drone-acquired dataset of lidar imagery. In both cases, we will attempt to locate archaeological features.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Public Lidar Data</span>"
+    ]
+  },
+  {
+    "objectID": "public_lidar.html#background-and-objectives",
+    "href": "public_lidar.html#background-and-objectives",
+    "title": "Public Lidar Data",
+    "section": "",
+    "text": "Mink Brook at Main Street Bridge in 1865",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Public Lidar Data</span>"
+    ]
+  },
+  {
+    "objectID": "public_lidar.html#file-downloads",
+    "href": "public_lidar.html#file-downloads",
+    "title": "Public Lidar Data",
+    "section": "File Downloads",
+    "text": "File Downloads\nFor this lab, you will need to download a public and filtered drone-lidar dataset for the Mink Brook and Poor Farm near Dartmouth:\n\nminkbrook_april2024_dsm.tif: A DEM/DSM model that is derived from the raw point clouds collected using a DJI L1 lidar sensor;\npoorfarm25_part1_terradem.tif and poorfarm25_part2_terradem.tif: two-part DEM model of the Dartmouth “Poor Farm” off Etna Road.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Public Lidar Data</span>"
+    ]
+  },
+  {
+    "objectID": "public_lidar.html#public-lidar-of-mink-brook",
+    "href": "public_lidar.html#public-lidar-of-mink-brook",
+    "title": "Public Lidar Data",
+    "section": "Public Lidar of Mink Brook",
+    "text": "Public Lidar of Mink Brook\nIn this section of the lab we will explore lower-resolution, publicly available lidar imagery through an online viewer produced by Prof. Jonathan Chipman’s lab in the Department of Geography here at Dartmouth. The viewer brings tother all the local lidar data from various state and federal agencies into a user friendly platform. It is available here.\n\n\n\nNew England terrain viewer developed by the Citrin Lab, Dartmouth College\n\n\nFirst see if you can locate Mink Brook. Compare how it appears in color aerial imagery versus what is revealed in the lidar by changing the Basemaps option for the right map. Try different lidar visualizations or Shaded relief for the left image.\n\n\n\nContents panel in the terrain viewer\n\n\nBy toggling Edit drawing layer, we can also add polygons directly on top of the lidar image like in QGIS. Select Draw a polygon  and map the two square cellar holes that we visited, one on each side of the brook. Press Finish every time you draw a polygon. Once you are done, press Save in the Contents panel, and this will download a .geojson file to your machine. You may need to allow popups for it to download.\n\n\n\n\n\n\nImportantExercise 1\n\n\n\nWhich lidar visualization in the public terrain viewer shows the archaeological features better? Provide a screenshot of the webpage that covers both of the polygons you just drew.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Public Lidar Data</span>"
+    ]
+  },
+  {
+    "objectID": "public_lidar.html#importing-geojsons-in-qgis",
+    "href": "public_lidar.html#importing-geojsons-in-qgis",
+    "title": "Public Lidar Data",
+    "section": "Importing GeoJSONs in QGIS",
+    "text": "Importing GeoJSONs in QGIS\nOpen QGIS, start a new project, and save it as DigitalArch_Lab3_Name. Add a basemap such as the Bing satellites, and make sure the CRS is set to EPSG:4326. Import the data.geojson as a vector layer with default settings.\n\n\n\n\n\n\nTip\n\n\n\nWhile QGIS allows direct importation of GeoJSON files, many other programs, such as ArcGIS Pro, will require converting them to feature classes.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Public Lidar Data</span>"
+    ]
+  },
+  {
+    "objectID": "drone_lidar.html",
+    "href": "drone_lidar.html",
+    "title": "Drone Lidar and Hillshades",
+    "section": "",
+    "text": "Drone Lidar of Mink Brook\nIn this section of the lab, we will search for archaeological features in drone lidar data produced by the SPARCL team used the DJI L1 lidar sensor. This is the same sensor and drone used in the Casana et al. (2023) paper on Picuris Pueblo from our readings this week. The public lidar is typically 1m spatial resolution, compared with 10cm resolution in drone lidar (100x better!). This enables us to much more clearly visualize archaeological features.\nFor this part of the lab, the raw point clouds derived from the lidar sensor have been filtered to remove as much vegetation as possible, and then interpolated to create a continuous, “bare-earth” model of the ground. This was achieved by classifying points as unclassified (1, black in the picture below) or ground (2, brown) using LASTools.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drone Lidar and Hillshades</span>"
+    ]
+  },
+  {
+    "objectID": "drone_lidar.html#drone-lidar-of-mink-brook",
+    "href": "drone_lidar.html#drone-lidar-of-mink-brook",
+    "title": "Drone Lidar and Hillshades",
+    "section": "",
+    "text": "Classification of lidar point clouds\n\n\n\nHillshade visualization\nTo reveal the subtle agricultural features we will use a variety of “hillshades.” These are simply raster images in which we have digitally illuminated them from different low angles. By moving the imaginary light source around, we can often highlight topographic features that are otherwise invisible. Most hillshades are labeled by the direction of the faux sun or light source being used to illuminate them.\n\n\n\nA schematic representation for hillshade visualization\n\n\nIn QGIS, add minkbrook_april2024_dsm.tif, poorfarm25_part1_terradem.tif, and poorfarm25_part2_terradem.tif as raster layers. Zoom to minkbrook_april2024_dsm.\n\n\n\nLidar-derived DEM of Mink Brook\n\n\nRight click on minkbrook_april2024_dsm, choose Properties. And in the Symbology dialogue, choose Singleband pseudocolor as the Render Type to visualize the elevation better.\n\n\n\nSingleband pseudocolor of a DEM\n\n\nNext, right-click on the DEM layer again, select Duplicate Layer (). In the new layer, possibly named minkbrook_april2024_dsm copy, change Symbology Render Type to Hillshade, and change the Azimuth to 315°, Z-Factor to 2. Rename this layer by navigating to Information dialog and change the Layer name to something like minkbrook_april2024_dsm_hs315.\n\n\n\nHillshade config\n\n\nNow you should say something like this:\n\n\n\nHillshade with 315° azimuth\n\n\nIn the Layers panel, drag the color-ramp DEM visualization over the top of the hillshade. In the color-ramp, go to Layer Properties and change Symbology -&gt; Layer Rendering -&gt; Blending mode to Multiply.\n\n\n\nOverlaying pseudocolor representation over hillshade\n\n\nNow duplicate the hillshade layer twice and change each of the duplicated layers’ hillshade azimuth to 0° and 45°. Rename these layers properly.\n\n\n\n\n\n\nImportantExercise 2\n\n\n\nWhich hillshade visualization, in terms of its azimuth, shows the cellar holes better? With reference to the orientation of the cellar holes, explain why.\n\n\nBeyond the two cellar holes, we also saw mill footings and stone clearance walls during our visit. Can you identify them? Also look for anything else you think might be an archaeological feature (as opposed to geological or modern trees). Experiment with other hillshades in to see which ones are most useful in revealing archaeological features.\nNow move the vector layer that contains the two polygons you drew over the top of all layers in Layers panel. Toggle Edit () and Add Polygon Feature (). Map the additional archaeological features before saving layer edits.\n\n\n\n\n\n\nImportantExercise 3\n\n\n\nWere you able to locate all the known archaeological sites and features in Mink Brook? Did you find any potentially unrecorded things? Provide a screenshot of your saved archaeology layer.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drone Lidar and Hillshades</span>"
+    ]
+  },
+  {
+    "objectID": "drone_lidar.html#drone-lidar-of-the-dartmouth-poor-farm",
+    "href": "drone_lidar.html#drone-lidar-of-the-dartmouth-poor-farm",
+    "title": "Drone Lidar and Hillshades",
+    "section": "Drone Lidar of the Dartmouth Poor Farm",
+    "text": "Drone Lidar of the Dartmouth Poor Farm\nDuring the 19th century, the town of Hanover constructed a “poor farm”, a place for homeless, indigent, or poor people to live. These folks used to reside on the south side of Hanover, but were moved several miles away to an area of farms and fields. The Poor Farm was constructed near several existing farms and a small schoolhouse off Etna Road, as shown in this 1870s photograph.\n\n\n\nA 1870s map showing the Dartmouth Poor Farm\n\n\nIn 1892, two reservoirs were constructed nearby to provide drinking water for Hanover (this is still where we get our water). Following a cholera outbreak at Cornell in 1907, the residents of all the farms and the poor farm were forcibly relocated again in order to protect the water supply, The area remained fenced off until it was reopened for limited recreation in 2017. Today, remains of several of the 19th century and earlier buildings are still visible, but many more are hidden in the forest. A map from the late 19th century shows the location of the Poor Farm “Town Farm.”\n\n\n\nHistoric 19th century map of the Trescott Reservoir lands, showing historic buildings and roads, including the poor farm, labeled “Town Farm” as well as the location of the two reservoirs. Other houses have the names of owners. “S.H.” is the school house.\n\n\nA drone lidar survey conducted in April 2025 reveals many of the hidden features. Zoom to layers poorfarm25_part1_terradem and poorfarm25_part2_terradem.\n\n\n\nDEMs of the Dartmouth Poor Farm. You can safely ignore the image artefacts there\n\n\nVisualize the DEMs in different hillshade configs.\n\n\n\n\n\n\nImportantExercise 4\n\n\n\nWhat archaeological features are you able to identify in the Poor Farm/Trescott Reservoir lands lidar imagery? Report at least two sites (of preferably different types) with coordinates and screenshots.\n\n\n\n\n\n\n\n\nImportantExercise 5\n\n\n\nHow do the discoveries reported by Chase et al. (2011) and Pärssinen et al. (2026) change our understandings of the settlement and land use histories in Belize and the Amazon Basin respectively? What do you think might be missing from the lidar record that one might be able to see using other methods?\n\n\n\n\n\n\n\n\nImportantExercise 6\n\n\n\nWhat kinds of archaeological features are Casana et al. (2023) able to identify in drone lidar data from Picuris Pueblo that might not have been visible using other methods? What do you think the location, number or scale of agricultural features around Picuris Pueblo suggests about the history of land use at the site, its population, or the presence of forest cover in the highland Southwest?\n\n\n\n\n\n\n\n\nImportantExercise 7\n\n\n\nBased on your readings and your analysis of Mink Brook as seen in the public, aircraft-acquired lidar data, discuss the advantages and disadvantages of aircraft-acquired versus drone-acquired lidar for archaeology.\n\n\n\n\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023. “Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at Picuris Pueblo, New Mexico.” Journal of Archaeological Science 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011. “Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at Caracol, Belize.” Journal of Archaeological Science 38 (2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over 20,000 Precolonial Earthworks in the Southwest Amazonia.” Nature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drone Lidar and Hillshades</span>"
+    ]
+  },
+  {
+    "objectID": "Lab3.html",
+    "href": "Lab3.html",
+    "title": "Questions (Due: Oct 16)",
+    "section": "",
+    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Oct 16, 2026.\nQuestion 1\nWhich lidar visualization in the public terrain viewer shows the archaeological features better? Provide a screenshot of the webpage that covers both of the polygons you just drew (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 2\nWhich hillshade visualization, in terms of its azimuth, shows the cellar holes better? With reference to the orientation of the cellar holes, explain why (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 3\nWere you able to locate all the known archaeological sites and features in Mink Brook? Did you find any potentially unrecorded things? Provide a screenshot of your saved archaeology layer (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 4\nWhat archaeological features are you able to identify in the Poor Farm/Trescott Reservoir lands lidar imagery? Report at least two sites (of preferably different types) with coordinates and screenshots (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 5\nHow do the discoveries reported by Chase et al. (2011) and Pärssinen et al. (2026) change our understandings of the settlement and land use histories in Belize and the Amazon Basin respectively (5 points)? What do you think might be missing from the lidar record that one might be able to see using other methods (5 points)?\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 6\nWhat kinds of archaeological features are Casana et al. (2023) able to identify in drone lidar data from Picuris Pueblo that might not have been visible using other methods (5 points)? What do you think the location, number or scale of agricultural features around Picuris Pueblo suggests about the history of land use at the site, its population, or the presence of forest cover in the highland Southwest (5 points)?\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 7\nBased on your readings and your analysis of Mink Brook as seen in the public, aircraft-acquired lidar data, discuss the advantages and disadvantages of aircraft-acquired versus drone-acquired lidar for archaeology (10 points).\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nTotal 70 points\n\n\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023. “Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at Picuris Pueblo, New Mexico.” Journal of Archaeological Science 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011. “Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at Caracol, Belize.” Journal of Archaeological Science 38 (2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over 20,000 Precolonial Earthworks in the Southwest Amazonia.” Nature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.",
+    "crumbs": [
+      "Lab 3 Archaeological Applications of Airborne Lidar",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Questions (Due: Oct 16)</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Casana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
+    "text": "Casana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023.\n“Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at\nPicuris Pueblo, New Mexico.” Journal of Archaeological\nScience 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nCasana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011.\n“Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at\nCaracol, Belize.” Journal of Archaeological Science 38\n(2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over\n20,000 Precolonial Earthworks in the Southwest Amazonia.”\nNature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
     "crumbs": [
       "Appendices",
       "References"

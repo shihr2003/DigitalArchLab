@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Orthomosaic in QGIS – Digital Archaeology Labs</title>
+<title>Public Lidar Data – Digital Archaeology Labs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +26,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -55,8 +36,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Lab2.html" rel="next">
-<link href="./Drone_photogrammetry.html" rel="prev">
+<link href="./drone_lidar.html" rel="next">
+<link href="./Lab2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -273,7 +254,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Drone_photogrammetry.html">Lab 2 Drone-based Mapping</a></li><li class="breadcrumb-item"><a href="./Orthomosaic.html"><span class="chapter-title">Orthomosaic in QGIS</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./public_lidar.html">Lab 3 Archaeological Applications of Airborne Lidar</a></li><li class="breadcrumb-item"><a href="./public_lidar.html"><span class="chapter-title">Public Lidar Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -376,7 +357,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Orthomosaic.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Orthomosaic in QGIS</span></a>
+  <a href="./Orthomosaic.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orthomosaic in QGIS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -397,7 +378,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./public_lidar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Public Lidar Data</span></a>
+  <a href="./public_lidar.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Public Lidar Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -439,14 +420,10 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#project-setup-in-qgis" id="toc-project-setup-in-qgis" class="nav-link active" data-scroll-target="#project-setup-in-qgis">Project Setup in QGIS</a></li>
-  <li><a href="#adding-data" id="toc-adding-data" class="nav-link" data-scroll-target="#adding-data">Adding Data</a>
-  <ul class="collapse">
-  <li><a href="#orthomosaic-and-dem" id="toc-orthomosaic-and-dem" class="nav-link" data-scroll-target="#orthomosaic-and-dem">Orthomosaic and DEM</a></li>
-  <li><a href="#archaeological-features" id="toc-archaeological-features" class="nav-link" data-scroll-target="#archaeological-features">Archaeological Features</a></li>
-  <li><a href="#thermal-imagery" id="toc-thermal-imagery" class="nav-link" data-scroll-target="#thermal-imagery">Thermal Imagery</a></li>
-  </ul></li>
-  <li><a href="#archaeology-of-echo-mesa" id="toc-archaeology-of-echo-mesa" class="nav-link" data-scroll-target="#archaeology-of-echo-mesa">Archaeology of Echo Mesa</a></li>
+  <li><a href="#background-and-objectives" id="toc-background-and-objectives" class="nav-link active" data-scroll-target="#background-and-objectives">Background and Objectives</a></li>
+  <li><a href="#file-downloads" id="toc-file-downloads" class="nav-link" data-scroll-target="#file-downloads">File Downloads</a></li>
+  <li><a href="#public-lidar-of-mink-brook" id="toc-public-lidar-of-mink-brook" class="nav-link" data-scroll-target="#public-lidar-of-mink-brook">Public Lidar of Mink Brook</a></li>
+  <li><a href="#importing-geojsons-in-qgis" id="toc-importing-geojsons-in-qgis" class="nav-link" data-scroll-target="#importing-geojsons-in-qgis">Importing GeoJSONs in QGIS</a></li>
   </ul>
 </nav>
     </div>
@@ -454,9 +431,9 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Drone_photogrammetry.html">Lab 2 Drone-based Mapping</a></li><li class="breadcrumb-item"><a href="./Orthomosaic.html"><span class="chapter-title">Orthomosaic in QGIS</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./public_lidar.html">Lab 3 Archaeological Applications of Airborne Lidar</a></li><li class="breadcrumb-item"><a href="./public_lidar.html"><span class="chapter-title">Public Lidar Data</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Orthomosaic in QGIS</span></h1>
+<h1 class="title"><span class="chapter-title">Public Lidar Data</span></h1>
 </div>
 
 
@@ -473,236 +450,74 @@ div.csl-indent {
 </header>
 
 
-<section id="project-setup-in-qgis" class="level2">
-<h2 class="anchored" data-anchor-id="project-setup-in-qgis">Project Setup in QGIS</h2>
-<p>This page will guide you to analyze archaeological features in Echo Mesa using the <a href="./Drone_photogrammetry.html">orthomosaic</a> you have just generated. Start QGIS and open a new project. Save it (<img src="images/clipboard-2987863238.png" class="img-fluid" style="width:5.0%">) in your Digital Archaeology Lab folder with a filename such as <code>lab2_EchoMesa_Hopi_Your_LastName.qgz</code>.</p>
-<p>Change the <code>CRS</code> to <code>EPSG:32612</code> to match that of the orthomosaic.</p>
-<div class="quarto-figure quarto-figure-center">
+<section id="background-and-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="background-and-objectives">Background and Objectives</h2>
+<p>In the common imagination, forests are often thought of as wild and natural places, unchanging and pristine, but archaeology tells a different story. Forests have often been a cultivated and managed part of the landscape, relied upon for industrial fuel, timber harvesting, and grazing of animals. In other instances, forests have undergone cycles of clearance for conversion into farmland, such that the seemingly wild woodlands of today are in fact quite <a href="#old_photo_MB">recent regrowth</a>.</p>
+<div id="old_photo_MB" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/clipboard-4056692537.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Selecting UTM zone 12N for the project</figcaption>
+<p><img src="images/clipboard-3911904687.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Mink Brook at Main Street Bridge in 1865</figcaption>
 </figure>
 </div>
-<p>As before, from the <code>Browser</code> panel, drag a basemap such as <code>Bing maps</code> from <code>XYZ Tiles</code> to your <code>Layers</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-232834069.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Satellite XYZ tiles in QGIS</figcaption>
-</figure>
-</div>
-<p>If any of the panels are not there, select <code>View</code> -&gt; <code>Panels</code> to toggle them on.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3835793501.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Panel options</figcaption>
-</figure>
-</div>
+<p>In this lab, we we utilize a series of public and drone lidar datasets from Hanover Conservancy properties in our local area, including Mink Brook and others. First, we will explore publicly available lidar using an online viewer. Second, we will examine a drone-acquired dataset of lidar imagery. In both cases, we will attempt to locate archaeological features.</p>
 </section>
-<section id="adding-data" class="level2">
-<h2 class="anchored" data-anchor-id="adding-data">Adding Data</h2>
-<section id="orthomosaic-and-dem" class="level3">
-<h3 class="anchored" data-anchor-id="orthomosaic-and-dem">Orthomosaic and DEM</h3>
-<p>In QGIS, add both the DEM and orthomosaic <code>.tif</code> files as raster layer. In the <code>Layers</code> panel, toggle off DEM and compare the resolution between the orthomosaic and the basemap.</p>
+<section id="file-downloads" class="level2">
+<h2 class="anchored" data-anchor-id="file-downloads">File Downloads</h2>
+<p>For this lab, you will need to download a public and filtered drone-lidar dataset for the Mink Brook and Poor Farm near Dartmouth:</p>
+<ul>
+<li><p><a href="https://drive.google.com/file/d/1f1gNmDGRoNBjVTC1tto7urjAn3V_qwWN/view?usp=sharing"><code>minkbrook_april2024_dsm.tif</code></a>: A DEM/DSM model that is derived from the raw point clouds collected using a DJI L1 lidar sensor;</p></li>
+<li><p><a href="https://drive.google.com/file/d/15lW5FhXuT0pniYXAdfE9OO5rGx0jVAuR/view?usp=drive_link"><code>poorfarm25_part1_terradem.tif</code></a> and <a href="https://drive.google.com/file/d/1-n95LUnTxJcaVAn8Xm-gac6hzoksJLZ4/view?usp=sharing"><code>poorfarm25_part2_terradem.tif</code></a>: two-part DEM model of the Dartmouth “Poor Farm” off Etna Road.</p></li>
+</ul>
+</section>
+<section id="public-lidar-of-mink-brook" class="level2">
+<h2 class="anchored" data-anchor-id="public-lidar-of-mink-brook">Public Lidar of Mink Brook</h2>
+<p>In this section of the lab we will explore lower-resolution, publicly available lidar imagery through an online viewer produced by Prof.&nbsp;Jonathan Chipman’s lab in the Department of Geography here at Dartmouth. The viewer brings tother all the local lidar data from various state and federal agencies into a user friendly platform. It is available <a href="https://rcweb.dartmouth.edu/Geospace/lidar/newengland/">here</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1309264777.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>New England terrain viewer developed by the Citrin Lab, Dartmouth College</figcaption>
+</figure>
+</div>
+<p>First see if you can locate Mink Brook. Compare how it appears in color aerial imagery <em>versus</em> what is revealed in the lidar by changing the <code>Basemaps</code> option for the right map. Try different lidar visualizations or <code>Shaded relief</code> for the left image.</p>
+<div id="contents-terrain-viewer" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-2640797726.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Contents panel in the terrain viewer</figcaption>
+</figure>
+</div>
+<p>By toggling <code>Edit drawing layer</code>, we can also add polygons directly on top of the lidar image like in QGIS. Select <code>Draw a polygon</code> <img src="images/clipboard-2218440227.png" class="img-fluid" style="width:5.0%"> and map the two square cellar holes that we visited, one on each side of the brook. Press <code>Finish</code> every time you draw a polygon. Once you are done, press <code>Save</code> in the <a href="#contents-terrain-viewer"><code>Contents</code></a> panel, and this will download a <code>.geojson</code> file to your machine. You may need to allow popups for it to download.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>EXERCISE 2
+<span class="screen-reader-only">Important</span>Exercise 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Compare our 2-cm-resolution drone image to the basemap. List, with screenshots or coordinates, at least three additional features that are only resolved in the orthomosaic.</p>
+<p>Which lidar visualization in the public terrain viewer shows the archaeological features better? Provide a screenshot of the webpage that covers both of the polygons you just drew.</p>
 </div>
 </div>
 </section>
-<section id="archaeological-features" class="level3">
-<h3 class="anchored" data-anchor-id="archaeological-features">Archaeological Features</h3>
-<p>Next, add <code>EchoMesa_GroundSurvey.gpkg</code> that you downloaded as a vector layer. When asked, select all items to add.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2396376456.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Adding .gpkg to QGIS</figcaption>
-</figure>
-</div>
-<p>Next, convert these vectors to UTM zone 12N:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1716612345.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Converting coordinates between CRSs</figcaption>
-</figure>
-</div>
-<p>In the <code>Layers</code> panel, select all four vector layers added, right-click on them, and choose <code>Group Selected</code>. Name the group as <code>ground_survey_data</code>. Now you can toggle on/off all archaeological features at once.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2934135545.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Grouping layers</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
+<section id="importing-geojsons-in-qgis" class="level2">
+<h2 class="anchored" data-anchor-id="importing-geojsons-in-qgis">Importing GeoJSONs in QGIS</h2>
+<p>Open QGIS, start a new project, and save it as <code>DigitalArch_Lab3_Name</code>. Add a basemap such as the <code>Bing satellites</code>, and make sure the CRS is set to <code>EPSG:4326</code>. Import the <code>data.geojson</code> as a vector layer with default settings.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>EXERCISE 3
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Based on the mapped archaeological features and <span class="citation" data-cites="herrmann2018">Herrmann et al. (<a href="references.html#ref-herrmann2018" role="doc-biblioref">2018</a>)</span>, discuss how ultra-high resolution orthoimagery and DEMs we produce using drones can help archaeologists discover, document, and interpret ancient sites and landscapes.</p>
-</div>
-</div>
-</section>
-<section id="thermal-imagery" class="level3">
-<h3 class="anchored" data-anchor-id="thermal-imagery">Thermal Imagery</h3>
-<p>Finally, add <code>echocanyon_thermal_8may25_utm.tif</code> as a raster layer. You may notice that the image looks rather “muted.”</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-4033755233.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Thermal image initially added to QGIS</figcaption>
-</figure>
-</div>
-<p>To troubleshoot, we may need to examine the distribution of the pixel values. Right click on the thermal layer and select <code>Properties</code>. In <code>Layer Properties</code> window, go to <code>Histogram</code> and click <code>Computer Histogram</code>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For a single-band image such as this thermal image, a GIS program typically maps the range of pixel values onto a grayscale (0-255), from black for the lowest value to white for the highest.</p>
-</div>
-</div>
-<p>As you can see here, the raster displays poorly because a few outlying values stretch this range. Most pixels fall within only about 10% of it, so they are squeezed into a narrow band of grays, and the variation within the histogram’s main peak is hard to see.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1702361124.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Thermal raster histogram</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2387496510.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Thermal raster ideal histogram</figcaption>
-</figure>
-</div>
-<p>To change this, go to <code>Symbology</code> dialog in <code>Layer Properties</code>. In the <code>Min/Max Value Settings</code>, select <code>Cumulative count cut</code> and choose <code>10</code> - <code>90</code>%.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1117125022.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Changing layer symbology in QGIS</figcaption>
-</figure>
-</div>
-<p>You should now have a much better visualization of the thermal data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2345076739.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Thermal data overlaid by mapped features</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="archaeology-of-echo-mesa" class="level2">
-<h2 class="anchored" data-anchor-id="archaeology-of-echo-mesa">Archaeology of Echo Mesa</h2>
-<p>A typical archaeological site in Echo Canyon consists of stone building foundations and artifact scatter at the surface:</p>
-<div id="stone-foundation" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/clipboard-2795006388.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>A typical archaeological site in the study region</figcaption>
-</figure>
-</div>
-<p>In QGIS map view, one similar site can be found near coordinates <code>570324.3092,3972901.0257</code>. Locate this point and set the scale to <code>1:30</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3256632031.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Locating an archaeological site in Echo Mesa</figcaption>
-</figure>
-</div>
-<p>Toggle off all layers except for the orthomosaic. Can you see the archaeological feature here?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3652846502.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>An archaeological site in Echo Mesa</figcaption>
-</figure>
-</div>
-<p>To map this feature, we will need to create a new vector layer. Go to <code>Layer</code> -&gt; <code>Create Layer</code> -&gt; <code>New GeoPackage Layer...</code>. In the pop-up window, first click <code>...</code> next to the <code>File name</code> and select a location to save your layer with a reasonable name.</p>
-<p>For <code>Geometry type</code>, select <code>Polygon</code>, and select <code>Project CRS</code>. In <code>New Field</code>, write <code>ID</code> in the <code>Name</code> field and change <code>Type</code> to <code>Integer</code>. Press <code>Add to Fields List</code>. Finally, press <code>OK</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-834352606.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-<p>In the <code>Layers</code> panel, right-click on the newly created layer and select <code>Toggle Editing</code> (<img src="images/clipboard-472253616.png" class="img-fluid" style="width:5.0%">). This will let you edit the <code>.gpkg</code> file directly. In the top toolbars, select <code>Add Polygon Feature</code> (<img src="images/clipboard-3529096093.png" class="img-fluid" style="width:5.0%">) and start tracing the boundary of the archaeological site. Once done, hold <code>Ctrl</code> and click anywhere on the map. In the pop-up window, put <code>0</code> in the <code>ID</code> field, indicating this is the first site you map.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3274568731.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Adding new features to QGIS</figcaption>
-</figure>
-</div>
-<p>There you go — you have just mapped your first archaeological feature in QGIS! It should look something like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2727169148.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Your first mapped archaeological site!</figcaption>
-</figure>
-</div>
-<p>Once you are done, select <code>Save Layer Edits</code> (<img src="images/clipboard-781940283.png" class="img-fluid" style="width:5.0%">) in the top toolbar. Click <code>Toggle Editing</code> (<img src="images/clipboard-472253616.png" class="img-fluid" style="width:5.0%">) again to exit edit mode.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>EXERCISE 4
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Are you able to identify the archaeological feature you just mapped in the color orthoimage, DEM, or thermal mosaic of Echo Canyon? Was this feature previously mapped in <code>EchoMesa_GroundSurvey</code>? Can you see other previously mapped features in the rasters?</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>EXERCISE 5
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Are you able to recognize any other possible archaeological features? What data did you use to find these features? Please provide screenshots in your response, edit your newly created layer to include these features, and upload your <code>.gpkg</code> to Canvas. Make sure that the file name contains your name.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>EXERCISE 6
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Based on your work and our readings, including <span class="citation" data-cites="materazzi2022">Materazzi and Pacifici (<a href="references.html#ref-materazzi2022" role="doc-biblioref">2022</a>)</span> and <span class="citation" data-cites="paulsen2026">Paulsen et al. (<a href="references.html#ref-paulsen2026" role="doc-biblioref">2026</a>)</span>, describe how thermal and near-infrared imagery are used by archaeologists to reveal features that are not visible otherwise.</p>
+<p>While QGIS allows direct importation of <code>GeoJSON</code> files, many other programs, such as ArcGIS Pro, will require converting them to feature classes.</p>
 </div>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-herrmann2018" class="csl-entry" role="listitem">
-Herrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter Pfälzner. 2018. <span>“Unmanned Aerial Vehicle (UAV) Survey with Commercial-Grade Instruments: A Case Study from the Eastern Ḫabur Archaeological Survey, Iraq.”</span> <em>Journal of Field Archaeology</em> 43 (4): 269–83. <a href="https://doi.org/10.1080/00934690.2018.1465808">https://doi.org/10.1080/00934690.2018.1465808</a>.
-</div>
-<div id="ref-materazzi2022" class="csl-entry" role="listitem">
-Materazzi, Filippo, and Marco Pacifici. 2022. <span>“Archaeological Crop Marks Detection Through Drone Multispectral Remote Sensing and Vegetation Indices: A New Approach Tested on the Italian Pre-Roman City of Veii.”</span> <em>Journal of Archaeological Science: Reports</em> 41 (February): 103235. <a href="https://doi.org/10.1016/j.jasrep.2021.103235">https://doi.org/10.1016/j.jasrep.2021.103235</a>.
-</div>
-<div id="ref-paulsen2026" class="csl-entry" role="listitem">
-Paulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026. <span>“Drone-Based Thermal Imaging of Subsurface Architecture: Methodological Insights and Discoveries at Iron Age Raki (Oman).”</span> <em>Journal of Archaeological Science: Reports</em> 69 (February): 105569. <a href="https://doi.org/10.1016/j.jasrep.2026.105569">https://doi.org/10.1016/j.jasrep.2026.105569</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -1121,13 +936,13 @@ Paulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026. <span>“Drone-
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Drone_photogrammetry.html" class="pagination-link" aria-label="Drone Photogrammetry">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Drone Photogrammetry</span></span>
+      <a href="./Lab2.html" class="pagination-link" aria-label="Questions (Due: Oct 8)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Questions (Due: Oct 8)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Lab2.html" class="pagination-link" aria-label="Questions (Due: Oct 8)">
-        <span class="nav-page-text"><span class="chapter-title">Questions (Due: Oct 8)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./drone_lidar.html" class="pagination-link" aria-label="Drone Lidar and Hillshades">
+        <span class="nav-page-text"><span class="chapter-title">Drone Lidar and Hillshades</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
