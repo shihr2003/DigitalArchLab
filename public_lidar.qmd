@@ -27,7 +27,7 @@ In this section of the lab we will explore lower-resolution, publicly available 
 
 First see if you can locate Mink Brook. Compare how it appears in color aerial imagery *versus* what is revealed in the lidar by changing the `Basemaps` option for the right map. Try different lidar visualizations or `Shaded relief` for the left image.
 
-![Contents panel in the terrain viewer](images/clipboard-2640797726.png){#contents-terrain-viewer fig-align="center" width="50%"}
+![Contents panel in the terrain viewer](images/clipboard-2640797726.png){#contents-terrain-viewer fig-align="center" width="30%"}
 
 By toggling `Edit drawing layer`, we can also add polygons directly on top of the lidar image like in QGIS. Select `Draw a polygon` ![](images/clipboard-2218440227.png){width="5%"} and map the two square cellar holes that we visited, one on each side of the brook. Press `Finish` every time you draw a polygon. Once you are done, press `Save` in the [`Contents`](#contents-terrain-viewer) panel, and this will download a `.geojson` file to your machine. You may need to allow popups for it to download.
 
