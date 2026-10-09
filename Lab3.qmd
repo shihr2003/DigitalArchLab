@@ -1,0 +1,78 @@
+---
+title: "Questions (Due: Oct 16)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Oct 16, 2026.
+
+**Question 1**
+
+Which lidar visualization in the public terrain viewer shows the archaeological features better? Provide a screenshot of the webpage that covers both of the polygons you just drew (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+Which hillshade visualization, in terms of its azimuth, shows the cellar holes better? With reference to the orientation of the cellar holes, explain why (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Were you able to locate all the known archaeological sites and features in Mink Brook? Did you find any potentially unrecorded things? Provide a screenshot of your saved archaeology layer (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+What archaeological features are you able to identify in the Poor Farm/Trescott Reservoir lands lidar imagery? Report at least two sites (of preferably different types) with coordinates and screenshots (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 5**
+
+How do the discoveries reported by @chase2011 and @pärssinen2026 change our understandings of the settlement and land use histories in Belize and the Amazon Basin respectively (**5 points**)? What do you think might be missing from the lidar record that one might be able to see using other methods (**5 points**)?
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 6**
+
+What kinds of archaeological features are @casana2023a able to identify in drone lidar data from Picuris Pueblo that might not have been visible using other methods (**5 points**)? What do you think the location, number or scale of agricultural features around Picuris Pueblo suggests about the history of land use at the site, its population, or the presence of forest cover in the highland Southwest (**5 points**)?
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 7**
+
+Based on your readings and your analysis of Mink Brook as seen in the public, aircraft-acquired lidar data, discuss the advantages and disadvantages of aircraft-acquired *versus* drone-acquired lidar for archaeology (**10 points**).
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Total** 70 points

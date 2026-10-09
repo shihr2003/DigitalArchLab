@@ -16,6 +16,8 @@ book:
       chapters: [CORONA.qmd, Rasters.qmd, Vectors.qmd, Lab1.qmd]
     - part: "Lab 2 Drone-based Mapping"
       chapters: [Drone_photogrammetry.qmd, Orthomosaic.qmd, Lab2.qmd]
+    - part: "Lab 3 Archaeological Applications of Airborne Lidar"
+      chapters: [public_lidar.qmd, drone_lidar.qmd, Lab3.qmd]
     
   
   appendices: 
