@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Casey Shi">
+<meta name="dcterms.date" content="2026-10-13">
+
+<title>Lecture Notes – Digital Archaeology Labs</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Lab3.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-18a86156fa881a144d2995565f3cba36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-474a37e43424c329c4530dde3bf06416.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-18a86156fa881a144d2995565f3cba36.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_notes_w4.html">Lab 4 Multispectral Satellite Data</a></li><li class="breadcrumb-item"><a href="./lecture_notes_w4.html"><span class="chapter-title">Lecture Notes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Digital Archaeology Labs</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./QGIS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Metashape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installing Metashape</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./GEE.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Setting up Google Earth Engine (GEE)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lab 1 Historical Satellite Imagery and GIS Basics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CORONA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">CORONA and HEXAGON Imagery</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Rasters.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Rasters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Vectors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Questions (Due: Oct 1)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lab 2 Drone-based Mapping</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Drone_photogrammetry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Drone Photogrammetry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Orthomosaic.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orthomosaic in QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Questions (Due: Oct 8)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lab 3 Archaeological Applications of Airborne Lidar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./public_lidar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Public Lidar Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drone_lidar.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Drone Lidar and Hillshades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Questions (Due: Oct 16)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lab 4 Multispectral Satellite Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_notes_w4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#before-the-lecture" id="toc-before-the-lecture" class="nav-link active" data-scroll-target="#before-the-lecture">Before the Lecture</a></li>
+  <li><a href="#electromagnetic-em-spectrum" id="toc-electromagnetic-em-spectrum" class="nav-link" data-scroll-target="#electromagnetic-em-spectrum">Electromagnetic (EM) Spectrum</a>
+  <ul class="collapse">
+  <li><a href="#em-energy-as-wave-and-particle" id="toc-em-energy-as-wave-and-particle" class="nav-link" data-scroll-target="#em-energy-as-wave-and-particle">EM Energy as Wave and Particle</a></li>
+  <li><a href="#notable-spectral-windows" id="toc-notable-spectral-windows" class="nav-link" data-scroll-target="#notable-spectral-windows">Notable Spectral Windows</a></li>
+  <li><a href="#passive-and-active-sensors" id="toc-passive-and-active-sensors" class="nav-link" data-scroll-target="#passive-and-active-sensors">Passive and Active Sensors</a></li>
+  <li><a href="#spectral-signatures" id="toc-spectral-signatures" class="nav-link" data-scroll-target="#spectral-signatures">Spectral Signatures</a></li>
+  </ul></li>
+  <li><a href="#a-sensor-menu" id="toc-a-sensor-menu" class="nav-link" data-scroll-target="#a-sensor-menu">A Sensor Menu</a>
+  <ul class="collapse">
+  <li><a href="#resolutions" id="toc-resolutions" class="nav-link" data-scroll-target="#resolutions">Resolutions</a></li>
+  <li><a href="#notable-sensors" id="toc-notable-sensors" class="nav-link" data-scroll-target="#notable-sensors">Notable Sensors</a></li>
+  <li><a href="#landsat-a-closer-look" id="toc-landsat-a-closer-look" class="nav-link" data-scroll-target="#landsat-a-closer-look">Landsat: A Closer Look</a></li>
+  <li><a href="#demo-getting-landsat-data-in-gee" id="toc-demo-getting-landsat-data-in-gee" class="nav-link" data-scroll-target="#demo-getting-landsat-data-in-gee">Demo: Getting Landsat Data in GEE</a></li>
+  </ul></li>
+  <li><a href="#band-composites" id="toc-band-composites" class="nav-link" data-scroll-target="#band-composites">Band Composites</a></li>
+  <li><a href="#spectral-indices" id="toc-spectral-indices" class="nav-link" data-scroll-target="#spectral-indices">Spectral Indices</a>
+  <ul class="collapse">
+  <li><a href="#timing" id="toc-timing" class="nav-link" data-scroll-target="#timing">Timing</a></li>
+  </ul></li>
+  <li><a href="#land-use-and-land-cover-lulc-classification" id="toc-land-use-and-land-cover-lulc-classification" class="nav-link" data-scroll-target="#land-use-and-land-cover-lulc-classification">Land Use and Land Cover (LULC) Classification</a>
+  <ul class="collapse">
+  <li><a href="#unsupervised-methods-k-means" id="toc-unsupervised-methods-k-means" class="nav-link" data-scroll-target="#unsupervised-methods-k-means">Unsupervised Methods: k-means</a></li>
+  <li><a href="#supervised-methods-random-forest-with-three-classes" id="toc-supervised-methods-random-forest-with-three-classes" class="nav-link" data-scroll-target="#supervised-methods-random-forest-with-three-classes">Supervised Methods: Random Forest with Three Classes</a></li>
+  <li><a href="#confusion-matrix" id="toc-confusion-matrix" class="nav-link" data-scroll-target="#confusion-matrix">Confusion Matrix</a></li>
+  </ul></li>
+  <li><a href="#change-detection" id="toc-change-detection" class="nav-link" data-scroll-target="#change-detection">Change Detection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lecture_notes_w4.html">Lab 4 Multispectral Satellite Data</a></li><li class="breadcrumb-item"><a href="./lecture_notes_w4.html"><span class="chapter-title">Lecture Notes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Lecture Notes</span></h1>
+<p class="subtitle lead">Path Wavelengths: Multispectral Imagery Analysis in Archaeology</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Casey Shi </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 13, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/SPARCL.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Can you recognize what is written here with these panels of Landsat satellite imagery? Use <a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/">Your Name in Landsat</a> to create your own!</figcaption>
+</figure>
+</div>
+<section id="before-the-lecture" class="level2">
+<h2 class="anchored" data-anchor-id="before-the-lecture">Before the Lecture</h2>
+<p>We will be using <a href="console.cloud.google.com/earth-engine">Google Earth Engine</a> (GEE) throughout this week’s lecture and lab. Follow this page to create a Cloud project.</p>
+<p>Google Earth Engine, not to be confused with <a href="https://earth.google.com/web">Google Earth</a>, features a multi-petabyte (<span class="math inline">\(10^{15}\)</span> bytes) catalog of multisensor satelite imagery that allows cloud-based planetary-scale analysis.</p>
+<p>Once everything is set up, you should be able to access the code editor like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2972781803.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>GEE interface</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Quota and access
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Community Tier now gives 150 EECU-hours per month for students. While GEE used to require approval for access, registration is now instant.</p>
+</div>
+</div>
+</section>
+<section id="electromagnetic-em-spectrum" class="level2">
+<h2 class="anchored" data-anchor-id="electromagnetic-em-spectrum">Electromagnetic (EM) Spectrum</h2>
+<p>We see things because visible light reflects off objects and enter our eyes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3366048878.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>What happens when light hits a material?</figcaption>
+</figure>
+</div>
+<p>However, we can only see things of certain wavelengths (visible; or blue, green, red; <em>ca</em>. 0.4-0.7 micrometer or µm). What can a satellite see?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3489402790.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>EM spectrum</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-963398427.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>The EM spectrum from <a href="https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/electromagnetic-spectrum">NASA Earthdata</a></figcaption>
+</figure>
+</div>
+<section id="em-energy-as-wave-and-particle" class="level3">
+<h3 class="anchored" data-anchor-id="em-energy-as-wave-and-particle">EM Energy as Wave and Particle</h3>
+<p>Electromagnetic (EM) energy travels as a wave, but it is absorbed and detected as discrete packs of energy (photons).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1969048981.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>The double-slit experiment</figcaption>
+</figure>
+</div>
+<p><span class="math display">\[
+c = \lambda\,\nu \qquad\qquad E = h\,\nu = \frac{h\,c}{\lambda}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\lambda\)</span> is wavelength and <span class="math inline">\(\nu\)</span> is frequency; speed of light <span class="math inline">\(c = 3.00\times10^{8}\ \mathrm{m\,s^{-1}}\)</span> and the Planck constant <span class="math inline">\(h = 6.63\times10^{-34}\ \mathrm{J\,s}\)</span>. A longer wavelength means less energy per photon.</li>
+<li>Wien’s law, <span class="math inline">\(\lambda_{max} \approx 2898\ \mu\mathrm{m\,K}\,/\,T\)</span>. The Sun (≈ 5,800 K) peaks near 0.5 µm and Earth’s surface (≈ 300 K) near 10 µm. Below ~3 µm (visible, NIR, SWIR), sensors record reflected sunlight; at 3–14 µm (TIR) they record emitted heat from the Earth.</li>
+</ul>
+</section>
+<section id="notable-spectral-windows" class="level3">
+<h3 class="anchored" data-anchor-id="notable-spectral-windows">Notable Spectral Windows</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Region</th>
+<th>Wavelength</th>
+<th>What is recorded</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Visible (blue, green, red)</td>
+<td>0.4–0.7 µm</td>
+<td>reflected sunlight; what the eye sees</td>
+</tr>
+<tr class="even">
+<td>Near-infrared (NIR)</td>
+<td>0.7–1.3 µm</td>
+<td>reflected sunlight; vegetation</td>
+</tr>
+<tr class="odd">
+<td>Shortwave infrared (SWIR)</td>
+<td>1.3–3 µm</td>
+<td>reflected sunlight; water and mineral absorption</td>
+</tr>
+<tr class="even">
+<td>Thermal infrared (TIR)</td>
+<td>8–14 µm</td>
+<td>heat emitted by the surface</td>
+</tr>
+<tr class="odd">
+<td>Microwave</td>
+<td>~1 mm–1 m</td>
+<td>radar echoes (active sensors)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="passive-and-active-sensors" class="level3">
+<h3 class="anchored" data-anchor-id="passive-and-active-sensors">Passive and Active Sensors</h3>
+<ul>
+<li><p><strong>Passive</strong> sensors (most satellite sensors) record what the Sun provides (either reflected or emitted as heat).</p></li>
+<li><p><strong>Active</strong> sensors (such as synthetic aperture radar, SAR) send their own microwave pulse and measure the echo. SAR works day and night and can penetrate most clouds.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1112813602.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Scanning configuration for a left looking SAR with a rectangular antenna. Credit: Coert Olmsted, Scientific SAR User’s Guide. Alaska SAR Facility, 1993.</figcaption>
+</figure>
+</div>
+</section>
+<section id="spectral-signatures" class="level3">
+<h3 class="anchored" data-anchor-id="spectral-signatures">Spectral Signatures</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2868091301.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Reflectance spectra of materials on Earth’s surface. Credit: NASA Science</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Vegetation: chlorophyll absorbs blue and red; leaf water absorbs SWIR.</p></li>
+<li><p>Dry soil: Clay mineral absorbs near 2 micrometer.</p></li>
+<li><p>Water: absorbs nearly everything beyond ~ green. What color in NIR and SWIR?</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1820354558.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Seasonal variation in spectral patterns and spatial probability maps for the Hamoukar region. Source: <span class="citation" data-cites="menze2012">Menze and Ur (<a href="references.html#ref-menze2012" role="doc-biblioref">2012</a>)</span>: Fig. 2.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Which part of the spectrum best separates wet soil from dry soil?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are designing an Earth-observation sensor to record surface reflectance in a blue band and a SWIR band. Given the spectrum and the equations above, what spatial resolution would you reasonably expect?</p>
+</div>
+</div>
+</section>
+</section>
+<section id="a-sensor-menu" class="level2">
+<h2 class="anchored" data-anchor-id="a-sensor-menu">A Sensor Menu</h2>
+<section id="resolutions" class="level3">
+<h3 class="anchored" data-anchor-id="resolutions">Resolutions</h3>
+<p>Four types of resolutions are discussed; the design of sensors is usually a trade-off among them.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resolution</th>
+<th>Definition</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spatial</td>
+<td>The smallest unit a sensor can distinguish</td>
+<td>CORONA ≈ 1-3 m; Landsat 30 m; MODIS 250 m–1 km</td>
+</tr>
+<tr class="even">
+<td>Spectral</td>
+<td>Ability to distinguish features in the EM spectrum</td>
+<td>Landsat 9: 11 bands; MODIS: 36 bands</td>
+</tr>
+<tr class="odd">
+<td>Temporal</td>
+<td>The amount of time needed to revisit the same location</td>
+<td>MODIS: daily; Landsat 8 + 9: 8 days</td>
+</tr>
+<tr class="even">
+<td>Radiometric</td>
+<td>The amount of information in each pixel (<em>i.e.</em> bit depth)</td>
+<td>8-bit = 256 levels (TM); 14-bit = 16,384 levels (Landsat 9)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="citation" data-cites="howey2026">Howey and Palace (<a href="references.html#ref-howey2026" role="doc-biblioref">2026</a>)</span> suggest that coarser spatial resolution (but higher temporal resolution) requires “more inferential work. Do you agree?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4264289916.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>A chart showing the analytic spatial scale of an array of remote sensing technologies as well as temporal cycles of each technology’s data collection/availability; <span class="citation" data-cites="howey2026">Howey and Palace (<a href="references.html#ref-howey2026" role="doc-biblioref">2026</a>)</span>: Fig. 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="notable-sensors" class="level3">
+<h3 class="anchored" data-anchor-id="notable-sensors">Notable Sensors</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sensor (platform)</th>
+<th>Years</th>
+<th>Pixel size</th>
+<th>Bands</th>
+<th>Revisit</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TM (Landsat 4–5)</td>
+<td>1982–2011</td>
+<td>30 m (TIR 120 m)</td>
+<td>7: VIS–SWIR, TIR</td>
+<td>16 days</td>
+<td>free</td>
+</tr>
+<tr class="even">
+<td>ETM+ (Landsat 7)</td>
+<td>1999–2024</td>
+<td>30 m; pan 15 m; TIR 60 m</td>
+<td>8</td>
+<td>16 days</td>
+<td>free</td>
+</tr>
+<tr class="odd">
+<td>OLI/TIRS (Landsat 8, 9)</td>
+<td>2013–; 2021–</td>
+<td>30 m; pan 15 m; TIR 100 m</td>
+<td>11</td>
+<td>8 days combined</td>
+<td>free</td>
+</tr>
+<tr class="even">
+<td>MSI (Sentinel-2)</td>
+<td>2015–</td>
+<td>10/20/60 m</td>
+<td>13</td>
+<td>5 days</td>
+<td>free</td>
+</tr>
+<tr class="odd">
+<td>SAR (Sentinel-1)</td>
+<td>2014–</td>
+<td>≈ 10 m</td>
+<td>radar</td>
+<td>6–12 days</td>
+<td>free</td>
+</tr>
+<tr class="even">
+<td>ASTER (Terra)</td>
+<td>2000–</td>
+<td>15 m VNIR; 30 m SWIR; 90 m TIR</td>
+<td>14</td>
+<td>16 days or upon request</td>
+<td>free; SWIR dead since 2008</td>
+</tr>
+<tr class="odd">
+<td>MODIS (Terra, Aqua)</td>
+<td>2000–</td>
+<td>250 m–1 km</td>
+<td>36</td>
+<td>1–2 days</td>
+<td>free</td>
+</tr>
+<tr class="even">
+<td>PlanetScope (CubeSats)</td>
+<td>~2016–</td>
+<td>≈ 3 m</td>
+<td>4–8</td>
+<td>~daily</td>
+<td>commercial; archive access</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>How do the CORONA satellite panoramic camera systems compare to Landsat 8/9’s OLI?</p>
+</div>
+</div>
+</section>
+<section id="landsat-a-closer-look" class="level3">
+<h3 class="anchored" data-anchor-id="landsat-a-closer-look">Landsat: A Closer Look</h3>
+<ul>
+<li><p>TM (Landsat 4–5), ETM+ (7), OLI + TIRS (8), and OLI-2 + TIRS-2 (9). Landsat 9 records 14-bit data.</p></li>
+<li><p>Radiometric correction and atmospheric correction.</p></li>
+<li><p>Processing levels <strong>(<a href="https://www.usgs.gov/landsat-missions/landsat-collection-2">Collection 2</a>)</strong>:</p>
+<ul>
+<li>Level-1 is calibrated and terrain-corrected, and can be converted to top-of-atmosphere (TOA) reflectance.</li>
+<li><strong>Level-2</strong> is corrected for the atmosphere and provides surface reflectance (SR) plus surface temperature (ST).</li>
+<li>Level-3 is the further derivatives of Level-2 products (archaeologists rarely use them).</li>
+</ul></li>
+<li><p>Clouds: each scene carries a precomputed <code>CLOUD_COVER</code> percentage. Level-2 adds a per-pixel quality band (<code>QA_PIXEL</code>, 16-bit masks; USGS provides <a href="https://www.usgs.gov/landsat-missions/landsat-collection-2-quality-assessment-bands">documentation</a>).</p></li>
+<li><p>Band numbers: they do not match between generations. Note <a href="https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature">surface temperature</a> conversion to Level 2 products.</p></li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Blue</th>
+<th>Green</th>
+<th>Red</th>
+<th>NIR</th>
+<th>SWIR1</th>
+<th>SWIR2</th>
+<th>Thermal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TM / ETM+ (Landsat 5–7)</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>7</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>OLI / TIRS (Landsat 8–9)</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>10, 11</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Integration of Landsat 5/7 NIR with Landsat 8/9 bands needs prudence. Band 8 can be used for pan-sharpening.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-56623809.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Graph generated by the Band Comparison Tool showing the location of bands on the electromagnetic spectrum for each Landsat instrument. The atmospheric transmission values for this graphic were calculated using MODTRAN for a summertime mid-latitude hazy atmosphere (circa 5 km visibility). NASA/Ross Walter</figcaption>
+</figure>
+</div>
+<ul>
+<li><a href="https://svs.gsfc.nasa.gov/12754/">Whisk Broom and Push Broom sensors</a>:</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Design</th>
+<th>How it works</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Whiskbroom</td>
+<td>a moving mirror sweeps a few detectors across the track</td>
+<td>TM, ETM+</td>
+</tr>
+<tr class="even">
+<td>Pushbroom</td>
+<td>a linear array of detectors images a whole row at once</td>
+<td>OLI, TIRS, Sentinel-2 MSI, ASTER VNIR/SWIR</td>
+</tr>
+<tr class="odd">
+<td>Film camera</td>
+<td>records a whole area at once on film or a 2-D array</td>
+<td>CORONA (film)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="demo-getting-landsat-data-in-gee" class="level3">
+<h3 class="anchored" data-anchor-id="demo-getting-landsat-data-in-gee">Demo: Getting Landsat Data in GEE</h3>
+<p>In this section, we will try to load decades of satellite imagery for the archaeological landscape around Tell Beydar that we saw in Lab 1. First, we will need to define the study area. Copy and paste the following code to GEE.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 1. Study area</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> beydar <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Point</span>([<span class="fl">40.587</span><span class="op">,</span> <span class="fl">36.738</span>])<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> aoi <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Rectangle</span>([<span class="fl">40.50</span><span class="op">,</span> <span class="fl">36.66</span><span class="op">,</span> <span class="fl">40.68</span><span class="op">,</span> <span class="fl">36.81</span>])<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">setOptions</span>(<span class="st">'SATELLITE'</span>)<span class="op">;</span> <span class="co">// basemap</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">centerObject</span>(beydar<span class="op">,</span> <span class="dv">14</span>)<span class="op">;</span> <span class="co">// 14 is the scale</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(aoi<span class="op">,</span> {<span class="dt">color</span><span class="op">:</span> <span class="st">'yellow'</span>}<span class="op">,</span> <span class="st">'Study area'</span><span class="op">,</span> <span class="kw">true</span><span class="op">,</span> <span class="fl">0.2</span>)<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(beydar<span class="op">,</span> {<span class="dt">color</span><span class="op">:</span> <span class="st">'red'</span>}<span class="op">,</span> <span class="st">'Tell Beydar'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Next, load Landsat 8 &amp; 9, collection 2, level 2 data and filter it using the AoI.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 2. Load and filter</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> l89 <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'LANDSAT/LC08/C02/T1_L2'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">merge</span>(ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'LANDSAT/LC09/C02/T1_L2'</span>))<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> l89Here <span class="op">=</span> l89<span class="op">.</span><span class="fu">filterBounds</span>(aoi)<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Landsat 8/9 scenes over Tell Beydar:'</span><span class="op">,</span> l89Here<span class="op">.</span><span class="fu">size</span>())<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now, let us get the vegetation-rich, clear images from 2024. How many scenes does each filter remove?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> l89Plant <span class="op">=</span> l89Here<span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2024-03-01'</span><span class="op">,</span> <span class="st">'2024-07-01'</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'...from March-June 2024:'</span><span class="op">,</span> l89Plant<span class="op">.</span><span class="fu">size</span>())<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> l89Clear <span class="op">=</span> l89Plant<span class="op">.</span><span class="fu">filter</span>(ee<span class="op">.</span><span class="at">Filter</span><span class="op">.</span><span class="fu">lt</span>(<span class="st">'CLOUD_COVER'</span><span class="op">,</span> <span class="dv">10</span>))<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'...with less than 10% cloud:'</span><span class="op">,</span> l89Clear<span class="op">.</span><span class="fu">size</span>())<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(l89Clear)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A median composite will drop out clouds and shadows, because for every pixel it will take the median value of all clear scenes. Run the following code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Level-2 SR: bands SR_B1...SR_B7 are stored as integers.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Multiply by 0.0000275 and subtract 0.2 to get reflectance (0-1).</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> spring <span class="op">=</span> l89Clear<span class="op">.</span><span class="fu">median</span>()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">'SR_B.'</span>) <span class="co">// SR_B1 ... SR_B7</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">multiply</span>(<span class="fl">0.0000275</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">add</span>(<span class="op">-</span><span class="fl">0.2</span>)<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(spring<span class="op">,</span> {<span class="dt">bands</span><span class="op">:</span> [<span class="st">'SR_B4'</span><span class="op">,</span> <span class="st">'SR_B3'</span><span class="op">,</span> <span class="st">'SR_B2'</span>]<span class="op">,</span> <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span>}<span class="op">,</span> <span class="st">'Level-2 SR, 4-3-2'</span>)<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">// Level-2 also holds surface temperature (band 10): scale to kelvin, then to °C</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> lst <span class="op">=</span> l89Clear<span class="op">.</span><span class="fu">median</span>()<span class="op">.</span><span class="fu">select</span>(<span class="st">'ST_B10'</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">multiply</span>(<span class="fl">0.00341802</span>)<span class="op">.</span><span class="fu">add</span>(<span class="fl">149.0</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">subtract</span>(<span class="fl">273.15</span>)<span class="op">;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(lst<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="dv">55</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'blue'</span><span class="op">,</span> <span class="st">'yellow'</span><span class="op">,</span> <span class="st">'red'</span>]}<span class="op">,</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">'Surface temperature (°C)'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can compare Level-2 products with Level-1 TOA. What are the differences and why? What color is most removed?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Level-1 TOA</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> toa <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'LANDSAT/LC09/C02/T1_TOA'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterBounds</span>(aoi)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2024-03-01'</span><span class="op">,</span> <span class="st">'2024-07-01'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filter</span>(ee<span class="op">.</span><span class="at">Filter</span><span class="op">.</span><span class="fu">lt</span>(<span class="st">'CLOUD_COVER'</span><span class="op">,</span> <span class="dv">10</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">median</span>()<span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(toa<span class="op">,</span> {<span class="dt">bands</span><span class="op">:</span> [<span class="st">'B4'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B2'</span>]<span class="op">,</span> <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span>}<span class="op">,</span> <span class="st">'Level-1 TOA, 4-3-2'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="band-composites" class="level2">
+<h2 class="anchored" data-anchor-id="band-composites">Band Composites</h2>
+<p>A raster can be visualized using three color channels, and a composite assigns any three bands to the display of red, green, and blue. By assigning different bands to these three channels, one can visualize the EM spectrum beyond visible.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Composite</th>
+<th>Landsat 8/9 (R-G-B)</th>
+<th>What stands out</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natural color</td>
+<td>4-3-2</td>
+<td>what the eye <em>expects</em></td>
+</tr>
+<tr class="even">
+<td>Color infrared</td>
+<td>5-4-3</td>
+<td>healthy vegetation in red; crop marks</td>
+</tr>
+<tr class="odd">
+<td>Agriculture</td>
+<td>6-5-2</td>
+<td>moisture and crop differences</td>
+</tr>
+<tr class="even">
+<td>SWIR soils</td>
+<td>7-6-4</td>
+<td>soil and mineral differences; bright bare ground</td>
+</tr>
+</tbody>
+</table>
+<p>Now add different composites to GEE. Which composite makes the round <em>Kranzhügel</em> and its lower town stand out best?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 3. Composites (Landsat 8/9 band numbers) </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(spring<span class="op">,</span> {<span class="dt">bands</span><span class="op">:</span> [<span class="st">'SR_B5'</span><span class="op">,</span> <span class="st">'SR_B4'</span><span class="op">,</span> <span class="st">'SR_B3'</span>]<span class="op">,</span> <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span>}<span class="op">,</span>  <span class="st">'Color infrared, 5-4-3'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(spring<span class="op">,</span> {<span class="dt">bands</span><span class="op">:</span> [<span class="st">'SR_B6'</span><span class="op">,</span> <span class="st">'SR_B5'</span><span class="op">,</span> <span class="st">'SR_B2'</span>]<span class="op">,</span> <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span>}<span class="op">,</span> <span class="st">'Agriculture, 6-5-2'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(spring<span class="op">,</span> {<span class="dt">bands</span><span class="op">:</span> [<span class="st">'SR_B7'</span><span class="op">,</span> <span class="st">'SR_B6'</span><span class="op">,</span> <span class="st">'SR_B4'</span>]<span class="op">,</span> <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span>}<span class="op">,</span>  <span class="st">'SWIR soils, 7-6-4'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3897674565.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>False color composite, R-G-B: 5-4-3</figcaption>
+</figure>
+</div>
+</section>
+<section id="spectral-indices" class="level2">
+<h2 class="anchored" data-anchor-id="spectral-indices">Spectral Indices</h2>
+<p>Spectral indices can help us compress two bands into one and eliminate much of the illumination/slope effects. Most indices follow a “normalized difference” template, which runs from -1 to 1:</p>
+<p><span class="math display">\[
+\mathrm{ND} = \frac{\rho_A - \rho_B}{\rho_A + \rho_B}
+\]</span></p>
+<p>Here <span class="math inline">\(\rho\)</span> is <em>surface reflectance</em> (0-1; important!) in bands A and B. Some common indices are as follows:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 55%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Index</th>
+<th>Formula</th>
+<th>Landsat 8/9 bands</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NDVI</td>
+<td>(NIR − Red) / (NIR + Red)</td>
+<td>5, 4</td>
+</tr>
+<tr class="even">
+<td>SAVI</td>
+<td>1.5 × (NIR − Red) / (NIR + Red + 0.5)</td>
+<td>5, 4</td>
+</tr>
+<tr class="odd">
+<td>NDMI</td>
+<td>(NIR − SWIR1) / (NIR + SWIR1)</td>
+<td>5, 6</td>
+</tr>
+<tr class="even">
+<td>Clay ratio</td>
+<td>SWIR1 / SWIR2</td>
+<td>6, 7</td>
+</tr>
+<tr class="odd">
+<td>NDWI</td>
+<td>(Green − NIR) / (Green + NIR)</td>
+<td>3, 5</td>
+</tr>
+</tbody>
+</table>
+<p>Luckily, GEE provides a <a href="https://developers.google.com/earth-engine/apidocs/ee-image-normalizeddifference">function</a> to calculate the normalized difference easily. Add the following code to your GEE code editor. Do you notice anything interesting?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 4. Indices from the spring composite</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> ndvi <span class="op">=</span> spring<span class="op">.</span><span class="fu">normalizedDifference</span>([<span class="st">'SR_B5'</span><span class="op">,</span> <span class="st">'SR_B4'</span>])<span class="op">.</span><span class="fu">rename</span>(<span class="st">'NDVI'</span>)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> ndwi <span class="op">=</span> spring<span class="op">.</span><span class="fu">normalizedDifference</span>([<span class="st">'SR_B3'</span><span class="op">,</span> <span class="st">'SR_B5'</span>])<span class="op">.</span><span class="fu">rename</span>(<span class="st">'NDWI'</span>)<span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> savi <span class="op">=</span> spring<span class="op">.</span><span class="fu">expression</span>(<span class="st">'1.5 * (NIR - RED) / (NIR + RED + 0.5)'</span><span class="op">,</span> {</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">NIR</span><span class="op">:</span> spring<span class="op">.</span><span class="fu">select</span>(<span class="st">'SR_B5'</span>)<span class="op">,</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">RED</span><span class="op">:</span> spring<span class="op">.</span><span class="fu">select</span>(<span class="st">'SR_B4'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">rename</span>(<span class="st">'SAVI'</span>)<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(ndvi<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'brown'</span><span class="op">,</span> <span class="st">'yellow'</span><span class="op">,</span> <span class="st">'green'</span>]}<span class="op">,</span> <span class="st">'NDVI'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(savi<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'brown'</span><span class="op">,</span> <span class="st">'yellow'</span><span class="op">,</span> <span class="st">'green'</span>]}<span class="op">,</span> <span class="st">'SAVI'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(ndwi<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'white'</span><span class="op">,</span> <span class="st">'blue'</span>]}<span class="op">,</span> <span class="st">'NDWI'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2454442487.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>SAVI of the region (2024 spring)</figcaption>
+</figure>
+</div>
+<section id="timing" class="level3">
+<h3 class="anchored" data-anchor-id="timing">Timing</h3>
+<p><span class="citation" data-cites="menze2012">Menze and Ur (<a href="references.html#ref-menze2012" role="doc-biblioref">2012</a>)</span> classified 160 ASTER scenes from 2003–2007, where they averaged the probability maps to prevent seasonal variation. Can you further create an <code>ee.ImageCollection</code> named <code>dryScenes</code> from <code>l89Here</code> with <code>filterDate('2024-08-01', '2024-11-01')</code>, and compute its NDVI map? How does summer NDVI compare with the spring one?</p>
+</section>
+</section>
+<section id="land-use-and-land-cover-lulc-classification" class="level2">
+<h2 class="anchored" data-anchor-id="land-use-and-land-cover-lulc-classification">Land Use and Land Cover (LULC) Classification</h2>
+<p><span class="citation" data-cites="bauer2018">Bauer (<a href="references.html#ref-bauer2018" role="doc-biblioref">2018</a>)</span> suggests that Iron Age and Early Historic Period residents in Maski, Northern Karnataka, used more water-retentive, clay-rich, blacker <em>regur</em> soils for agriculture, and observed greater social inequalities in later periods.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1772254054.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Fig. 6 in <span class="citation" data-cites="bauer2018">Bauer (<a href="references.html#ref-bauer2018" role="doc-biblioref">2018</a>)</span></figcaption>
+</figure>
+</div>
+<p>This work relies on Land Cover classification using multispectral data, which we can use GEE to generate today. There are usually two methods for LC classification.</p>
+<section id="unsupervised-methods-k-means" class="level3">
+<h3 class="anchored" data-anchor-id="unsupervised-methods-k-means">Unsupervised Methods: k-means</h3>
+<p>Unsupervised methods (<em>e.g.</em> k-means) find clusters of similar pixels, and you will name the clusters afterwards. Try the following code in GEE. Are similar features correctly clustered?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 5a. Unsupervised: k-means </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> features <span class="op">=</span> spring<span class="op">.</span><span class="fu">select</span>([<span class="st">'SR_B2'</span><span class="op">,</span> <span class="st">'SR_B3'</span><span class="op">,</span> <span class="st">'SR_B4'</span><span class="op">,</span> <span class="st">'SR_B5'</span><span class="op">,</span> <span class="st">'SR_B6'</span><span class="op">,</span> <span class="st">'SR_B7'</span>])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Learn the clusters from 5,000 random pixels</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> pixels <span class="op">=</span> features<span class="op">.</span><span class="fu">sample</span>({<span class="dt">region</span><span class="op">:</span> aoi<span class="op">,</span> <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">numPixels</span><span class="op">:</span> <span class="dv">5000</span><span class="op">,</span> <span class="dt">seed</span><span class="op">:</span> <span class="dv">1</span>})<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> kmeans <span class="op">=</span> ee<span class="op">.</span><span class="at">Clusterer</span><span class="op">.</span><span class="fu">wekaKMeans</span>(<span class="dv">6</span>)<span class="op">.</span><span class="fu">train</span>(pixels)<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> clusters <span class="op">=</span> features<span class="op">.</span><span class="fu">cluster</span>(kmeans)<span class="op">;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(clusters<span class="op">.</span><span class="fu">randomVisualizer</span>()<span class="op">,</span> {}<span class="op">,</span> <span class="st">'k-means, 6 clusters'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-151866441.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>K-means LC clustering around Tell Beydar</figcaption>
+</figure>
+</div>
+</section>
+<section id="supervised-methods-random-forest-with-three-classes" class="level3">
+<h3 class="anchored" data-anchor-id="supervised-methods-random-forest-with-three-classes">Supervised Methods: Random Forest with Three Classes</h3>
+<p>Supervised methods (maximum likelihood, random forest, support vector machines, deep learning) start from training examples that you provide.</p>
+<p>In GEE, turn off all layers except for the basemap. Hover over <code>Geometry Imports</code> (top left of the map view) and click <code>+ new layer</code>. If there is no <code>Geometry Imports</code> option, select <code>Add a marker</code> <img src="images/clipboard-717853737.png" class="img-fluid" style="width:5.0%">.</p>
+<p>Click the gear icon next to the new layer. Name it <code>developed</code>, set <strong><code>Import as</code></strong> to <strong><code>FeatureCollection</code></strong>, click <strong><code>+ Property</code></strong>, and add <code>class</code> = <code>0</code> like <a href="#add-points-GEE">below</a>. Choose red for this class.</p>
+<div id="add-points-GEE" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-1742993826.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Create a new class of labels</figcaption>
+</figure>
+</div>
+<p>With <code>developed</code> selected, use the point tool to select at least 30 pixels that represent “developed” land cover, such as roads, houses, ancient buildings, etc. You should try to include as many varieties and be as precise as possible. Avoid sampling <a href="#mixed-pxs">mixed pixels</a>!</p>
+<div id="mixed-pxs" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/clipboard-2538624181.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Avoid mixed pixels</figcaption>
+</figure>
+</div>
+<p>Repeat for <code>vegetation</code> (<code>class</code> = <code>1</code>: fields that are green in spring, trees, etc.) and <code>bare</code> (<code>class</code> = <code>2</code>: bare soil, rocks, etc.).</p>
+<p>After you are done, run the following code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 5b. Supervised: random forest </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> trainingPoints <span class="op">=</span> developed<span class="op">.</span><span class="fu">merge</span>(vegetation)<span class="op">.</span><span class="fu">merge</span>(bare)<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> training <span class="op">=</span> features<span class="op">.</span><span class="fu">sampleRegions</span>({</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">collection</span><span class="op">:</span> trainingPoints<span class="op">,</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">properties</span><span class="op">:</span> [<span class="st">'class'</span>]<span class="op">,</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Training pixels per class:'</span><span class="op">,</span> training<span class="op">.</span><span class="fu">aggregate_histogram</span>(<span class="st">'class'</span>))<span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> rf <span class="op">=</span> ee<span class="op">.</span><span class="at">Classifier</span><span class="op">.</span><span class="fu">smileRandomForest</span>(<span class="dv">100</span>)<span class="op">.</span><span class="fu">train</span>({</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">features</span><span class="op">:</span> training<span class="op">,</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">classProperty</span><span class="op">:</span> <span class="st">'class'</span><span class="op">,</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inputProperties</span><span class="op">:</span> features<span class="op">.</span><span class="fu">bandNames</span>()</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> classified <span class="op">=</span> features<span class="op">.</span><span class="fu">classify</span>(rf)<span class="op">;</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(classified<span class="op">,</span> {<span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">max</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">palette</span><span class="op">:</span> [<span class="st">'red'</span><span class="op">,</span> <span class="st">'green'</span><span class="op">,</span> <span class="st">'yellow'</span>]}<span class="op">,</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">'Random forest: developed / crop / bare'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Compare results between two classification methods; how is Tell Beydar classified?</p>
+</section>
+<section id="confusion-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h3>
+<p>To evaluate the accuracy of his classification, <span class="citation" data-cites="bauer2018">Bauer (<a href="references.html#ref-bauer2018" role="doc-biblioref">2018</a>)</span> used a confusion matrix:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1672560383.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Confusion matrix in <span class="citation" data-cites="bauer2018">Bauer (<a href="references.html#ref-bauer2018" role="doc-biblioref">2018</a>)</span></figcaption>
+</figure>
+</div>
+<p>This helps evaluate his classification. Four common metrics are given here, where TP, TN, FP, and FN denote true positive, true negative, false positive, and false negative.</p>
+<p><span class="math display">\[
+Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
+\]</span> <span class="math display">\[
+Precision = \frac{TP}{TP+FP}
+\]</span> <span class="math display">\[
+Recall = \frac{TP}{TP+FN}
+\]</span> <span class="math display">\[
+F1 = \frac{2*Precision*Recall}{Precision+Recall} = \frac{2*TP}{2*TP+FP+FN}
+\]</span></p>
+<p>Note that precision is also called user’s accuracy or consumer’s accuracy, whereas recall is also known as producer’s accuracy or sensitivity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-660966697.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Understanding precision and recall</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="citation" data-cites="menze2012">Menze and Ur (<a href="references.html#ref-menze2012" role="doc-biblioref">2012</a>)</span> mention that settlement signals covered about 4% of their search area. Which metrics are best for evaluating their archaeological detection?</p>
+</div>
+</div>
+<p>Now let us check the metrics for your supervised classification.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 6: sample the map where the drawn points are</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> check <span class="op">=</span> classified<span class="op">.</span><span class="fu">sampleRegions</span>({</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">collection</span><span class="op">:</span> trainingPoints<span class="op">,</span>     <span class="co">// the drawn points, not 'training'</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">properties</span><span class="op">:</span> [<span class="st">'class'</span>]<span class="op">,</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">geometries</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Your label (class) vs map (classification): 0 developed, 1 vegetation, 2 bare'</span><span class="op">,</span> check)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="change-detection" class="level2">
+<h2 class="anchored" data-anchor-id="change-detection">Change Detection</h2>
+<p>For Landsat, we can compare how different indices or LULC have changed over the same season of different years. We can also subtract an index at date 1 from the same index at date 2. For a true time series, where computations are applied to every pixels, try the following code using <a href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD12Q1">MODIS</a> data over the past 26 years.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 7: Change detection using MODIS</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> modis <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'MODIS/061/MOD12Q1'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2000-01-01'</span><span class="op">,</span> <span class="st">'2026-01-01'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">'NDVI'</span>)<span class="op">;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ui<span class="op">.</span><span class="at">Chart</span><span class="op">.</span><span class="at">image</span><span class="op">.</span><span class="fu">series</span>({</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">imageCollection</span><span class="op">:</span> modis<span class="op">,</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">region</span><span class="op">:</span> aoi<span class="op">,</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">reducer</span><span class="op">:</span> ee<span class="op">.</span><span class="at">Reducer</span><span class="op">.</span><span class="fu">mean</span>()<span class="op">,</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scale</span><span class="op">:</span> <span class="dv">250</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">setOptions</span>({<span class="dt">title</span><span class="op">:</span> <span class="st">'Mean NDVI around Tell Beydar'</span>}))<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4175658348.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Mean NDVI around Tell Beydar, x 10,000</figcaption>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-bauer2018" class="csl-entry" role="listitem">
+Bauer, Andrew M. 2018. <span>“Remote Sensing Soils and Social Geographies of Difference: The Landscape Archaeology of Regur from Iron Age Through Medieval Period Northern Karnataka, Southern India.”</span> <em>Journal of Field Archaeology</em> 43 (1): 31–43. <a href="https://doi.org/10.1080/00934690.2017.1418611">https://doi.org/10.1080/00934690.2017.1418611</a>.
+</div>
+<div id="ref-howey2026" class="csl-entry" role="listitem">
+Howey, Meghan C. L., and Michael W. Palace. 2026. <span>“Satellite Thermal Data Applied to Landscape Archaeology: Mounds in Michigan (1200<span></span>1600 CE).”</span> <em>Proceedings of the National Academy of Sciences</em> 123 (8). <a href="https://doi.org/10.1073/pnas.2528379123">https://doi.org/10.1073/pnas.2528379123</a>.
+</div>
+<div id="ref-menze2012" class="csl-entry" role="listitem">
+Menze, Bjoern H., and Jason A. Ur. 2012. <span>“Mapping Patterns of Long-Term Settlement in Northern Mesopotamia at a Large Scale.”</span> <em>Proceedings of the National Academy of Sciences</em> 109 (14). <a href="https://doi.org/10.1073/pnas.1115472109">https://doi.org/10.1073/pnas.1115472109</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Lab3.html" class="pagination-link" aria-label="Questions (Due: Oct 16)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Questions (Due: Oct 16)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2026, Casey H. Shi || Do not share course materials</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
