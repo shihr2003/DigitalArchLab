@@ -421,7 +421,7 @@
     "href": "drone_lidar.html#drone-lidar-of-mink-brook",
     "title": "Drone Lidar and Hillshades",
     "section": "",
-    "text": "Classification of lidar point clouds\n\n\n\nHillshade visualization\nTo reveal the subtle agricultural features we will use a variety of “hillshades.” These are simply raster images in which we have digitally illuminated them from different low angles. By moving the imaginary light source around, we can often highlight topographic features that are otherwise invisible. Most hillshades are labeled by the direction of the faux sun or light source being used to illuminate them.\n\n\n\nA schematic representation for hillshade visualization\n\n\nIn QGIS, add minkbrook_april2024_dsm.tif, poorfarm25_part1_terradem.tif, and poorfarm25_part2_terradem.tif as raster layers. Zoom to minkbrook_april2024_dsm.\n\n\n\nLidar-derived DEM of Mink Brook\n\n\nRight click on minkbrook_april2024_dsm, choose Properties. And in the Symbology dialogue, choose Singleband pseudocolor as the Render Type to visualize the elevation better.\n\n\n\nSingleband pseudocolor of a DEM\n\n\nNext, right-click on the DEM layer again, select Duplicate Layer (). In the new layer, possibly named minkbrook_april2024_dsm copy, change Symbology Render Type to Hillshade, and change the Azimuth to 315°, Z-Factor to 2. Rename this layer by navigating to Information dialog and change the Layer name to something like minkbrook_april2024_dsm_hs315.\n\n\n\nHillshade config\n\n\nNow you should say something like this:\n\n\n\nHillshade with 315° azimuth\n\n\nIn the Layers panel, drag the color-ramp DEM visualization over the top of the hillshade. In the color-ramp, go to Layer Properties and change Symbology -&gt; Layer Rendering -&gt; Blending mode to Multiply.\n\n\n\nOverlaying pseudocolor representation over hillshade\n\n\nNow duplicate the hillshade layer twice and change each of the duplicated layers’ hillshade azimuth to 0° and 45°. Rename these layers properly.\n\n\n\n\n\n\nImportantExercise 2\n\n\n\nWhich hillshade visualization, in terms of its azimuth, shows the cellar holes better? With reference to the orientation of the cellar holes, explain why.\n\n\nBeyond the two cellar holes, we also saw mill footings and stone clearance walls during our visit. Can you identify them? Also look for anything else you think might be an archaeological feature (as opposed to geological or modern trees). Experiment with other hillshades in to see which ones are most useful in revealing archaeological features.\nNow move the vector layer that contains the two polygons you drew over the top of all layers in Layers panel. Toggle Edit () and Add Polygon Feature (). Map the additional archaeological features before saving layer edits.\n\n\n\n\n\n\nImportantExercise 3\n\n\n\nWere you able to locate all the known archaeological sites and features in Mink Brook? Did you find any potentially unrecorded things? Provide a screenshot of your saved archaeology layer.",
+    "text": "Classification of lidar point clouds\n\n\n\nHillshade visualization\nTo reveal the subtle agricultural features we will use a variety of “hillshades.” These are simply raster images in which we have digitally illuminated them from different low angles. By moving the imaginary light source around, we can often highlight topographic features that are otherwise invisible. Most hillshades are labeled by the direction of the faux sun or light source being used to illuminate them.\n\n\n\nA schematic representation for hillshade visualization\n\n\nIn QGIS, add minkbrook_april2024_dsm.tif, poorfarm25_part1_terradem.tif, and poorfarm25_part2_terradem.tif as raster layers. Zoom to minkbrook_april2024_dsm.\n\n\n\nLidar-derived DEM of Mink Brook\n\n\nRight click on minkbrook_april2024_dsm, choose Properties. And in the Symbology dialogue, choose Singleband pseudocolor as the Render Type to visualize the elevation better.\n\n\n\nSingleband pseudocolor of a DEM\n\n\nNext, right-click on the DEM layer again, select Duplicate Layer (). In the new layer, possibly named minkbrook_april2024_dsm copy, change Symbology Render type to Hillshade, and change the Azimuth to 315°, Z-Factor to 2. Rename this layer by navigating to Information dialog and change the Layer name to something like minkbrook_april2024_dsm_hs315.\n\n\n\nHillshade config\n\n\nNow you should see something like this:\n\n\n\nHillshade with 315° azimuth\n\n\nIn the Layers panel, drag the color-ramp DEM visualization over the top of the hillshade. In the color-ramp, go to Layer Properties and change Symbology -&gt; Layer Rendering -&gt; Blending mode to Multiply.\n\n\n\nOverlaying pseudocolor representation over hillshade\n\n\nNow duplicate the hillshade layer twice and change each of the duplicated layers’ hillshade azimuth to 0° and 45°. Rename these layers properly.\n\n\n\n\n\n\nImportantExercise 2\n\n\n\nWhich hillshade visualization, in terms of its azimuth, shows the cellar holes better? With reference to the orientation of the cellar holes, explain why.\n\n\nBeyond the two cellar holes, we also saw mill footings and stone clearance walls during our visit. Can you identify them in QGIS? Also look for anything else you think might be an archaeological feature (as opposed to geological or modern trees). Experiment with other hillshades in to see which ones are most useful in revealing archaeological features.\nNow move the vector layer that contains the two polygons you drew over the top of all layers in Layers panel. Toggle Edit () and Add Polygon Feature (). Map the additional archaeological features before saving layer edits.\n\n\n\n\n\n\nImportantExercise 3\n\n\n\nWere you able to locate all the known archaeological sites and features in Mink Brook? Did you find any potentially unrecorded things? Provide a screenshot of your saved archaeology layer.",
     "crumbs": [
       "Lab 3 Archaeological Applications of Airborne Lidar",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drone Lidar and Hillshades</span>"
@@ -432,7 +432,7 @@
     "href": "drone_lidar.html#drone-lidar-of-the-dartmouth-poor-farm",
     "title": "Drone Lidar and Hillshades",
     "section": "Drone Lidar of the Dartmouth Poor Farm",
-    "text": "Drone Lidar of the Dartmouth Poor Farm\nDuring the 19th century, the town of Hanover constructed a “poor farm”, a place for homeless, indigent, or poor people to live. These folks used to reside on the south side of Hanover, but were moved several miles away to an area of farms and fields. The Poor Farm was constructed near several existing farms and a small schoolhouse off Etna Road, as shown in this 1870s photograph.\n\n\n\nA 1870s map showing the Dartmouth Poor Farm\n\n\nIn 1892, two reservoirs were constructed nearby to provide drinking water for Hanover (this is still where we get our water). Following a cholera outbreak at Cornell in 1907, the residents of all the farms and the poor farm were forcibly relocated again in order to protect the water supply, The area remained fenced off until it was reopened for limited recreation in 2017. Today, remains of several of the 19th century and earlier buildings are still visible, but many more are hidden in the forest. A map from the late 19th century shows the location of the Poor Farm “Town Farm.”\n\n\n\nHistoric 19th century map of the Trescott Reservoir lands, showing historic buildings and roads, including the poor farm, labeled “Town Farm” as well as the location of the two reservoirs. Other houses have the names of owners. “S.H.” is the school house.\n\n\nA drone lidar survey conducted in April 2025 reveals many of the hidden features. Zoom to layers poorfarm25_part1_terradem and poorfarm25_part2_terradem.\n\n\n\nDEMs of the Dartmouth Poor Farm. You can safely ignore the image artefacts there\n\n\nVisualize the DEMs in different hillshade configs.\n\n\n\n\n\n\nImportantExercise 4\n\n\n\nWhat archaeological features are you able to identify in the Poor Farm/Trescott Reservoir lands lidar imagery? Report at least two sites (of preferably different types) with coordinates and screenshots.\n\n\n\n\n\n\n\n\nImportantExercise 5\n\n\n\nHow do the discoveries reported by Chase et al. (2011) and Pärssinen et al. (2026) change our understandings of the settlement and land use histories in Belize and the Amazon Basin respectively? What do you think might be missing from the lidar record that one might be able to see using other methods?\n\n\n\n\n\n\n\n\nImportantExercise 6\n\n\n\nWhat kinds of archaeological features are Casana et al. (2023) able to identify in drone lidar data from Picuris Pueblo that might not have been visible using other methods? What do you think the location, number or scale of agricultural features around Picuris Pueblo suggests about the history of land use at the site, its population, or the presence of forest cover in the highland Southwest?\n\n\n\n\n\n\n\n\nImportantExercise 7\n\n\n\nBased on your readings and your analysis of Mink Brook as seen in the public, aircraft-acquired lidar data, discuss the advantages and disadvantages of aircraft-acquired versus drone-acquired lidar for archaeology.\n\n\n\n\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023. “Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at Picuris Pueblo, New Mexico.” Journal of Archaeological Science 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011. “Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at Caracol, Belize.” Journal of Archaeological Science 38 (2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over 20,000 Precolonial Earthworks in the Southwest Amazonia.” Nature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.",
+    "text": "Drone Lidar of the Dartmouth Poor Farm\nDuring the 19th century, the town of Hanover constructed a “poor farm”, a place for homeless, indigent, or poor people to live. These folks used to reside on the south side of Hanover, but were moved several miles away to an area of farms and fields. The Poor Farm was constructed near several existing farms and a small schoolhouse off Etna Road, as shown in this 1870s photograph.\n\n\n\nA 1870s map showing the Dartmouth Poor Farm\n\n\nIn 1892, two reservoirs were constructed nearby to provide drinking water for Hanover (this is still where we get our water). Following a cholera outbreak at Cornell in 1907, the residents of all the farms and the poor farm were forcibly relocated again in order to protect the water supply, The area remained fenced off until it was reopened for limited recreation in 2017. Today, remains of several of the 19th century and earlier buildings are still visible, but many more are hidden in the forest. A map from the late 19th century shows the location of the Poor Farm “Town Farm.”\n\n\n\nHistoric 19th century map of the Trescott Reservoir lands, showing historic buildings and roads, including the poor farm, labeled “Town Farm” as well as the location of the two reservoirs. Other houses have the names of owners. “S.H.” is the school house.\n\n\nA drone lidar survey conducted in April 2025 reveals many of the hidden features. Zoom to layers poorfarm25_part1_terradem and poorfarm25_part2_terradem.\n\n\n\nDEMs of the Dartmouth Poor Farm. You can safely ignore the image artifacts there\n\n\nVisualize the DEMs in different hillshade configs.\n\n\n\n\n\n\nImportantExercise 4\n\n\n\nWhat archaeological features are you able to identify in the Poor Farm/Trescott Reservoir lands lidar imagery? Report at least two sites (of preferably different types) with coordinates and screenshots.\n\n\n\n\n\n\n\n\nImportantExercise 5\n\n\n\nHow do the discoveries reported by Chase et al. (2011) and Pärssinen et al. (2026) change our understandings of the settlement and land use histories in Belize and the Amazon Basin respectively? What do you think might be missing from the lidar record that one might be able to see using other methods?\n\n\n\n\n\n\n\n\nImportantExercise 6\n\n\n\nWhat kinds of archaeological features are Casana et al. (2023) able to identify in drone lidar data from Picuris Pueblo that might not have been visible using other methods? What do you think the location, number or scale of agricultural features around Picuris Pueblo suggests about the history of land use at the site, its population, or the presence of forest cover in the highland Southwest?\n\n\n\n\n\n\n\n\nImportantExercise 7\n\n\n\nBased on your readings and your analysis of Mink Brook as seen in the public, aircraft-acquired lidar data, discuss the advantages and disadvantages of aircraft-acquired versus drone-acquired lidar for archaeology.\n\n\n\n\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023. “Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at Picuris Pueblo, New Mexico.” Journal of Archaeological Science 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011. “Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at Caracol, Belize.” Journal of Archaeological Science 38 (2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over 20,000 Precolonial Earthworks in the Southwest Amazonia.” Nature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.",
     "crumbs": [
       "Lab 3 Archaeological Applications of Airborne Lidar",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drone Lidar and Hillshades</span>"
@@ -458,6 +458,325 @@
     "crumbs": [
       "Appendices",
       "References"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html",
+    "href": "lecture_notes_w4.html",
+    "title": "Lecture Notes",
+    "section": "",
+    "text": "Before the Lecture\nWe will be using Google Earth Engine (GEE) throughout this week’s lecture and lab. Follow this page to create a Cloud project.\nGoogle Earth Engine, not to be confused with Google Earth, features a multi-petabyte (\\(10^{15}\\) bytes) catalog of multisensor satelite imagery that allows cloud-based planetary-scale analysis.\nOnce everything is set up, you should be able to access the code editor like this:",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#light-as-wave-and-particle",
+    "href": "lecture_notes_w4.html#light-as-wave-and-particle",
+    "title": "Lecture Notes",
+    "section": "Light as wave and particle",
+    "text": "Light as wave and particle\nElectromagnetic (EM) energy travels as a wave, but it is absorbed and detected as packets of energy (photons):\n\\[\nc = \\lambda\\,\\nu \\qquad\\qquad E = h\\,\\nu = \\frac{h\\,c}{\\lambda}\n\\]\n\n\\(\\lambda\\) is wavelength and \\(\\nu\\) is frequency; \\(c = 3.00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}\\) and \\(h = 6.63\\times10^{-34}\\ \\mathrm{J\\,s}\\). A longer wavelength means less energy per photon.\nWien’s law, \\(\\lambda_{max} \\approx 2898\\ \\mu\\mathrm{m\\,K}\\,/\\,T\\). The Sun (≈ 5,800 K) peaks near 0.5 µm and Earth’s surface (≈ 300 K) near 10 µm. Below ~3 µm, sensors record reflected sunlight; at 8–14 µm they record emitted heat.\nDiffraction: an instrument with aperture \\(D\\) cannot resolve angles smaller than about \\(1.22\\,\\lambda / D\\). Longer wavelengths blur more.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#the-spectrum-we-sample",
+    "href": "lecture_notes_w4.html#the-spectrum-we-sample",
+    "title": "Lecture Notes",
+    "section": "The spectrum we sample",
+    "text": "The spectrum we sample\n\n\n\n\n\n\n\n\nRegion\nWavelength\nWhat is recorded\n\n\n\n\nVisible (blue, green, red)\n0.4–0.7 µm\nreflected sunlight; what the eye sees\n\n\nNear-infrared (NIR)\n0.7–1.3 µm\nreflected sunlight; leaf structure\n\n\nShortwave infrared (SWIR)\n1.3–3 µm\nreflected sunlight; water and mineral absorption\n\n\nThermal infrared (TIR)\n8–14 µm\nheat emitted by the surface\n\n\nMicrowave\n~1 mm–1 m\nradar echoes (active sensors)\n\n\n\nBetween these windows, gases in the atmosphere (mostly water vapour and CO₂) absorb the energy, so sensors place their bands inside the windows.\n\n\n\n\n\n\n\nImportantQuestion: where is SWIR?\n\n\n\nShortwave infrared is particularly useful for spotting some anthrosols. These are the lighter, finer, organic-rich soils formed from decayed mudbrick and household waste on ancient settlements. Water absorbs SWIR strongly, which is also why SWIR reveals bruised fruit, wet grain and soil moisture. Find SWIR on the strip. Which Landsat 9 and Sentinel-2 bands sit inside it?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nSWIR is ≈ 1.3–3 µm.\n\nLandsat 8/9: band 6 (SWIR1, 1.57–1.65 µm) and band 7 (SWIR2, 2.11–2.29 µm).\nSentinel-2: B11 (≈ 1.61 µm) and B12 (≈ 2.19 µm).\nASTER: bands 4–9 (1.6–2.43 µm), which became unusable in 2008.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#passive-and-active-sensors",
+    "href": "lecture_notes_w4.html#passive-and-active-sensors",
+    "title": "Lecture Notes",
+    "section": "Passive and active sensors",
+    "text": "Passive and active sensors\n\nPassive sensors record what the Sun provides: reflected sunlight (visible to SWIR) or heat emitted by the surface (TIR). They need clear skies and, except in TIR, daylight.\nActive sensors send their own pulse. Synthetic aperture radar (SAR), such as Sentinel-1 (C-band, λ ≈ 5.5 cm), measures the echo. The echo depends on surface roughness, geometry and moisture. Radar works day and night. Its waves are thousands of times longer than cloud droplets, so it sees through most clouds.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#spectral-signatures",
+    "href": "lecture_notes_w4.html#spectral-signatures",
+    "title": "Lecture Notes",
+    "section": "Spectral signatures",
+    "text": "Spectral signatures\n\nVegetation: chlorophyll absorbs blue and red, and leaf structure reflects strongly in NIR. The steep climb between them (~0.68–0.75 µm) is the red edge. Leaf water absorbs in SWIR.\nDry soil: reflectance rises gently with wavelength. Moisture and organic matter darken it, and clay minerals absorb near 2.2 µm (SWIR2).\nWater: absorbs nearly everything beyond green, so it is black in NIR and SWIR.\n\n\n\n\n\n\n\n\nTipActivity: read the signatures\n\n\n\nLandsat 9 OLI band 4 samples 0.64–0.67 µm, band 5 samples 0.85–0.88 µm, and band 6 samples 1.57–1.65 µm.\n\nWhich surface is brightest in each band?\nWhich part of the spectrum best separates wet soil from dry soil?\n\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\nIn band 4 (red), dry soil is brightest; plants are dark because chlorophyll absorbs red. In band 5 (NIR), vegetation is brightest by far. In band 6 (SWIR1), dry soil is brightest and plants are moderate because leaf water absorbs. Water is black in both 5 and 6.\nSWIR (bands 6–7). Water in the soil absorbs strongly there, so wet soil is much darker than dry soil. The NDMI index (below) uses exactly this.\n\n\n\n\n\n\n\n\n\n\nImportantQuestion: what did the classifier learn?\n\n\n\nMenze & Ur (2012) fed a random-forest classifier ASTER’s 14 bands plus three NIR–red vegetation indices. Its most important inputs were ASTER channels 3 (≈ 0.8 µm, NIR), 5 (≈ 2.165 µm) and 6 (≈ 2.205 µm). These are NIR and two SWIR bands near 2.2 µm, where clay minerals absorb. What does this suggest?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\nAnthrosols differ from the surrounding soil in two ways a sensor can see. One is how vegetation grows on them (NIR). The other is their clay mineralogy, texture and moisture (≈ 2.2 µm).\nThe signal is more than visible brightness. Panchromatic film (CORONA) and sensors without SWIR (PlanetScope) capture only part of it.\nNarrow SWIR bands matter. Landsat and Sentinel-2 each have one broad band across 2.2 µm, while ASTER had five. ASTER’s SWIR failed in 2008, after the 2003–2007 scenes that Menze & Ur used.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#poll-design-a-sensor",
+    "href": "lecture_notes_w4.html#poll-design-a-sensor",
+    "title": "Lecture Notes",
+    "section": "Poll: design a sensor",
+    "text": "Poll: design a sensor\n\n\n\n\n\n\nImportantMentimeter\n\n\n\n\nYou are designing an Earth-observation sensor to record reflectance in a blue band and a SWIR band (useful for anthrosols). Given the spectrum and the equations above, what spatial resolution would you reasonably expect?\n\nLower (coarser) for blue, higher (finer) for SWIR\nHigher (finer) for blue, lower (coarser) for SWIR\nAbout the same\nMore information is needed\n\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nb. Three effects work against SWIR:\n\nA 2.2 µm photon carries ≈ 0.56 eV, versus ≈ 2.6 eV at 0.48 µm (\\(E = hc/\\lambda\\)).\nThe Sun emits far less energy at 2.2 µm than near its 0.5 µm peak (Wien).\nDiffraction (\\(1.22\\,\\lambda/D\\)) is ~4.6× worse at 2.2 µm with the same optics.\n\nTo collect enough signal, designers make SWIR pixels larger or SWIR bands wider. ASTER has 15 m VNIR, 30 m SWIR and 90 m TIR. Sentinel-2 has 10 m blue and 20 m SWIR. Landsat keeps 30 m for both by making SWIR2 roughly three times wider than blue, trading spectral resolution for spatial resolution.\nThat is why d is also defensible: aperture, detector cooling and band width are design choices.\n\n\n\n\nDetecting a site is only the first step. Howey & Palace (2026) used a decade of Landsat 8 thermal data to study where people placed burial mounds in Michigan, without detecting the mounds themselves.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#four-resolutions",
+    "href": "lecture_notes_w4.html#four-resolutions",
+    "title": "Lecture Notes",
+    "section": "Four resolutions",
+    "text": "Four resolutions\n\n\n\n\n\n\n\n\nResolution\nQuestion\nExample\n\n\n\n\nSpatial\nHow large is one pixel?\nPlanetScope ≈ 3 m; Landsat 30 m; MODIS 250 m–1 km\n\n\nSpectral\nHow many bands, and how narrow?\nLandsat 9: 11 bands; ASTER: 14\n\n\nTemporal\nHow often is the same place revisited?\nMODIS 1–2 days; Landsat 8 + 9: 8 days\n\n\nRadiometric\nHow finely is brightness recorded?\n8-bit = 256 levels (TM); 14-bit = 16,384 levels (Landsat 9)\n\n\n\nNo sensor maximises all four; improving one usually costs another.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#sensors-you-will-meet",
+    "href": "lecture_notes_w4.html#sensors-you-will-meet",
+    "title": "Lecture Notes",
+    "section": "Sensors you will meet",
+    "text": "Sensors you will meet\n\n\n\n\n\n\n\n\n\n\n\nSensor (platform)\nYears\nPixel size\nBands\nRevisit\nAccess\n\n\n\n\nTM (Landsat 4–5)\n1982–2011\n30 m (TIR 120 m)\n7: VIS–SWIR, TIR\n16 days\nfree\n\n\nETM+ (Landsat 7)\n1999–2024\n30 m; pan 15 m; TIR 60 m\n8\n16 days\nfree; striped gaps after May 2003\n\n\nOLI/TIRS (Landsat 8, 9)\n2013–; 2021–\n30 m; pan 15 m; TIR 100 m\n11\n8 days combined\nfree\n\n\nMSI (Sentinel-2)\n2015–\n10/20/60 m\n13, incl. red edge and SWIR\n5 days\nfree\n\n\nC-band SAR (Sentinel-1)\n2014–\n≈ 10 m\nradar, VV/VH polarisation\n6–12 days\nfree\n\n\nASTER (Terra)\n2000–\n15 m VNIR; 30 m SWIR; 90 m TIR\n14\n16 days, on request\nfree; SWIR dead since 2008\n\n\nMODIS (Terra, Aqua)\n2000–\n250 m–1 km\n36\n1–2 days\nfree\n\n\nPlanetScope (Doves)\n~2016–\n≈ 3 m\n4–8: VIS, red edge, NIR (no SWIR)\n~daily\ncommercial\n\n\nCORONA (KH-4B)\n1967–1972\n≈ 2 m\npanchromatic film\nirregular\nfree scans (USGS)\n\n\n\nTerra and Aqua are ageing satellites near the end of their missions; check their current status.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#landsat-up-close",
+    "href": "lecture_notes_w4.html#landsat-up-close",
+    "title": "Lecture Notes",
+    "section": "Landsat up close",
+    "text": "Landsat up close\n\nInstruments: TM (Landsat 4–5), ETM+ (7), OLI + TIRS (8), and OLI-2 + TIRS-2 (9). Landsat 8 and 9 are near twins; Landsat 9 records 14-bit data.\nProcessing levels (Collection 2):\n\nLevel-1 is calibrated and terrain-corrected, and can be converted to top-of-atmosphere (TOA) reflectance.\nLevel-2 is corrected for the atmosphere and provides surface reflectance (SR) plus surface temperature (ST). Use Level-2 when comparing dates.\n\nClouds: each scene carries a CLOUD_COVER percentage. Level-2 adds a per-pixel quality band (QA_PIXEL).\nSurface temperature comes from one thermal band: band 10 on Landsat 8/9 and band 6 on TM/ETM+.\nBand 11 issue: stray light from outside the field of view contaminated TIRS, and band 11 far more than band 10. Barsi et al. (2014) advise against band 11 where absolute calibration matters, and USGS recommended band 10 for thermal work.\n\nBand numbers do not match between generations:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue\nGreen\nRed\nNIR\nSWIR1\nSWIR2\nThermal\n\n\n\n\nTM / ETM+ (Landsat 4–7)\n1\n2\n3\n4\n5\n7\n6\n\n\nOLI / TIRS (Landsat 8–9)\n2\n3\n4\n5\n6\n7\n10, 11\n\n\n\nOLI’s NIR band (0.85–0.88 µm) is also narrower than TM’s (0.76–0.90 µm), which avoids a water-vapour absorption feature. Code copied from a Landsat 8 tutorial gives silently wrong results on Landsat 5.\n\n\n\n\n\n\n\n\n\nDesign\nHow it works\nExamples\nConsequence\n\n\n\n\nWhiskbroom\na moving mirror sweeps a few detectors across the track\nTM, ETM+, MODIS\nmoving parts; short dwell per pixel; ETM+’s scan-line corrector failed in 2003\n\n\nPushbroom\na long line of detectors images a whole row at once\nOLI, TIRS, Sentinel-2 MSI, ASTER VNIR/SWIR\nno scanning mirror; longer dwell, better signal; many detectors to calibrate\n\n\nFilm / frame camera\nrecords a whole area at once on film or a 2-D array\nCORONA (film), PlanetScope (digital)\nvery sharp; few bands; old panoramic film is geometrically distorted",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#step-1-define-the-study-area",
+    "href": "lecture_notes_w4.html#step-1-define-the-study-area",
+    "title": "Lecture Notes",
+    "section": "Step 1 — define the study area",
+    "text": "Step 1 — define the study area\n// Step 1. Study area ------------------------------------------------------\n// Tell Beydar (ancient Nabada), Upper Khabur basin, NE Syria\nvar beydar = ee.Geometry.Point([40.587, 36.738]);\n\n// A ~16 x 17 km box around the tell: [west, south, east, north] in degrees\nvar aoi = ee.Geometry.Rectangle([40.50, 36.66, 40.68, 36.81]);\n\nMap.setOptions('SATELLITE');                  // high-resolution basemap\nMap.centerObject(beydar, 14);\nMap.addLayer(aoi, {color: 'yellow'}, 'Study area', true, 0.2);\nMap.addLayer(beydar, {color: 'red'}, 'Tell Beydar');",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#step-2-load-landsat-9-and-filter-it-one-step-at-a-time",
+    "href": "lecture_notes_w4.html#step-2-load-landsat-9-and-filter-it-one-step-at-a-time",
+    "title": "Lecture Notes",
+    "section": "Step 2 — load Landsat 9 and filter it, one step at a time",
+    "text": "Step 2 — load Landsat 9 and filter it, one step at a time\n// Step 2. Load and filter -----------------------------------------------------\n// Landsat 9, Collection 2, Tier 1, Level-2 (surface reflectance)\nvar l9 = ee.ImageCollection('LANDSAT/LC09/C02/T1_L2');\n\n// (a) Where: scenes that touch the study area\nvar l9Here = l9.filterBounds(aoi);\nprint('Landsat 9 scenes over Tell Beydar:', l9Here.size());\n\n// (b) When: late summer, after the harvest (bare, dry fields)\nvar l9Dry = l9Here.filterDate('2024-08-01', '2024-10-01');\nprint('...from August-September 2024:', l9Dry.size());\n\n// (c) How clear: less than 10% of the scene under cloud\nvar l9Clear = l9Dry.filter(ee.Filter.lt('CLOUD_COVER', 10));\nprint('...with less than 10% cloud:', l9Clear.size());\n\n// Look inside: expand the list in the Console\nprint(l9Clear);\n\n\n\n\n\n\nTipActivity\n\n\n\nHow many scenes does each filter remove? If the last number were 0, what would you change?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nYou could widen the date window or relax the cloud limit (e.g. 30%). You could also add Landsat 8, which has the same band names: l9.merge(ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')).",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#step-3-processing-levels",
+    "href": "lecture_notes_w4.html#step-3-processing-levels",
+    "title": "Lecture Notes",
+    "section": "Step 3 — processing levels",
+    "text": "Step 3 — processing levels\n// Step 3. Level-1 (top of atmosphere) vs Level-2 (surface) -----------------------\n// Level-1 TOA: same filters, different collection; bands are called B1...B11\nvar toa = ee.ImageCollection('LANDSAT/LC09/C02/T1_TOA')\n  .filterBounds(aoi)\n  .filterDate('2024-08-01', '2024-10-01')\n  .filter(ee.Filter.lt('CLOUD_COVER', 10))\n  .median();\n\n// Level-2 SR: bands SR_B1...SR_B7 are stored as integers.\n// Multiply by 0.0000275 and subtract 0.2 to get reflectance (0-1).\nvar dry = l9Clear.median()\n  .select('SR_B.')                            // SR_B1 ... SR_B7\n  .multiply(0.0000275)\n  .add(-0.2);\n\nMap.addLayer(toa, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.35}, 'Level-1 TOA, 4-3-2');\nMap.addLayer(dry, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 0, max: 0.35}, 'Level-2 SR, 4-3-2');\n\n// Level-2 also holds surface temperature (band 10): scale to kelvin, then to °C\nvar lst = l9Clear.median().select('ST_B10')\n  .multiply(0.00341802).add(149.0)\n  .subtract(273.15);\nMap.addLayer(lst, {min: 25, max: 55, palette: ['blue', 'yellow', 'red']},\n  'Surface temperature (°C)', false);\n\n\n\n\n\n\nTipActivity\n\n\n\nToggle the two natural-colour layers. What does the atmosphere add to the Level-1 image? Now turn on surface temperature: where is the ground hottest?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nHaze is light scattered by the atmosphere, strongest in blue. It brightens and flattens the TOA image, and Level-2 removes most of it. Bare, dry soil is hottest; irrigated fields and water are cooler because evaporation uses energy.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#step-4-cloud-free-images",
+    "href": "lecture_notes_w4.html#step-4-cloud-free-images",
+    "title": "Lecture Notes",
+    "section": "Step 4 — cloud-free images",
+    "text": "Step 4 — cloud-free images\n// Step 4. One clear scene, or a median composite? ------------------------------\n// (a) The single least-cloudy scene in the window\nvar clearest = l9Dry.sort('CLOUD_COVER').first();\nprint('Clearest scene, date:', clearest.get('DATE_ACQUIRED'));\nprint('Clearest scene, cloud %:', clearest.get('CLOUD_COVER'));\n\nvar clearestSR = clearest.select('SR_B.').multiply(0.0000275).add(-0.2);\nMap.addLayer(clearestSR, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 0, max: 0.35},\n  'Single clearest scene');\n\n// (b) 'dry' (Step 3) is a median composite. For every pixel it takes the\n// middle value of all clear scenes, so clouds and shadows drop out.\n\n\n\n\n\n\nImportantQuestion\n\n\n\nWhich would you use to trace a site’s outline on one particular day? Which would you use to map soils across a season?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nA single scene is a real moment with consistent shadows and moisture, but it may hold thin cloud or haze. A median composite is clean, but it is a synthetic mix of dates, which suits “typical” seasonal conditions better than a single event.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#unsupervised-k-means",
+    "href": "lecture_notes_w4.html#unsupervised-k-means",
+    "title": "Lecture Notes",
+    "section": "Unsupervised: k-means",
+    "text": "Unsupervised: k-means\n// Step 8a. Unsupervised: k-means ------------------------------------------------------\nvar features = dry.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'SR_B7'])\n  .addBands(ndviSpring);\n\n// Learn the clusters from 5,000 random pixels\nvar pixels = features.sample({region: aoi, scale: 30, numPixels: 5000, seed: 1});\n\nvar kmeans = ee.Clusterer.wekaKMeans(6).train(pixels);\nvar clusters = features.cluster(kmeans);\nMap.addLayer(clusters.randomVisualizer(), {}, 'k-means, 6 clusters');\n\n\n\n\n\n\nTipActivity\n\n\n\nName your six clusters. Which cluster holds Tell Beydar? Do modern villages fall in the same cluster?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nOften, yes. Villages built of mudbrick on soil can look spectrally like tells. Menze & Ur’s most common false positives were modern villages, which they screened out using high-resolution imagery and mound volume.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#supervised-random-forest-with-three-classes",
+    "href": "lecture_notes_w4.html#supervised-random-forest-with-three-classes",
+    "title": "Lecture Notes",
+    "section": "Supervised: random forest with three classes",
+    "text": "Supervised: random forest with three classes\nDraw about 10 training points per class (30 in total):\n\nHover over Geometry Imports (top left of the map) and click + new layer.\nClick the gear icon next to the new layer. Name it site, set Import as to FeatureCollection, click + Property, and add class = 0.\nWith site selected, use the point tool to click on Tell Beydar and other mounds.\nRepeat for crop (class = 1: fields that are green in spring) and other (class = 2: bare or fallow fields, villages, roads).\n\n// Step 8b. Supervised: random forest ---------------------------------------------------\n// site, crop and other are the three point layers you drew\nvar trainingPoints = site.merge(crop).merge(other);\n\n// Read the feature values under each point\nvar training = features.sampleRegions({\n  collection: trainingPoints,\n  properties: ['class'],\n  scale: 30\n});\nprint('Training pixels per class:', training.aggregate_histogram('class'));\n\nvar rf = ee.Classifier.smileRandomForest(100).train({\n  features: training,\n  classProperty: 'class',\n  inputProperties: features.bandNames()\n});\n\nvar classified = features.classify(rf);\nMap.addLayer(classified, {min: 0, max: 2, palette: ['red', 'green', 'D2B48C']},\n  'Random forest: site / crop / other');\n\n\n\n\n\n\nTipActivity\n\n\n\nWhere does the map say “site”? Is it only on mounds, or also on villages and bare fields? Add points where the map is wrong, to the correct layer, and run again. Menze & Ur improved their training data in the same iterative way.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#mixed-pixels",
+    "href": "lecture_notes_w4.html#mixed-pixels",
+    "title": "Lecture Notes",
+    "section": "Mixed pixels",
+    "text": "Mixed pixels\nA pixel records one value for everything inside it. At 30 m, a pixel on the edge of a tell mixes anthrosol with field soil, crop, a road or shadow, so its spectrum matches no single class. Mixed pixels blur boundaries and bias area estimates, especially for small sites.\n\n\n\n\n\n\n\nTipActivity\n\n\n\nSkim Menze & Ur (2012). How did they handle mixed pixels when measuring the size (area and volume) of a mound?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\nThey kept a soft output: every pixel gets a 0–1 probability of anthrosol, averaged over many dates, instead of being forced into hard classes early.\nSite extents were read from that probability map; their figures outline the 50% level.\nVolume came from the SRTM elevation model. They modelled the surrounding plain, subtracted it, and kept only central pixels standing more than two standard deviations (≈ 1 m) above it, which is a deliberately conservative core.\nThey reported ranges rather than single numbers: cylinder versus cone shapes, and “high town” versus “lower town” totals.\nThe general remote-sensing tool for this problem is spectral unmixing, which estimates the fraction of each material within a pixel.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#check-the-map-against-30-systematic-points",
+    "href": "lecture_notes_w4.html#check-the-map-against-30-systematic-points",
+    "title": "Lecture Notes",
+    "section": "Check the map against 30 systematic points",
+    "text": "Check the map against 30 systematic points\n// Step 9. Thirty systematic check points --------------------------------------------\n// One point at the centre of each 0.03-degree grid cell inside the box:\n// 6 columns x 5 rows = 30 points, about 2.7 km (E-W) x 3.3 km (N-S) apart\nvar grid = ee.Image.constant(1).sample({\n  region: aoi,\n  projection: ee.Projection('EPSG:4326').scale(0.03, 0.03),\n  geometries: true\n});\nprint('Number of check points:', grid.size());   // should print 30\nMap.addLayer(grid, {color: 'yellow'}, 'Check points');\n\n// What did the classifier say at each point?\nvar check = classified.sampleRegions({collection: grid, scale: 30, geometries: true});\nprint('Map class at each point (0 site, 1 crop, 2 other):', check);\n\n// For comparison: accuracy measured on the training points themselves\nprint('Accuracy on the training data:', rf.confusionMatrix().accuracy());\nprint('Random forest details (see outOfBagErrorEstimate):', rf.explain());\n\n\n\n\n\n\nTipActivity: build the matrix by hand\n\n\n\nClick each yellow point with the Inspector. Read the map class from the random-forest layer. Then decide the true class yourself from the imagery and the basemap, and add a tally mark below. Compute overall, producer’s and user’s accuracy.\n\n\n\n\n\n\n\n\n\n\n\n\n\nReference ↓ / Map →\nSite (0)\nCrop (1)\nOther (2)\nRow total\nProducer’s accuracy\n\n\n\n\nSite (0)\n\n\n\n\n\n\n\nCrop (1)\n\n\n\n\n\n\n\nOther (2)\n\n\n\n\n\n\n\nColumn total\n\n\n\n30\n\n\n\nUser’s accuracy\n\n\n\n\nOverall:\n\n\n\nRows = reference, columns = map, as in Earth Engine. Many textbooks use the opposite orientation.\n\n\n\n\n\n\nImportantQuestions\n\n\n\n\nHow many of the 30 points fell on a site? What does that do to producer’s accuracy for “site”?\nWhy is the accuracy on the training data so much higher than yours?\n\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\nProbably zero or one point fell on a site, which makes that class’s accuracy undefined or meaningless. Systematic samples are unbiased for the whole map, but rare classes need extra (stratified) points.\nThe model is being tested on what it memorised. In addition, nearby pixels resemble each other (spatial autocorrelation), which flatters random train/test splits. Menze & Ur therefore held out whole 6 × 6 km blocks during cross-validation.\n\n\n\n\n// Step 9b (optional). Let Earth Engine build the matrix ------------------------------\n// First draw three new point layers on top of the yellow points:\n// refSite (class 0), refCrop (class 1), refOther (class 2)\nvar reference = refSite.merge(refCrop).merge(refOther);\nvar validation = classified.sampleRegions({\n  collection: reference, properties: ['class'], scale: 30\n});\nvar matrix = validation.errorMatrix('class', 'classification');\nprint('Confusion matrix (rows = reference, columns = map):', matrix);\nprint('Overall accuracy:', matrix.accuracy());\nprint(\"Producer's accuracy:\", matrix.producersAccuracy());\nprint(\"User's (consumer's) accuracy:\", matrix.consumersAccuracy());",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#other-examples",
+    "href": "lecture_notes_w4.html#other-examples",
+    "title": "Lecture Notes",
+    "section": "Other examples",
+    "text": "Other examples\n\nReservoirs (NDWI). The Ilısu Dam reservoir on the Tigris flooded most of ancient Hasankeyf, Turkey, in early 2020; NASA Earth Observatory shows a Landsat 8 before/after pair. Titolo (2021) used NDWI time series to monitor archaeological sites emerging along Iraqi reservoirs.\nAgricultural levelling and expansion. Cunliffe (2014) compared site damage over decades of peace, seen on sequential satellite imagery, with wartime damage in Syria. Her Durham thesis (2013) compares 1960s CORONA with recent imagery, and Beydar is among its case studies.\nUrban sprawl. Agapiou et al. (2015) mapped urban growth around Paphos, Cyprus, from Landsat TM/ETM+ time series and modelled future pressure on its monuments.\nConflict damage. Casana & Laugier (2017) assessed nearly 5,000 sites in Syria, northern Iraq and southern Turkey on high-resolution imagery. Casana et al. (2026) revisit about 200 Syrian sites after the war.\nCoastal erosion. Westley et al. (2021) assess past impacts and future threats to coastal sites across the Middle East and North Africa (MarEA project). Andreou et al. (2022) set a baseline for Gaza’s coast.\n\n// Optional, in a NEW script: Hasankeyf and the Ilisu reservoir ------------------------\nvar hasankeyf = ee.Geometry.Point([41.413, 37.714]);\nvar box = hasankeyf.buffer(5000).bounds();       // 10 x 10 km square\n\nvar hk2018 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')\n  .filterBounds(hasankeyf)\n  .filterDate('2018-06-01', '2018-09-01')\n  .filter(ee.Filter.lt('CLOUD_COVER', 10))\n  .median().select('SR_B.').multiply(0.0000275).add(-0.2);\nvar hk2021 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')\n  .filterBounds(hasankeyf)\n  .filterDate('2021-06-01', '2021-09-01')\n  .filter(ee.Filter.lt('CLOUD_COVER', 10))\n  .median().select('SR_B.').multiply(0.0000275).add(-0.2);\n\n// NDWI above 0 is (usually) open water\nvar water2018 = hk2018.normalizedDifference(['SR_B3', 'SR_B5']).gt(0);\nvar water2021 = hk2021.normalizedDifference(['SR_B3', 'SR_B5']).gt(0);\nvar newWater = water2021.and(water2018.not());\n\nMap.centerObject(hasankeyf, 13);\nMap.addLayer(hk2018, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 0, max: 0.3}, 'Hasankeyf, summer 2018');\nMap.addLayer(hk2021, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 0, max: 0.3}, 'Hasankeyf, summer 2021');\nMap.addLayer(newWater.selfMask(), {palette: ['cyan']}, 'Flooded since 2018');\n\nvar flooded = newWater.multiply(ee.Image.pixelArea()).reduceRegion({\n  reducer: ee.Reducer.sum(), geometry: box, scale: 30\n});\nprint('Newly flooded area in the 10 x 10 km box (m²):', flooded);\n\n\n\n\n\n\nImportantQuestion\n\n\n\nWhich of these threats can you monitor with free 10–30 m imagery, and which need sub-metre imagery?\n\n\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nReservoirs, coastline change, urban sprawl, and large-scale levelling or irrigation show up at 10–30 m, and Landsat’s archive back to the 1980s is a huge advantage. Looting pits, bulldozer scars and military earthworks on a single tell need sub-metre imagery. That is why conflict-damage monitoring relies on commercial satellites and Google Earth.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#before-the-lecture",
+    "href": "lecture_notes_w4.html#before-the-lecture",
+    "title": "Lecture Notes",
+    "section": "",
+    "text": "GEE interface\n\n\n\n\n\n\n\n\nNoteQuota and access\n\n\n\nThe Community Tier now gives 150 EECU-hours per month for students. While GEE used to require approval for access, registration is now instant.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#electromagnetic-em-spectrum",
+    "href": "lecture_notes_w4.html#electromagnetic-em-spectrum",
+    "title": "Lecture Notes",
+    "section": "Electromagnetic (EM) Spectrum",
+    "text": "Electromagnetic (EM) Spectrum\nWe see things because visible light reflects off objects and enter our eyes.\n\n\n\nWhat happens when light hits a material?\n\n\nHowever, we can only see things of certain wavelengths (visible; or blue, green, red; ca. 0.4-0.7 micrometer or µm). What can a satellite see?\n\n\n\nEM spectrum\n\n\n\n\n\nThe EM spectrum from NASA Earthdata\n\n\n\nEM Energy as Wave and Particle\nElectromagnetic (EM) energy travels as a wave, but it is absorbed and detected as discrete packs of energy (photons).\n\n\n\nThe double-slit experiment\n\n\n\\[\nc = \\lambda\\,\\nu \\qquad\\qquad E = h\\,\\nu = \\frac{h\\,c}{\\lambda}\n\\]\n\n\\(\\lambda\\) is wavelength and \\(\\nu\\) is frequency; speed of light \\(c = 3.00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}\\) and the Planck constant \\(h = 6.63\\times10^{-34}\\ \\mathrm{J\\,s}\\). A longer wavelength means less energy per photon.\nWien’s law, \\(\\lambda_{max} \\approx 2898\\ \\mu\\mathrm{m\\,K}\\,/\\,T\\). The Sun (≈ 5,800 K) peaks near 0.5 µm and Earth’s surface (≈ 300 K) near 10 µm. Below ~3 µm (visible, NIR, SWIR), sensors record reflected sunlight; at 3–14 µm (TIR) they record emitted heat from the Earth.\n\n\n\nNotable Spectral Windows\n\n\n\n\n\n\n\n\nRegion\nWavelength\nWhat is recorded\n\n\n\n\nVisible (blue, green, red)\n0.4–0.7 µm\nreflected sunlight; what the eye sees\n\n\nNear-infrared (NIR)\n0.7–1.3 µm\nreflected sunlight; vegetation\n\n\nShortwave infrared (SWIR)\n1.3–3 µm\nreflected sunlight; water and mineral absorption\n\n\nThermal infrared (TIR)\n8–14 µm\nheat emitted by the surface\n\n\nMicrowave\n~1 mm–1 m\nradar echoes (active sensors)\n\n\n\n\n\nPassive and Active Sensors\n\nPassive sensors (most satellite sensors) record what the Sun provides (either reflected or emitted as heat).\nActive sensors (such as synthetic aperture radar, SAR) send their own microwave pulse and measure the echo. SAR works day and night and can penetrate most clouds.\n\n\n\n\nScanning configuration for a left looking SAR with a rectangular antenna. Credit: Coert Olmsted, Scientific SAR User’s Guide. Alaska SAR Facility, 1993.\n\n\n\n\nSpectral Signatures\n\n\n\nReflectance spectra of materials on Earth’s surface. Credit: NASA Science\n\n\n\nVegetation: chlorophyll absorbs blue and red; leaf water absorbs SWIR.\nDry soil: Clay mineral absorbs near 2 micrometer.\nWater: absorbs nearly everything beyond ~ green. What color in NIR and SWIR?\n\n\n\n\nSeasonal variation in spectral patterns and spatial probability maps for the Hamoukar region. Source: Menze and Ur (2012): Fig. 2.\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\nWhich part of the spectrum best separates wet soil from dry soil?\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\nYou are designing an Earth-observation sensor to record surface reflectance in a blue band and a SWIR band. Given the spectrum and the equations above, what spatial resolution would you reasonably expect?",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#a-sensor-menu",
+    "href": "lecture_notes_w4.html#a-sensor-menu",
+    "title": "Lecture Notes",
+    "section": "A Sensor Menu",
+    "text": "A Sensor Menu\n\nResolutions\nFour types of resolutions are discussed; the design of sensors is usually a trade-off among them.\n\n\n\n\n\n\n\n\nResolution\nDefinition\nExamples\n\n\n\n\nSpatial\nThe smallest unit a sensor can distinguish\nCORONA ≈ 1-3 m; Landsat 30 m; MODIS 250 m–1 km\n\n\nSpectral\nAbility to distinguish features in the EM spectrum\nLandsat 9: 11 bands; MODIS: 36 bands\n\n\nTemporal\nThe amount of time needed to revisit the same location\nMODIS: daily; Landsat 8 + 9: 8 days\n\n\nRadiometric\nThe amount of information in each pixel (i.e. bit depth)\n8-bit = 256 levels (TM); 14-bit = 16,384 levels (Landsat 9)\n\n\n\nHowey and Palace (2026) suggest that coarser spatial resolution (but higher temporal resolution) requires “more inferential work. Do you agree?\n\n\n\nA chart showing the analytic spatial scale of an array of remote sensing technologies as well as temporal cycles of each technology’s data collection/availability; Howey and Palace (2026): Fig. 1\n\n\n\n\nNotable Sensors\n\n\n\n\n\n\n\n\n\n\n\nSensor (platform)\nYears\nPixel size\nBands\nRevisit\nAccess\n\n\n\n\nTM (Landsat 4–5)\n1982–2011\n30 m (TIR 120 m)\n7: VIS–SWIR, TIR\n16 days\nfree\n\n\nETM+ (Landsat 7)\n1999–2024\n30 m; pan 15 m; TIR 60 m\n8\n16 days\nfree\n\n\nOLI/TIRS (Landsat 8, 9)\n2013–; 2021–\n30 m; pan 15 m; TIR 100 m\n11\n8 days combined\nfree\n\n\nMSI (Sentinel-2)\n2015–\n10/20/60 m\n13\n5 days\nfree\n\n\nSAR (Sentinel-1)\n2014–\n≈ 10 m\nradar\n6–12 days\nfree\n\n\nASTER (Terra)\n2000–\n15 m VNIR; 30 m SWIR; 90 m TIR\n14\n16 days or upon request\nfree; SWIR dead since 2008\n\n\nMODIS (Terra, Aqua)\n2000–\n250 m–1 km\n36\n1–2 days\nfree\n\n\nPlanetScope (CubeSats)\n~2016–\n≈ 3 m\n4–8\n~daily\ncommercial; archive access\n\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\nHow do the CORONA satellite panoramic camera systems compare to Landsat 8/9’s OLI?\n\n\n\n\nLandsat: A Closer Look\n\nTM (Landsat 4–5), ETM+ (7), OLI + TIRS (8), and OLI-2 + TIRS-2 (9). Landsat 9 records 14-bit data.\nRadiometric correction and atmospheric correction.\nProcessing levels (Collection 2):\n\nLevel-1 is calibrated and terrain-corrected, and can be converted to top-of-atmosphere (TOA) reflectance.\nLevel-2 is corrected for the atmosphere and provides surface reflectance (SR) plus surface temperature (ST).\nLevel-3 is the further derivatives of Level-2 products (archaeologists rarely use them).\n\nClouds: each scene carries a precomputed CLOUD_COVER percentage. Level-2 adds a per-pixel quality band (QA_PIXEL, 16-bit masks; USGS provides documentation).\nBand numbers: they do not match between generations. Note surface temperature conversion to Level 2 products.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue\nGreen\nRed\nNIR\nSWIR1\nSWIR2\nThermal\n\n\n\n\nTM / ETM+ (Landsat 5–7)\n1\n2\n3\n4\n5\n7\n6\n\n\nOLI / TIRS (Landsat 8–9)\n2\n3\n4\n5\n6\n7\n10, 11\n\n\n\n\nIntegration of Landsat 5/7 NIR with Landsat 8/9 bands needs prudence. Band 8 can be used for pan-sharpening.\n\n\n\n\nGraph generated by the Band Comparison Tool showing the location of bands on the electromagnetic spectrum for each Landsat instrument. The atmospheric transmission values for this graphic were calculated using MODTRAN for a summertime mid-latitude hazy atmosphere (circa 5 km visibility). NASA/Ross Walter\n\n\n\nWhisk Broom and Push Broom sensors:\n\n\n\n\n\n\n\n\n\nDesign\nHow it works\nExamples\n\n\n\n\nWhiskbroom\na moving mirror sweeps a few detectors across the track\nTM, ETM+\n\n\nPushbroom\na linear array of detectors images a whole row at once\nOLI, TIRS, Sentinel-2 MSI, ASTER VNIR/SWIR\n\n\nFilm camera\nrecords a whole area at once on film or a 2-D array\nCORONA (film)\n\n\n\n\n\nDemo: Getting Landsat Data in GEE\nIn this section, we will try to load decades of satellite imagery for the archaeological landscape around Tell Beydar that we saw in Lab 1. First, we will need to define the study area. Copy and paste the following code to GEE.\n// Step 1. Study area\nvar beydar = ee.Geometry.Point([40.587, 36.738]);\nvar aoi = ee.Geometry.Rectangle([40.50, 36.66, 40.68, 36.81]);\n\nMap.setOptions('SATELLITE'); // basemap\nMap.centerObject(beydar, 14); // 14 is the scale\nMap.addLayer(aoi, {color: 'yellow'}, 'Study area', true, 0.2);\nMap.addLayer(beydar, {color: 'red'}, 'Tell Beydar');\nNext, load Landsat 8 & 9, collection 2, level 2 data and filter it using the AoI.\n// Step 2. Load and filter\nvar l89 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')\n    .merge(ee.ImageCollection('LANDSAT/LC09/C02/T1_L2'));\n\nvar l89Here = l89.filterBounds(aoi);\nprint('Landsat 8/9 scenes over Tell Beydar:', l89Here.size());\nNow, let us get the vegetation-rich, clear images from 2024. How many scenes does each filter remove?\nvar l89Plant = l89Here.filterDate('2024-03-01', '2024-07-01');\nprint('...from March-June 2024:', l89Plant.size());\n\nvar l89Clear = l89Plant.filter(ee.Filter.lt('CLOUD_COVER', 10));\nprint('...with less than 10% cloud:', l89Clear.size());\n\nprint(l89Clear);\nA median composite will drop out clouds and shadows, because for every pixel it will take the median value of all clear scenes. Run the following code:\n// Level-2 SR: bands SR_B1...SR_B7 are stored as integers.\n// Multiply by 0.0000275 and subtract 0.2 to get reflectance (0-1).\nvar spring = l89Clear.median()\n  .select('SR_B.') // SR_B1 ... SR_B7\n  .multiply(0.0000275)\n  .add(-0.2);\n\nMap.addLayer(spring, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 0, max: 0.5}, 'Level-2 SR, 4-3-2');\n\n// Level-2 also holds surface temperature (band 10): scale to kelvin, then to °C\n\nvar lst = l89Clear.median().select('ST_B10')\n  .multiply(0.00341802).add(149.0)\n  .subtract(273.15);\n\nMap.addLayer(lst, {min: 25, max: 55, palette: ['blue', 'yellow', 'red']},\n  'Surface temperature (°C)', false);\nYou can compare Level-2 products with Level-1 TOA. What are the differences and why? What color is most removed?\n// Level-1 TOA\n\nvar toa = ee.ImageCollection('LANDSAT/LC09/C02/T1_TOA')\n  .filterBounds(aoi)\n  .filterDate('2024-03-01', '2024-07-01')\n  .filter(ee.Filter.lt('CLOUD_COVER', 10))\n  .median();\n  \nMap.addLayer(toa, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.5}, 'Level-1 TOA, 4-3-2', false);",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#band-composites",
+    "href": "lecture_notes_w4.html#band-composites",
+    "title": "Lecture Notes",
+    "section": "Band Composites",
+    "text": "Band Composites\nA raster can be visualized using three color channels, and a composite assigns any three bands to the display of red, green, and blue. By assigning different bands to these three channels, one can visualize the EM spectrum beyond visible.\n\n\n\n\n\n\n\n\nComposite\nLandsat 8/9 (R-G-B)\nWhat stands out\n\n\n\n\nNatural color\n4-3-2\nwhat the eye expects\n\n\nColor infrared\n5-4-3\nhealthy vegetation in red; crop marks\n\n\nAgriculture\n6-5-2\nmoisture and crop differences\n\n\nSWIR soils\n7-6-4\nsoil and mineral differences; bright bare ground\n\n\n\nNow add different composites to GEE. Which composite makes the round Kranzhügel and its lower town stand out best?\n// Step 3. Composites (Landsat 8/9 band numbers) \n\nMap.addLayer(spring, {bands: ['SR_B5', 'SR_B4', 'SR_B3'], min: 0, max: 0.5},  'Color infrared, 5-4-3', false);\n\nMap.addLayer(spring, {bands: ['SR_B6', 'SR_B5', 'SR_B2'], min: 0, max: 0.5}, 'Agriculture, 6-5-2', false);\n\nMap.addLayer(spring, {bands: ['SR_B7', 'SR_B6', 'SR_B4'], min: 0, max: 0.5},  'SWIR soils, 7-6-4', false);\n\n\n\nFalse color composite, R-G-B: 5-4-3",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#spectral-indices",
+    "href": "lecture_notes_w4.html#spectral-indices",
+    "title": "Lecture Notes",
+    "section": "Spectral Indices",
+    "text": "Spectral Indices\nSpectral indices can help us compress two bands into one and eliminate much of the illumination/slope effects. Most indices follow a “normalized difference” template, which runs from -1 to 1:\n\\[\n\\mathrm{ND} = \\frac{\\rho_A - \\rho_B}{\\rho_A + \\rho_B}\n\\]\nHere \\(\\rho\\) is surface reflectance (0-1; important!) in bands A and B. Some common indices are as follows:\n\n\n\n\n\n\n\n\nIndex\nFormula\nLandsat 8/9 bands\n\n\n\n\nNDVI\n(NIR − Red) / (NIR + Red)\n5, 4\n\n\nSAVI\n1.5 × (NIR − Red) / (NIR + Red + 0.5)\n5, 4\n\n\nNDMI\n(NIR − SWIR1) / (NIR + SWIR1)\n5, 6\n\n\nClay ratio\nSWIR1 / SWIR2\n6, 7\n\n\nNDWI\n(Green − NIR) / (Green + NIR)\n3, 5\n\n\n\nLuckily, GEE provides a function to calculate the normalized difference easily. Add the following code to your GEE code editor. Do you notice anything interesting?\n// Step 4. Indices from the spring composite\n\nvar ndvi = spring.normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI');\nvar ndwi = spring.normalizedDifference(['SR_B3', 'SR_B5']).rename('NDWI');\nvar savi = spring.expression('1.5 * (NIR - RED) / (NIR + RED + 0.5)', {\n  NIR: spring.select('SR_B5'),\n  RED: spring.select('SR_B4')\n}).rename('SAVI');\n\nMap.addLayer(ndvi, {min: 0, max: 0.5, palette: ['brown', 'yellow', 'green']}, 'NDVI', false);\nMap.addLayer(savi, {min: 0, max: 0.5, palette: ['brown', 'yellow', 'green']}, 'SAVI', false);\nMap.addLayer(ndwi, {min: 0, max: 0.5, palette: ['white', 'blue']}, 'NDWI', false);\n\n\n\nSAVI of the region (2024 spring)\n\n\n\nTiming\nMenze and Ur (2012) classified 160 ASTER scenes from 2003–2007, where they averaged the probability maps to prevent seasonal variation. Can you further create an ee.ImageCollection named dryScenes from l89Here with filterDate('2024-08-01', '2024-11-01'), and compute its NDVI map? How does summer NDVI compare with the spring one?",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#land-use-and-land-cover-lulc-classification",
+    "href": "lecture_notes_w4.html#land-use-and-land-cover-lulc-classification",
+    "title": "Lecture Notes",
+    "section": "Land Use and Land Cover (LULC) Classification",
+    "text": "Land Use and Land Cover (LULC) Classification\nBauer (2018) suggests that Iron Age and Early Historic Period residents in Maski, Northern Karnataka, used more water-retentive, clay-rich, blacker regur soils for agriculture, and observed greater social inequalities in later periods.\n\n\n\nFig. 6 in Bauer (2018)\n\n\nThis work relies on Land Cover classification using multispectral data, which we can use GEE to generate today. There are usually two methods for LC classification.\n\nUnsupervised Methods: k-means\nUnsupervised methods (e.g. k-means) find clusters of similar pixels, and you will name the clusters afterwards. Try the following code in GEE. Are similar features correctly clustered?\n// Step 5a. Unsupervised: k-means \n\nvar features = spring.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'SR_B7'])\n\n// Learn the clusters from 5,000 random pixels\nvar pixels = features.sample({region: aoi, scale: 30, numPixels: 5000, seed: 1});\n\nvar kmeans = ee.Clusterer.wekaKMeans(6).train(pixels);\nvar clusters = features.cluster(kmeans);\nMap.addLayer(clusters.randomVisualizer(), {}, 'k-means, 6 clusters');\n\n\n\nK-means LC clustering around Tell Beydar\n\n\n\n\nSupervised Methods: Random Forest with Three Classes\nSupervised methods (maximum likelihood, random forest, support vector machines, deep learning) start from training examples that you provide.\nIn GEE, turn off all layers except for the basemap. Hover over Geometry Imports (top left of the map view) and click + new layer. If there is no Geometry Imports option, select Add a marker .\nClick the gear icon next to the new layer. Name it developed, set Import as to FeatureCollection, click + Property, and add class = 0 like below. Choose red for this class.\n\n\n\nCreate a new class of labels\n\n\nWith developed selected, use the point tool to select at least 30 pixels that represent “developed” land cover, such as roads, houses, ancient buildings, etc. You should try to include as many varieties and be as precise as possible. Avoid sampling mixed pixels!\n\n\n\nAvoid mixed pixels\n\n\nRepeat for vegetation (class = 1: fields that are green in spring, trees, etc.) and bare (class = 2: bare soil, rocks, etc.).\nAfter you are done, run the following code:\n// Step 5b. Supervised: random forest \nvar trainingPoints = developed.merge(vegetation).merge(bare);\nvar training = features.sampleRegions({\n  collection: trainingPoints,\n  properties: ['class'],\n  scale: 30\n});\nprint('Training pixels per class:', training.aggregate_histogram('class'));\n\nvar rf = ee.Classifier.smileRandomForest(100).train({\n  features: training,\n  classProperty: 'class',\n  inputProperties: features.bandNames()\n});\n\nvar classified = features.classify(rf);\nMap.addLayer(classified, {min: 0, max: 2, palette: ['red', 'green', 'yellow']},\n  'Random forest: developed / crop / bare');\nCompare results between two classification methods; how is Tell Beydar classified?\n\n\nConfusion Matrix\nTo evaluate the accuracy of his classification, Bauer (2018) used a confusion matrix:\n\n\n\nConfusion matrix in Bauer (2018)\n\n\nThis helps evaluate his classification. Four common metrics are given here, where TP, TN, FP, and FN denote true positive, true negative, false positive, and false negative.\n\\[\nAccuracy = \\frac{TP+TN}{TP+TN+FP+FN}\n\\] \\[\nPrecision = \\frac{TP}{TP+FP}\n\\] \\[\nRecall = \\frac{TP}{TP+FN}\n\\] \\[\nF1 = \\frac{2*Precision*Recall}{Precision+Recall} = \\frac{2*TP}{2*TP+FP+FN}\n\\]\nNote that precision is also called user’s accuracy or consumer’s accuracy, whereas recall is also known as producer’s accuracy or sensitivity.\n\n\n\nUnderstanding precision and recall\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\nMenze and Ur (2012) mention that settlement signals covered about 4% of their search area. Which metrics are best for evaluating their archaeological detection?\n\n\nNow let us check the metrics for your supervised classification.\n// Step 6: sample the map where the drawn points are\nvar check = classified.sampleRegions({\n  collection: trainingPoints,     // the drawn points, not 'training'\n  properties: ['class'],\n  scale: 30,\n  geometries: true\n});\nprint('Your label (class) vs map (classification): 0 developed, 1 vegetation, 2 bare', check);",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "lecture_notes_w4.html#change-detection",
+    "href": "lecture_notes_w4.html#change-detection",
+    "title": "Lecture Notes",
+    "section": "Change Detection",
+    "text": "Change Detection\nFor Landsat, we can compare how different indices or LULC have changed over the same season of different years. We can also subtract an index at date 1 from the same index at date 2. For a true time series, where computations are applied to every pixels, try the following code using MODIS data over the past 26 years.\n// Step 7: Change detection using MODIS\nvar modis = ee.ImageCollection('MODIS/061/MOD12Q1')\n  .filterDate('2000-01-01', '2026-01-01')\n  .select('NDVI');\nprint(ui.Chart.image.series({\n  imageCollection: modis,\n  region: aoi,\n  reducer: ee.Reducer.mean(),\n  scale: 250\n}).setOptions({title: 'Mean NDVI around Tell Beydar'}));\n\n\n\nMean NDVI around Tell Beydar, x 10,000\n\n\n\n\n\n\nBauer, Andrew M. 2018. “Remote Sensing Soils and Social Geographies of Difference: The Landscape Archaeology of Regur from Iron Age Through Medieval Period Northern Karnataka, Southern India.” Journal of Field Archaeology 43 (1): 31–43. https://doi.org/10.1080/00934690.2017.1418611.\n\n\nHowey, Meghan C. L., and Michael W. Palace. 2026. “Satellite Thermal Data Applied to Landscape Archaeology: Mounds in Michigan (12001600 CE).” Proceedings of the National Academy of Sciences 123 (8). https://doi.org/10.1073/pnas.2528379123.\n\n\nMenze, Bjoern H., and Jason A. Ur. 2012. “Mapping Patterns of Long-Term Settlement in Northern Mesopotamia at a Large Scale.” Proceedings of the National Academy of Sciences 109 (14). https://doi.org/10.1073/pnas.1115472109.",
+    "crumbs": [
+      "Lab 4 Multispectral Satellite Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lecture Notes</span>"
+    ]
+  },
+  {
+    "objectID": "GEE.html",
+    "href": "GEE.html",
+    "title": "Setting up Google Earth Engine (GEE)",
+    "section": "",
+    "text": "Introduction\nGoogle Earth Engine (GEE) is a powerful cloud-based platform that allows high-speed, Google-powered spatial analysis using a massive catalog of satellite datasets.",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting up Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "GEE.html#introduction",
+    "href": "GEE.html#introduction",
+    "title": "Setting up Google Earth Engine (GEE)",
+    "section": "",
+    "text": "GEE logo",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting up Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "GEE.html#registration",
+    "href": "GEE.html#registration",
+    "title": "Setting up Google Earth Engine (GEE)",
+    "section": "Registration",
+    "text": "Registration\nFirst, go to console.cloud.google.com/earth-engine and create or select a Cloud project.\nAfter logging in with your Dartmouth credentials, click on Register and select Create project. Select a unique Project name and attach the project to dartmouth.edu -&gt; Learning -&gt; Students.\n\n\n\nRegister your Cloud project\n\n\nNext, select Get started for noncommercial use. In the questionnaire, answer Public or private academic institution for organization type. Type in Dartmouth College as the name of your institution, and select No, Scientific research, Archaeology, Global, and finally No, before checking for eligibility.\n\n\n\nPart of the eligibility questionnaire\n\n\nNext, choose Community as your plan, which is more than enough for our course. Select a category that describes your work.\nAfter submitting your questionnaire, you may need to enable GEE API. Select Enable.\n\n\n\nEnable GEE API",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting up Google Earth Engine (GEE)</span>"
+    ]
+  },
+  {
+    "objectID": "GEE.html#code-editor-interface",
+    "href": "GEE.html#code-editor-interface",
+    "title": "Setting up Google Earth Engine (GEE)",
+    "section": "Code Editor Interface",
+    "text": "Code Editor Interface\nAfter registration, you should now have access to the code editor (https://code.earthengine.google.com/).",
+    "crumbs": [
+      "Getting Started",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting up Google Earth Engine (GEE)</span>"
     ]
   }
 ]
