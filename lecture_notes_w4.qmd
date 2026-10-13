@@ -1,8 +1,8 @@
 ---
 title: "Lecture Notes"
 subtitle: "Path Wavelengths: Multispectral Imagery Analysis in Archaeology"
-author: "Casey Shi"
-date: last-modified
+author: "Dr. Casey H. Shi"
+date: 10/13/2026
 format:
   html:
     number-sections: false
@@ -11,11 +11,11 @@ format:
     link-external-newwindow: true
 ---
 
-![Can you recognize what is written here with these panels of Landsat satellite imagery? Use [Your Name in Landsat](https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/) to create your own!](imgs/SPARCL.png){fig-align="center" width="80%"}
+![Can you recognize what is written here with these panels of Landsat satellite imagery? Use [Your Name in Landsat](https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/) to create your own panels.](imgs/SPARCL.png){fig-align="center" width="80%"}
 
 ## Before the Lecture
 
-We will be using [Google Earth Engine](console.cloud.google.com/earth-engine) (GEE) throughout this week's lecture and lab. Follow this page to create a Cloud project.
+We will be using [Google Earth Engine](console.cloud.google.com/earth-engine) (GEE) throughout this week's lecture and lab. Follow [this page](GEE.qmd) to create a Cloud project.
 
 Google Earth Engine, not to be confused with [Google Earth](https://earth.google.com/web), features a multi-petabyte ($10^{15}$ bytes) catalog of multisensor satelite imagery that allows cloud-based planetary-scale analysis.
 
