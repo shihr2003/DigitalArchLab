@@ -148,7 +148,7 @@ It looks like this:
 ``` javascript
 // calculating greenup 2011-2025
 var gu2011 = modisSpring.filterDate('2011-01-01', '2012-01-01').max()
-    .subtract(modisAutumn.filterDate('2010-01-01', '2011-01-01').mean()).rename('y2011');
+  .subtract(modisAutumn.filterDate('2010-01-01', '2011-01-01').mean()).rename('y2011');
 ```
 
 Similarly, for greenup of 2012 (`gu2012`), we can write something like:
@@ -234,7 +234,7 @@ var rainfall = chirps
 Map.addLayer(rainfall, {min: 150, max: 600, palette: ['#ffffcc','#41b6c4','#253494']}, 'Annual mean precipitation')
 ```
 
-You should now be able to see annual mean precipitation averaged from five-year data.
+This may take a while to load. You should now be able to see annual mean precipitation averaged from five-year data.
 
 ![Annual mean precipitation](images/clipboard-4150565081.png){fig-align="center" width="80%"}
 
@@ -261,7 +261,7 @@ Feel free to change toggle on and off different layers and change opacity of the
 For mounds and the square fortifications, describe how the sites are differently distributed. How does the distribution of mounds differ from that of fortifications in this region? Turn on the autumn NDVI, spring NDVI, greenup frequency, and mean annual rainfall layers, one at a time. For each site type, which environmental layer (if any) seems to explain its distribution better?
 :::
 
-Finally, let us stack all bands together and read the values for each of the site, so we can do some statistical analyses. Add the following code to your script:
+Finally, let us stack all bands together and read the values for each of the site, so we can export our data. Add the following code to your script:
 
 ``` javascript
 // Stacking points data
@@ -270,13 +270,14 @@ var env = autumnNDVI.focalMean({radius: 2000, units: 'meters'})
   .addBands(greenupFreq.focalMean({radius: 2000, units: 'meters'}))
   .addBands(rainfall)
   .addBands(ee.Image.pixelLonLat());            // adds longitude and latitude
-print('Layers in the stack:', env.bandNames());
 
 var siteValues = env.sampleRegions({
   collection: points,
   properties: ['class_name'],
   scale: 250
 });
+
+// Export
 
 Export.table.toDrive({
   collection: siteValues,
