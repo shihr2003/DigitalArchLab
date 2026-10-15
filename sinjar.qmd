@@ -87,7 +87,7 @@ Just like in the change detection section of the [lecture](lecture_notes_w4.qmd#
 var modisAll = ee.ImageCollection('MODIS/061/MOD13Q1');
 ```
 
-Next, create `modisFiltered` to include only those scenes between 2010 and 2025 that touch our study region. We will only be using the NDVI (normalized difference vegetation index) for this exercise.
+Next, create `modis` to include only those scenes between 2010 and 2025 that touch our study region. We will only be using the NDVI (normalized difference vegetation index) for this exercise.
 
 ``` javascript
 var modis = modisAll
