@@ -756,7 +756,7 @@ div.csl-indent {
 </section>
 <section id="greenup-frequency" class="level3">
 <h3 class="anchored" data-anchor-id="greenup-frequency">Greenup Frequency</h3>
-<p>Finally, add these few lines to your script, calculating a “greenup frequency” from 2010 to 2025. This part basically calculates the percentage of the years that have dramatic greenup in the spring for any given pixel, meaning they are a “good year” for farmers. The higher the greenup frequency is, the better a chance a location has a good year in the past 15 years.</p>
+<p>Finally, add these few lines to your script, calculating a “greenup frequency” from 2010 to 2025. This part basically calculates the percentage of the years that have dramatic greenup in the spring for any given pixel, meaning they are a “good year” for farmers. The higher the greenup frequency is, the better the chance a location has a good year.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Greenup frequency</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> threshold <span class="op">=</span> <span class="fl">0.2</span><span class="op">;</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> greenupFreq <span class="op">=</span> guAll<span class="op">.</span><span class="fu">gt</span>(threshold)<span class="op">.</span><span class="fu">reduce</span>(ee<span class="op">.</span><span class="at">Reducer</span><span class="op">.</span><span class="fu">mean</span>())<span class="op">.</span><span class="fu">rename</span>(<span class="st">'greenup_freq'</span>)<span class="op">;</span></span>
@@ -795,7 +795,7 @@ div.csl-indent {
 </section>
 <section id="synthesis" class="level2">
 <h2 class="anchored" data-anchor-id="synthesis">Synthesis</h2>
-<p>Now, feel free to add the site centroids on top to see if they match with any the environmental data we just produced:</p>
+<p>Now, feel free to add the site centroids on top to see if they match with any of the environmental data we just produced:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Adding points on top</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> points <span class="op">=</span> ee<span class="op">.</span><span class="fu">FeatureCollection</span>(table)<span class="op">;</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> squares <span class="op">=</span> points<span class="op">.</span><span class="fu">filter</span>(ee<span class="op">.</span><span class="at">Filter</span><span class="op">.</span><span class="fu">eq</span>(<span class="st">'class_name'</span><span class="op">,</span> <span class="st">'square'</span>))<span class="op">;</span></span>
@@ -804,7 +804,7 @@ div.csl-indent {
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">centerObject</span>(points<span class="op">,</span> <span class="dv">9</span>)<span class="op">;</span></span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(squares<span class="op">,</span> {<span class="dt">color</span><span class="op">:</span> <span class="st">'blue'</span>}<span class="op">,</span> <span class="st">'Fortifications'</span>)<span class="op">;</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(mounds<span class="op">,</span> {<span class="dt">color</span><span class="op">:</span> <span class="st">'red'</span>}<span class="op">,</span> <span class="st">'Mounds'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Feel free to change toggle on and off different layers and change opacity of these layers.</p>
+<p>Feel free to toggle on and off different layers and change their opacity.</p>
 <div id="question5" class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -818,7 +818,7 @@ div.csl-indent {
 <p>For mounds and the square fortifications, describe how the sites are differently distributed. How does the distribution of mounds differ from that of fortifications in this region? Turn on the autumn NDVI, spring NDVI, greenup frequency, and mean annual rainfall layers, one at a time. For each site type, which environmental layer (if any) seems to explain its distribution better?</p>
 </div>
 </div>
-<p>Finally, let us stack all bands together and read the values for each of the site, so we can export our data. Add the following code to your script:</p>
+<p>Finally, let us stack all bands together and have Earth Engine read the values for each of the site, so we can export our data. Add the following code to your script:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Stacking points data</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> env <span class="op">=</span> autumnNDVI<span class="op">.</span><span class="fu">focalMean</span>({<span class="dt">radius</span><span class="op">:</span> <span class="dv">2000</span><span class="op">,</span> <span class="dt">units</span><span class="op">:</span> <span class="st">'meters'</span>})</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">addBands</span>(springNDVI<span class="op">.</span><span class="fu">focalMean</span>({<span class="dt">radius</span><span class="op">:</span> <span class="dv">2000</span><span class="op">,</span> <span class="dt">units</span><span class="op">:</span> <span class="st">'meters'</span>}))</span>
@@ -841,14 +841,14 @@ div.csl-indent {
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">selectors</span><span class="op">:</span> [<span class="st">'class_name'</span><span class="op">,</span> <span class="st">'autumnNDVI'</span><span class="op">,</span> <span class="st">'springNDVI'</span><span class="op">,</span> <span class="st">'greenup_freq'</span><span class="op">,</span></span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>              <span class="st">'rainfall'</span><span class="op">,</span> <span class="st">'longitude'</span><span class="op">,</span> <span class="st">'latitude'</span>]</span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Locate <code>Tasks</code> tab from the right panel and <code>RUN</code> the <code>sites_environment</code> task.</p>
+<p>Locate <code>Tasks</code> tab from the right panel and <code>RUN</code> the <code>sites_environment</code> task to start exporting.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-3712267250.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 <p>In the pop-up window, leave <code>Drive folder</code> blank, so GEE will save the file to the root of your Google Drive. Change <code>Filename</code> to a reasonable name such as <code>DigitalArch_lab4_name_output1</code>. <code>File format</code> should be <code>CSV</code>. Press <code>RUN</code>.</p>
-<p>Wait for a few moments before the rotating gear symbol turns to a gray tick (<img src="images/clipboard-1534477752.png" class="img-fluid" style="width:10.0%">). This may take a while. After the task is done, go to your Google Drive and download the <code>csv</code> file you just created.</p>
+<p>Wait for a few moments before the rotating gear symbol turns to a gray tick (<img src="images/clipboard-1534477752.png" class="img-fluid" style="width:10.0%">). This may take a while. After the exporting task is done, go to your Google Drive and download the <code>csv</code> file you just created.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
