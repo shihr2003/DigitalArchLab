@@ -423,7 +423,7 @@ For Landsat, we can compare how different indices or LULC have changed over the 
 
 ``` javascript
 // Step 7: Change detection using MODIS
-var modis = ee.ImageCollection('MODIS/061/MOD12Q1')
+var modis = ee.ImageCollection('MODIS/061/MOD13Q1')
   .filterDate('2000-01-01', '2026-01-01')
   .select('NDVI');
 print(ui.Chart.image.series({

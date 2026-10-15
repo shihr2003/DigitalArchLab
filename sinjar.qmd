@@ -201,7 +201,7 @@ print('# years in the stack:', guAll.bandNames().length());
 
 ### Greenup Frequency
 
-Finally, add these few lines to your script, calculating a "greenup frequency" from 2010 to 2025. This part basically calculates the percentage of the years that have dramatic greenup in the spring for any given pixel, meaning they are a "good year" for farmers. The higher the greenup frequency is, the better a chance a location has a good year in the past 15 years.
+Finally, add these few lines to your script, calculating a "greenup frequency" from 2010 to 2025. This part basically calculates the percentage of the years that have dramatic greenup in the spring for any given pixel, meaning they are a "good year" for farmers. The higher the greenup frequency is, the better the chance a location has a good year.
 
 ``` javascript
 // Greenup frequency
@@ -240,7 +240,7 @@ This may take a while to load. You should now be able to see annual mean precipi
 
 ## Synthesis
 
-Now, feel free to add the site centroids on top to see if they match with any the environmental data we just produced:
+Now, feel free to add the site centroids on top to see if they match with any of the environmental data we just produced:
 
 ``` javascript
 // Adding points on top
@@ -253,7 +253,7 @@ Map.addLayer(squares, {color: 'blue'}, 'Fortifications');
 Map.addLayer(mounds, {color: 'red'}, 'Mounds');
 ```
 
-Feel free to change toggle on and off different layers and change opacity of these layers.
+Feel free to toggle on and off different layers and change their opacity.
 
 ::: {#question5 .callout-important}
 ## Question 5
@@ -261,7 +261,7 @@ Feel free to change toggle on and off different layers and change opacity of the
 For mounds and the square fortifications, describe how the sites are differently distributed. How does the distribution of mounds differ from that of fortifications in this region? Turn on the autumn NDVI, spring NDVI, greenup frequency, and mean annual rainfall layers, one at a time. For each site type, which environmental layer (if any) seems to explain its distribution better?
 :::
 
-Finally, let us stack all bands together and read the values for each of the site, so we can export our data. Add the following code to your script:
+Finally, let us stack all bands together and have Earth Engine read the values for each of the site, so we can export our data. Add the following code to your script:
 
 ``` javascript
 // Stacking points data
@@ -288,13 +288,13 @@ Export.table.toDrive({
 });
 ```
 
-Locate `Tasks` tab from the right panel and `RUN` the `sites_environment` task.
+Locate `Tasks` tab from the right panel and `RUN` the `sites_environment` task to start exporting.
 
 ![](images/clipboard-3712267250.png){fig-align="center" width="80%"}
 
 In the pop-up window, leave `Drive folder` blank, so GEE will save the file to the root of your Google Drive. Change `Filename` to a reasonable name such as `DigitalArch_lab4_name_output1`. `File format` should be `CSV`. Press `RUN`.
 
-Wait for a few moments before the rotating gear symbol turns to a gray tick (![](images/clipboard-1534477752.png){width="10%"}). This may take a while. After the task is done, go to your Google Drive and download the `csv` file you just created.
+Wait for a few moments before the rotating gear symbol turns to a gray tick (![](images/clipboard-1534477752.png){width="10%"}). This may take a while. After the exporting task is done, go to your Google Drive and download the `csv` file you just created.
 
 ::: callout-tip
 You may need to switch your Google account to the one hosting your GEE cloud project before downloading the `csv` file.
