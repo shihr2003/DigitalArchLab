@@ -96,7 +96,7 @@ var modis = modisAll
   .select('NDVI');
 ```
 
-Use `print()` and the `Console` to check how many modis scenes are used. You can use this function to check the size of other `ee.ImageCollection`.
+Use `print()` and the `Console` to check how many modis scenes are used. You can use this function to check the size of other `ee.ImageCollection`. For example, you can check the number of all MODIS scenes used by using this line of code. Here, we are checking the `size()` of the `ImageCollection` named `modisAll` that we just created.
 
 ``` javascript
 print('# MODIS scenes in total:', modisAll.size());
