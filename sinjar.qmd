@@ -304,6 +304,8 @@ The first few rows of the csv file should look like this:
 
 ![First few rows of exported file](images/clipboard-19537344.png){fig-align="center" width="100%"}
 
+Congratulations — you are done with GEE for this lab! Please remember to save your script.
+
 ### Statistical Analyses (Optional)
 
 @bauer2018 and @howey2026 have both used p-values to test whether a class of sites is significantly associated with an environmental variable. We can do the same to test the patterns you observed in [Question 5](#question5).
