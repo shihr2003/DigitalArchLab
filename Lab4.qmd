@@ -1,0 +1,83 @@
+---
+title: "Questions (Due: Oct 22)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it to the course Canvas site by **11:59pm, Oct 22, 2026**.
+
+**Question 1**
+
+Please copy and paste your GEE script link here. (**5 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+How many MODIS scenes, *after filtering*, are you using? (**5 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Add the following code to your script and report the output. (**10 points**)
+
+``` javascript
+print('# autumn scenes:', modisAutumn.size()); 
+print('# spring scenes:', modisSpring.size());
+```
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+Add the following code to your script and report the output. (**10 points**)
+
+``` javascript
+print('# years in the stack:', guAll.bandNames().length());
+```
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 5**
+
+For mounds and the fortifications (`square`), describe how the sites are differently distributed. How does the distribution of mounds differ from that of fortifications in this region? Turn on the autumn NDVI, spring NDVI, greenup frequency, and mean annual rainfall layers in GEE, one at a time. For each site type, which environmental layer (if any) seems to explain its distribution better? (**20 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Bonus Question** (Bonus **10 points**)
+
+Run a Mann–Whitney U test comparing mounds and fortifications on spring NDVI (`springNDVI`), greenup frequency (`greenup_freq`) and mean annual rainfall (`rainfall`). Report the two-tailed p-value for each.
+
+**a**. Which of these variables, if any, differ significantly between the two types of site (p \< 0.05)?
+
+**b**. Do these results agree with what you observed in Question 5?
+
+**c**. In your opinion, what might these results suggest about how mounds and fortifications were sited?
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Total** 50 points + 10 points (bonus)

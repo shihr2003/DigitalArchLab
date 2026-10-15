@@ -18,8 +18,8 @@ book:
       chapters: [Drone_photogrammetry.qmd, Orthomosaic.qmd, Lab2.qmd]
     - part: "Lab 3 Archaeological Applications of Airborne Lidar"
       chapters: [public_lidar.qmd, drone_lidar.qmd, Lab3.qmd]
-    - part: "Lab 4 Multispectral Satellite Data"
-      chapters: [lecture_notes_w4.qmd]
+    - part: "Lab 4 Multispectral Analysis"
+      chapters: [lecture_notes_w4.qmd, sinjar.qmd, Lab4.qmd]
     
   
   appendices: 

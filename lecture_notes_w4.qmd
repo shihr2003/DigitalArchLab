@@ -1,5 +1,5 @@
 ---
-title: "Lecture Notes"
+title: "Lecture Notes (for reference only)"
 subtitle: "Path Wavelengths: Multispectral Imagery Analysis in Archaeology"
 author: "Dr. Casey H. Shi"
 date: 10/13/2026
@@ -19,14 +19,14 @@ We will be using [Google Earth Engine](console.cloud.google.com/earth-engine) (G
 
 Google Earth Engine, not to be confused with [Google Earth](https://earth.google.com/web), features a multi-petabyte ($10^{15}$ bytes) catalog of multisensor satelite imagery that allows cloud-based planetary-scale analysis.
 
-Once everything is set up, you should be able to access the code editor like this:
+Once everything is set up, you should be able to access the code editor that looks like this:
 
 ![GEE interface](images/clipboard-2972781803.png){fig-align="center" width="100%"}
 
 ::: callout-note
 ## Quota and access
 
-The Community Tier now gives 150 EECU-hours per month for students. While GEE used to require approval for access, registration is now instant.
+The Community Tier now gives 150 EECU-hours per month for free. While GEE used to require approval for access, registration is now instant.
 :::
 
 ## Electromagnetic (EM) Spectrum
@@ -417,7 +417,7 @@ var check = classified.sampleRegions({
 print('Your label (class) vs map (classification): 0 developed, 1 vegetation, 2 bare', check);
 ```
 
-## Change Detection
+## Change Detection {#change-detection}
 
 For Landsat, we can compare how different indices or LULC have changed over the same season of different years. We can also subtract an index at date 1 from the same index at date 2. For a true time series, where computations are applied to every pixels, try the following code using [MODIS](https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD12Q1) data over the past 26 years.
 
