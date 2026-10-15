@@ -306,9 +306,9 @@ The first few rows of the csv file should look like this:
 
 ### Statistical Analyses (Optional)
 
-@bauer2018 and @howey2026 have both used p-values to test whether a class of sites (mounds or square forts) is significantly associated with an environmental variable. We can do the same to test the patterns you observed in [Question 5](#question5).
+@bauer2018 and @howey2026 have both used p-values to test whether a class of sites is significantly associated with an environmental variable. We can do the same to test the patterns you observed in [Question 5](#question5).
 
-In this case, we will be using a simple [Mann-Whitney U](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test) Test for two independent datasets (mounds and square forts). For each measurement (autumn NDVI, spring NDVI, greenup frequency and mean annual rainfall), the test asks whether values at one type of site tend distribute differently than at the other.
+In this case, we will be using a simple [Mann-Whitney U](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test) Test for two independent datasets (mounds and square fortifications). For each measurement (autumn NDVI, spring NDVI, greenup frequency and mean annual rainfall), the test asks whether values at one type of site tend distribute differently than at the other.
 
 To do that, we will be using a simple online calculator like [this](https://www.socscistatistics.com/tests/mannwhitney/calculator/). All you need to do is to plug values from the mound class to group 1, and the square class to group 2.
 
