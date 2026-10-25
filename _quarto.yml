@@ -20,7 +20,8 @@ book:
       chapters: [public_lidar.qmd, drone_lidar.qmd, Lab3.qmd]
     - part: "Lab 4 Multispectral Analysis"
       chapters: [lecture_notes_w4.qmd, sinjar.qmd, Lab4.qmd]
-    
+    - part: "Lab 5 Archaeological Geophysics"
+      chapters: [geophysics.qmd, Lab5.qmd]
   
   appendices: 
     - references.qmd

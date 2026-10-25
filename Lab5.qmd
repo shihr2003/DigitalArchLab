@@ -1,0 +1,58 @@
+---
+title: "Questions (Due: Nov 1)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 1, 2026.
+
+**Question 1**
+
+Based on your readings (especially @ernenwein2023) and your analysis of lab datasets, describe the relative strengths and weaknesses of the three geophysical methods at revealing subsurface archaeological features on Dartmouth’s campus. Be sure to consider the visibility of remains, the time and logistics of data collection and processing, noise and other issues, and other related factors. (**15 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+Illustrate at least two probable subsurface archaeological features that are visible in geophysical datasets from central campus. What instruments provide the best image of these features and why? (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Where would you recommend expanded geophysical surveys take place and what instruments should we use? (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+Why did @herrmann2014 use GPR and ERT for geophysical surveys at the Hopewell mounds in southern Illinois, and what did these technologies reveal that other approaches, like magnetic gradiometry, did not? (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 5**
+
+What surprising discoveries did large-scale geophysical surveys reveal at the landscape around Stonehenge (@gaffney2012)? (**5 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Total** 50 points
