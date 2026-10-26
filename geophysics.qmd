@@ -29,7 +29,7 @@ Several of these houses were moved during early 1900s to make way for new campus
 
 ## Datasets
 
-In this lab you are provided with several datasets that are included in `DigitalArchaeologyLab_2025.zip`. After you've downloaded and uncompressed the `.zip` file, you should be able to see six folders/files:
+In this lab you are provided with several datasets that are included in [`DigitalArchaeologyLab_2025.zip`](https://drive.google.com/file/d/13wmKcvE4sxrPJR9UouS-UGXHH-gJdNvN/view?usp=drive_link). After you've downloaded and uncompressed the `.zip` file, you should be able to see six folders/files:
 
 ![Files included in the `.zip`](images/clipboard-3552377102.png){fig-align="center" width="50%"}
 
