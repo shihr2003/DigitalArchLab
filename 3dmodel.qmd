@@ -85,19 +85,19 @@ Resize the bounding box position and orientation to fit the object, as it define
 
 ![Adjusting bounding box in Metashape](images/clipboard-2478861408.png){fig-align="center" width="80%"}
 
-## Build Dense Cloud
+## Build Point Cloud/Dense Cloud
 
 Based on the estimated camera positions, Metashape now creates a single dense point cloud.
 
-Select `Build Dense Cloud` command from the `Workflow` menu.
+Select `Build Point Cloud` command from the `Workflow` menu.
 
 ::: callout-note
 You will need to do this procedure for each chunk in your model.
 :::
 
-Set the following recommended values for the parameters in the `Build Dense Cloud`dialogue:
+Set the following recommended values for the parameters in the `Build Point Cloud`dialogue:
 
-- **`Quality`**: Medium (higher quality takes quite a long time and demands more computational resources)
+- **`Quality`**: Medium (higher quality takes quite a long time and demands more computational resources)
 
 - **`Depth filtering`**: Aggressive (if the geometry of the scene to be reconstructed is complex with numerous small details on the foreground, then it is recommended to set to Mild depth filtering mode, for important features not to be sorted out)
 
@@ -109,13 +109,13 @@ Click `OK` button to start building dense point cloud.
 You should carefully inspect the resulting point cloud, and use the Rectangle, Circle or other selection tools to manually select bad points and delete them from the model.
 :::
 
-## Build a Mesh
+## Build a Model/Mesh
 
 After the dense point cloud has been reconstructed it is possible to generate a high-quality polygonal mesh model based on the dense cloud data, basically filling in areas between points in the point cloud to create a continuous surface.
 
-Select `Build Mesh` command from the `Workflow` menu.
+Select `Build Model` command from the `Workflow` menu.
 
-Set the following recommended values for the parameters in the `Build Mesh` dialog:
+Set the following recommended values for the parameters in the `Build Model` dialog:
 
 - `Source data`: Dense cloud
 
@@ -127,7 +127,7 @@ Click `OK` button to start mesh reconstruction.
 
 ![Mesh construction](images/clipboard-3371464042.png){fig-align="center" width="100%"}
 
-When complete notice that you can view the model now either as point cloud or a mesh.
+When complete notice that you can view the model now either as point cloud or a model/mesh.
 
 ::: callout-tip
 If your mesh looks terrible you should back up and clean your point cloud up a bit more.

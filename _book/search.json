@@ -899,5 +899,27 @@
       "Appendices",
       "References"
     ]
+  },
+  {
+    "objectID": "3dmodel.html#build-point-clouddense-cloud",
+    "href": "3dmodel.html#build-point-clouddense-cloud",
+    "title": "Generating a 3D Model",
+    "section": "Build Point Cloud/Dense Cloud",
+    "text": "Build Point Cloud/Dense Cloud\nBased on the estimated camera positions, Metashape now creates a single dense point cloud.\nSelect Build Point Cloud command from the Workflow menu.\n\n\n\n\n\n\nNote\n\n\n\nYou will need to do this procedure for each chunk in your model.\n\n\nSet the following recommended values for the parameters in the Build Point Clouddialogue:\n\nQuality: Medium (higher quality takes quite a long time and demands more computational resources)\nDepth filtering: Aggressive (if the geometry of the scene to be reconstructed is complex with numerous small details on the foreground, then it is recommended to set to Mild depth filtering mode, for important features not to be sorted out)\n\nClick OK button to start building dense point cloud.\n\n\n\nObject dense cloud in Metashape\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou should carefully inspect the resulting point cloud, and use the Rectangle, Circle or other selection tools to manually select bad points and delete them from the model.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#build-a-modelmesh",
+    "href": "3dmodel.html#build-a-modelmesh",
+    "title": "Generating a 3D Model",
+    "section": "Build a Model/Mesh",
+    "text": "Build a Model/Mesh\nAfter the dense point cloud has been reconstructed it is possible to generate a high-quality polygonal mesh model based on the dense cloud data, basically filling in areas between points in the point cloud to create a continuous surface.\nSelect Build Model command from the Workflow menu.\nSet the following recommended values for the parameters in the Build Model dialog:\n\nSource data: Dense cloud\nSurface type: Arbitrary (3D)\nFace count: High (to get a nice model) or Medium (for faster processing)\n\nClick OK button to start mesh reconstruction.\n\n\n\nMesh construction\n\n\nWhen complete notice that you can view the model now either as point cloud or a model/mesh.\n\n\n\n\n\n\nTip\n\n\n\nIf your mesh looks terrible you should back up and clean your point cloud up a bit more.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
   }
 ]
