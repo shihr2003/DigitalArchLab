@@ -795,7 +795,7 @@
     "href": "3dmodel.html#align-photos",
     "title": "Generating a 3D Model",
     "section": "Align Photos",
-    "text": "Align Photos\nAt this stage Metashape estimates the camera position for each photo and builds the sparse point cloud model.\nSelect Align Photos command from the Workflowmenu.\n\n\n\nAlign Photos dialogue\n\n\nSet the following recommended values for the parameters in the Align Photos dialogue:\n\nAccuracy: High or Medium (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nKey point limit: 40000\nTie point limit:1000\n\nClick OK button to start photo alignment.\nCreate a new chuck for each set of photos that are taken from a different perspective and follow the same steps as above.",
+    "text": "Align Photos\nAt this stage Metashape estimates the camera position for each photo and builds the sparse point cloud model.\nSelect Align Photos command from the Workflowmenu.\n\n\n\nAlign Photos dialogue\n\n\nSet the following recommended values for the parameters in the Align Photos dialogue:\n\nAccuracy: High or Medium (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nKey point limit: 40000\nTie point limit:10000\n\nClick OK button to start photo alignment.\nCreate a new chuck for each set of photos that are taken from a different perspective and follow the same steps as above.",
     "crumbs": [
       "Lab 6 3D Photogrammetry in Archaeology",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
