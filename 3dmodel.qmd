@@ -71,7 +71,7 @@ Set the following recommended values for the parameters in the *Align Photos* d
 
 - **`Key point limit`**: 40000
 
-- **`Tie point limit`**:1000
+- **`Tie point limit`**:10000
 
 Click `OK` button to start photo alignment.
 
