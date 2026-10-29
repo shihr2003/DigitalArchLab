@@ -503,8 +503,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#mask" id="toc-mask" class="nav-link" data-scroll-target="#mask">Mask Photos</a></li>
   <li><a href="#align-photos" id="toc-align-photos" class="nav-link" data-scroll-target="#align-photos">Align Photos</a></li>
   <li><a href="#set-bounding-box" id="toc-set-bounding-box" class="nav-link" data-scroll-target="#set-bounding-box">Set Bounding Box</a></li>
-  <li><a href="#build-dense-cloud" id="toc-build-dense-cloud" class="nav-link" data-scroll-target="#build-dense-cloud">Build Dense Cloud</a></li>
-  <li><a href="#build-a-mesh" id="toc-build-a-mesh" class="nav-link" data-scroll-target="#build-a-mesh">Build a Mesh</a></li>
+  <li><a href="#build-point-clouddense-cloud" id="toc-build-point-clouddense-cloud" class="nav-link" data-scroll-target="#build-point-clouddense-cloud">Build Point Cloud/Dense Cloud</a></li>
+  <li><a href="#build-a-modelmesh" id="toc-build-a-modelmesh" class="nav-link" data-scroll-target="#build-a-modelmesh">Build a Model/Mesh</a></li>
   <li><a href="#build-texture" id="toc-build-texture" class="nav-link" data-scroll-target="#build-texture">Build Texture</a></li>
   <li><a href="#align-and-merge-chunks" id="toc-align-and-merge-chunks" class="nav-link" data-scroll-target="#align-and-merge-chunks">Align and Merge Chunks</a></li>
   <li><a href="#export-a-model" id="toc-export-a-model" class="nav-link" data-scroll-target="#export-a-model">Export a Model</a></li>
@@ -672,10 +672,10 @@ Note
 </figure>
 </div>
 </section>
-<section id="build-dense-cloud" class="level2">
-<h2 class="anchored" data-anchor-id="build-dense-cloud">Build Dense Cloud</h2>
+<section id="build-point-clouddense-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="build-point-clouddense-cloud">Build Point Cloud/Dense Cloud</h2>
 <p>Based on the estimated camera positions, Metashape now creates a single dense point cloud.</p>
-<p>Select <code>Build Dense Cloud</code> command from the <code>Workflow</code> menu.</p>
+<p>Select <code>Build Point Cloud</code> command from the <code>Workflow</code> menu.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -689,9 +689,9 @@ Note
 <p>You will need to do this procedure for each chunk in your model.</p>
 </div>
 </div>
-<p>Set the following recommended values for the parameters in the <code>Build Dense Cloud</code>dialogue:</p>
+<p>Set the following recommended values for the parameters in the <code>Build Point Cloud</code>dialogue:</p>
 <ul>
-<li><p><strong><code>Quality</code></strong>:&nbsp;Medium (higher quality takes quite a long time and demands more computational resources)</p></li>
+<li><p><strong><code>Quality</code></strong>: Medium (higher quality takes quite a long time and demands more computational resources)</p></li>
 <li><p><strong><code>Depth filtering</code></strong>: Aggressive (if the geometry of the scene to be reconstructed is complex with numerous small details on the foreground, then it is recommended to set to Mild depth filtering mode, for important features not to be sorted out)</p></li>
 </ul>
 <p>Click <code>OK</code> button to start building dense point cloud.</p>
@@ -715,11 +715,11 @@ Tip
 </div>
 </div>
 </section>
-<section id="build-a-mesh" class="level2">
-<h2 class="anchored" data-anchor-id="build-a-mesh">Build a Mesh</h2>
+<section id="build-a-modelmesh" class="level2">
+<h2 class="anchored" data-anchor-id="build-a-modelmesh">Build a Model/Mesh</h2>
 <p>After the dense point cloud has been reconstructed it is possible to generate a high-quality polygonal mesh model based on the dense cloud data, basically filling in areas between points in the point cloud to create a continuous surface.</p>
-<p>Select <code>Build Mesh</code> command from the <code>Workflow</code> menu.</p>
-<p>Set the following recommended values for the parameters in the <code>Build Mesh</code> dialog:</p>
+<p>Select <code>Build Model</code> command from the <code>Workflow</code> menu.</p>
+<p>Set the following recommended values for the parameters in the <code>Build Model</code> dialog:</p>
 <ul>
 <li><p><code>Source data</code>: Dense cloud</p></li>
 <li><p><code>Surface type</code>: Arbitrary (3D)</p></li>
@@ -732,7 +732,7 @@ Tip
 <figcaption>Mesh construction</figcaption>
 </figure>
 </div>
-<p>When complete notice that you can view the model now either as point cloud or a mesh.</p>
+<p>When complete notice that you can view the model now either as point cloud or a model/mesh.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
