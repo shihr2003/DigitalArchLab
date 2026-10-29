@@ -725,11 +725,176 @@
     ]
   },
   {
+    "objectID": "photo_collection.html",
+    "href": "photo_collection.html",
+    "title": "Collecting Photographs",
+    "section": "",
+    "text": "Background and Objectives\nThe increasing ease of 3D model generation has rapidly transformed documentation in archaeology at scales ranging from artifacts to entire landscapes, while also offering exciting new research opportunities.\nIn this lab we will learn the basic steps involved in capturing digital images for the purpose of 3D modeling, processing those images using photogrammetry software, and analysis of resultant models.\nWe will use the popular photogrammetry software package Metashape, produced by the company Agisoft. The same basic steps we learn in this lab can be used to process many different kinds of imagery, including historic aerial photographs, archival photos of archaeological objects or excavations, and modern drone-acquired imagery (as we did a couple weeks ago).\nAlong with the instructions for 3D model generation below, you may find it helpful to consult this series of YouTube videos by Samatha Porter. She co-authored one of the readings of this week (Porter et al. (2016)).\nThe software we will be using is the same as Lab 2.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Collecting Photographs</span>"
+    ]
+  },
+  {
+    "objectID": "photo_collection.html#background-and-objectives",
+    "href": "photo_collection.html#background-and-objectives",
+    "title": "Collecting Photographs",
+    "section": "",
+    "text": "Note\n\n\n\nThe 3D models we produce in this lab will not have any scale, but there are a variety of relatively straightforward methods for adding scales (see further reading below).\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nPlease make sure to complete the Metashape workflow before your 30-day trail license expires. If you need license assistance, please contact the instructors well ahead of the assignment deadline.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Collecting Photographs</span>"
+    ]
+  },
+  {
+    "objectID": "photo_collection.html#photo-collection",
+    "href": "photo_collection.html#photo-collection",
+    "title": "Collecting Photographs",
+    "section": "Photo Collection",
+    "text": "Photo Collection\nFor this step, you will need a scale bar that we provide during the lab. You can also choose to use our photogrammetry rig similar to the one in Porter et al. (2016).\n\n\n\nA simple photogrammetry rig presented in Porter et al. (2016)\n\n\nFurther, you will need a digital camera or a smart phone.\nChoose an artifact from the many options that we provide. Collect overlapping photographs of the object using the method shown below.\n\n\n\nThe right diagram shows the right way to do photogrammetry\n\n\nKeep in mind:\n\nKeep images in focus\nTry to avoid too much background in the photos to cut down (alternatively, you can mask images later)\nEnsure all surfaces to be modelled are visible in at least three photographs and that each image has at least 80% overlap with adjacent images\nMake sure that the camera moves as you collect images, collecting images from a similar distance to the object but from lots of different angles\nEnsure that the lighting on the object remain the same while you collect photos, without too much direct light or harsh shadows. You want nice, consistent, indirect light\n\nMost objects will require you to collect at least two sets of images, one from the top and another from the bottom. With some objects this can be avoided, but it is in general necessary. Try to move the object only once if possible.\n\n\n\n\nPorter, Samantha Thi, Morgan Roussel, and Marie Soressi. 2016. “A Simple Photogrammetry Rig for the Reliable Creation of 3D Artifact Models in the Field.” Advances in Archaeological Practice 4 (1): 71–86. https://doi.org/10.7183/2326-3768.4.1.71.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Collecting Photographs</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html",
+    "href": "3dmodel.html",
+    "title": "Generating a 3D Model",
+    "section": "",
+    "text": "Set-up\nLoad your photos onto your computer and open Metashape. You will be working in a new project, a file that will save all the processing steps you undertake. You should save the project with a sensible name on your computer.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#add-photos",
+    "href": "3dmodel.html#add-photos",
+    "title": "Generating a 3D Model",
+    "section": "Add Photos",
+    "text": "Add Photos\nBefore adding Photos, carefully review them in a photo editor or viewer. Do not use any photos that are blurry, have bad lighting, or have too much background junk.\nTo add photos select the Add Photos... command from Workflow menu or click Add Photos button on Workspace toolbar. In the Add Photos dialog, browse the source folder and select files to be processed.\nSelect only the photos from one side of an object for now and click the Open button.\n\n\n\nAdding photos in Metashape\n\n\nIn the lower lefthand corner of the software window, be sure you have selected the Workspace tab.\nPut all the photos of each side of an object into a separate “Chunk”.\n\n\n\n\n\n\nNote\n\n\n\nEach chunk will need to be aligned and have a dense cloud generated independently.\n\n\n\n\n\nWorkspace overview in Metashape",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#mask",
+    "href": "3dmodel.html#mask",
+    "title": "Generating a 3D Model",
+    "section": "Mask Photos",
+    "text": "Mask Photos\n\n\n\n\n\n\nCaution\n\n\n\nYou may not need this step if your photos do not contain much background.\n\n\nIf your photos have a lot of extraneous background, you may need to “mask” this out. Open a photo in Photo View by double-clicking on the photo in the Photos pane.\nLocate Mask tools in the Toolbar and use one of the tools.\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nRectangular Selection () for rectangular shape irrelevant elements; Intelligent Scissors () selects irregular shaped area in the photo; Intelligent Paint () paints the selection with the mouse. Magic Wand () tool masks uniform background of the image. To use it, click the Magic Wand tool, then click inside the uniform area to be masked.\n\n\n\n\n\nAn example of mask\n\n\nSave the mask by clicking Add Selection () button from the Toolbar.\nRepeat the described procedure for every photo where background needs to be masked.\n\n\n\n\n\n\nTip\n\n\n\nFor some additional help on easier masking operations, check out this video: https://www.youtube.com/watch?v=feOo3KI-J-U\n\n\n\n\n\n\n\n\nNote\n\n\n\nRead more about masking photos from Agisoft’s own tutorial: https://agisoft.freshdesk.com/support/solutions/articles/31000153479-masks",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#align-photos",
+    "href": "3dmodel.html#align-photos",
+    "title": "Generating a 3D Model",
+    "section": "Align Photos",
+    "text": "Align Photos\nAt this stage Metashape estimates the camera position for each photo and builds the sparse point cloud model.\nSelect Align Photos command from the Workflowmenu.\n\n\n\nAlign Photos dialogue\n\n\nSet the following recommended values for the parameters in the Align Photos dialogue:\n\nAccuracy: High or Medium (lower accuracy settings can be used to get the rough camera positions in the shorter time)\nKey point limit: 40000\nTie point limit:1000\n\nClick OK button to start photo alignment.\nCreate a new chuck for each set of photos that are taken from a different perspective and follow the same steps as above.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#set-bounding-box",
+    "href": "3dmodel.html#set-bounding-box",
+    "title": "Generating a 3D Model",
+    "section": "Set Bounding Box",
+    "text": "Set Bounding Box\nAfter photo alignment is finished you should see a sparse point cloud showing your object with a box around it.\nResize the bounding box position and orientation to fit the object, as it defines the limits of the area to be modeled.\n\n\n\nAdjusting bounding box in Metashape",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#build-dense-cloud",
+    "href": "3dmodel.html#build-dense-cloud",
+    "title": "Generating a 3D Model",
+    "section": "Build Dense Cloud",
+    "text": "Build Dense Cloud\nBased on the estimated camera positions, Metashape now creates a single dense point cloud.\nSelect Build Dense Cloud command from the Workflow menu.\n\n\n\n\n\n\nNote\n\n\n\nYou will need to do this procedure for each chunk in your model.\n\n\nSet the following recommended values for the parameters in the Build Dense Clouddialogue:\n\nQuality: Medium (higher quality takes quite a long time and demands more computational resources)\nDepth filtering: Aggressive (if the geometry of the scene to be reconstructed is complex with numerous small details on the foreground, then it is recommended to set to Mild depth filtering mode, for important features not to be sorted out)\n\nClick OK button to start building dense point cloud.\n\n\n\nObject dense cloud in Metashape\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou should carefully inspect the resulting point cloud, and use the Rectangle, Circle or other selection tools to manually select bad points and delete them from the model.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#build-a-mesh",
+    "href": "3dmodel.html#build-a-mesh",
+    "title": "Generating a 3D Model",
+    "section": "Build a Mesh",
+    "text": "Build a Mesh\nAfter the dense point cloud has been reconstructed it is possible to generate a high-quality polygonal mesh model based on the dense cloud data, basically filling in areas between points in the point cloud to create a continuous surface.\nSelect Build Mesh command from the Workflow menu.\nSet the following recommended values for the parameters in the Build Mesh dialog:\n\nSource data: Dense cloud\nSurface type: Arbitrary (3D)\nFace count: High (to get a nice model) or Medium (for faster processing)\n\nClick OK button to start mesh reconstruction.\n\n\n\nMesh construction\n\n\nWhen complete notice that you can view the model now either as point cloud or a mesh.\n\n\n\n\n\n\nTip\n\n\n\nIf your mesh looks terrible you should back up and clean your point cloud up a bit more.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#build-texture",
+    "href": "3dmodel.html#build-texture",
+    "title": "Generating a 3D Model",
+    "section": "Build Texture",
+    "text": "Build Texture\nNow we will use the color values from the photos to create a textured surface on the blank 3D model.\nSelect Build Texture command from the Workflow menu.\nSet the following recommended values for the parameters in the Build Texture dialogue:\n\nMapping mode: Generic\nBlending mode: Mosaic\nTexture size/count: 4096 x 1 (width and height of the texture atlas in pixels and determines the number of files for texture to be exported to. Exporting texture to several files allows to archive greater resolution of the final model texture, while export of high resolution texture to a single file can fail due to RAM limitations)\nEnable color correction: disabled\n\nClick OK button to start texture generation. When this is done you will have a complete 3D model.\n\n\n\nA complete 3D model",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#align-and-merge-chunks",
+    "href": "3dmodel.html#align-and-merge-chunks",
+    "title": "Generating a 3D Model",
+    "section": "Align and Merge Chunks",
+    "text": "Align and Merge Chunks\nSelect Align Chucks from the workflow toolbar.\nIn the dialogue window, select options Method: Point Based, Accuracy: High, and Constrain Features by Mask.\nRun the process. HOPEFULLY this step will work automatically. If it does not work however you will need to do some additional fiddling, by manually selecting points in the two chunks to aid in their alignment.\n\n\n\n\n\n\nTip\n\n\n\nCheck out this useful video for some added tips on good ways to approach alignment of chunks if the automated method does not work: https://www.youtube.com/watch?v=Xz27IA-BCcA\n\n\nOnce the process is complete you will need to use the editor tools to delete unwanted elements in the point cloud from each chunk using the Selection tools located on the Toolbar. Essentially, you will use the top half of one model and the bottom half of the other.\nFinally, go back to the Workflow menu and select Merge Chunks and in the options, select Merge Dense Clouds and Merge Models. Run the process.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#export-a-model",
+    "href": "3dmodel.html#export-a-model",
+    "title": "Generating a 3D Model",
+    "section": "Export a Model",
+    "text": "Export a Model\nAfter you have saved your Metashape Project, you can export your model to a variety of formats.\nSelect Export Model... command from the File menu. In the Save As... dialogue select the folder for the model to be saved in and choose preferred file type from the list.\n\n\n\n\n\n\nImportantAssignment\n\n\n\nExport a 3D .pdf to submit with your lab write-up.\n\n\nIf you want to print your object on a 3D printer, you should use a OBJ file format. If you submit a good OBJ file to us, along with a mailing address, we will have your object printed and mail it to you!\nIn the Export Model dialog indicate the desired export parameters. Note that the list of available exporting parameters depends on the selected file format.\nMetashape also supports direct model upload to Sketchfab resources. To publish your model online use Upload Data... command from the File menu.\n\n\n\n\n\n\nTip\n\n\n\nTo apply correct model orientation in space use Rotate Object tool prior to model upload.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "3dmodel.html#further-training-for-3d-enthusiasts",
+    "href": "3dmodel.html#further-training-for-3d-enthusiasts",
+    "title": "Generating a 3D Model",
+    "section": "Further Training for 3D Enthusiasts",
+    "text": "Further Training for 3D Enthusiasts\nMetashape and other digital photogrammetry software packages are rapidly changing many fields of research.\nTo check out some of the other ways you can use Metashape, a good place to start are their tutorials: http://www.agisoft.com/support/tutorials/intermediate-level/\nSamantha Porter’s third video also provides good tips on improving texturing of artifacts as well as various methods to add scale to the illustration: https://www.youtube.com/watch?v=xLYLEpdfLos\nThere are dozens of online forums and videos dedicated to different issues and possibilities in the rapidly changing world of digital photogrammetry.\nWhen you are done, navigate to the next page and answer all questions.",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Generating a 3D Model</span>"
+    ]
+  },
+  {
+    "objectID": "Lab6.html",
+    "href": "Lab6.html",
+    "title": "Questions (Due: Nov 5)",
+    "section": "",
+    "text": "Please answer the following questions in a separate Word document and submit it, alongside a .pdf 3D model, to the course Canvas site by 11:59pm, Nov 5, 2026.\nQuestion 1\nIf your model was being used by an archaeologist, would it offer any useful details that would not be evident in a simple 2D photograph or drawing? That is, is the effort required to produce 3D models worth it? Why or why not? Are there things you could have done differently to address any of the challenges you faced in producing your model? (20 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 2\nDiscuss the respective benefits and challenges of 3D laser scanning versus digital photogrammetry. Based on your readings, what are some archaeological contexts in which these various methods would be best suited in archaeology? (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 3\nCompare and contrast how the researchers in at least two of the readings for this week utilized 3D modeling in archaeological research. What did the technology enable the archaeologists to do that they otherwise would not have been able to? (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nQuestion 4\nDo you think there are any ethical or legal questions arising from the growing ability of 3D models of archaeological or ethnographic to be created and disseminated? Provide specific examples from readings and class discussions. (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will only be posted after the assignment deadline!\n\n\n\nTotal 50 points",
+    "crumbs": [
+      "Lab 6 3D Photogrammetry in Archaeology",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Questions (Due: Nov 5)</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Bauer, Andrew M. 2018. “Remote Sensing Soils and Social\nGeographies of Difference: The Landscape Archaeology of Regur from Iron\nAge Through Medieval Period Northern Karnataka, Southern India.”\nJournal of Field Archaeology 43 (1): 31–43. https://doi.org/10.1080/00934690.2017.1418611.\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023.\n“Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at\nPicuris Pueblo, New Mexico.” Journal of Archaeological\nScience 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nCasana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011.\n“Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at\nCaracol, Belize.” Journal of Archaeological Science 38\n(2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nErnenwein, Eileen G. 2023. “Geophysical Survey Techniques.”\nHandbook of Archaeological Sciences, February 10, 985–1004. https://doi.org/10.1002/9781119592112.ch49.\n\n\nGaffney, Chris, Vince Gaffney, Wolfgang Neubauer, et al. 2012.\n“The Stonehenge Hidden Landscapes Project.”\nArchaeological Prospection 19 (2): 147–55. https://doi.org/10.1002/arp.1422.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nHerrmann, Jason T., Jason L. King, and Jane E. Buikstra. 2014.\n“Mapping the Internal Structure of Hopewell Tumuli in the Lower\nIllinois River Valley Through Archaeological Geophysics.”\nAdvances in Archaeological Practice 2 (3): 164–79. https://doi.org/10.7183/2326-3768.2.3.164.\n\n\nHowey, Meghan C. L., and Michael W. Palace. 2026. “Satellite\nThermal Data Applied to Landscape Archaeology: Mounds in Michigan\n(12001600 CE).” Proceedings of the National\nAcademy of Sciences 123 (8). https://doi.org/10.1073/pnas.2528379123.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nMenze, Bjoern H., and Jason A. Ur. 2012. “Mapping Patterns of\nLong-Term Settlement in Northern Mesopotamia at a Large Scale.”\nProceedings of the National Academy of Sciences 109 (14). https://doi.org/10.1073/pnas.1115472109.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over\n20,000 Precolonial Earthworks in the Southwest Amazonia.”\nNature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.",
+    "text": "Bauer, Andrew M. 2018. “Remote Sensing Soils and Social\nGeographies of Difference: The Landscape Archaeology of Regur from Iron\nAge Through Medieval Period Northern Karnataka, Southern India.”\nJournal of Field Archaeology 43 (1): 31–43. https://doi.org/10.1080/00934690.2017.1418611.\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023.\n“Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at\nPicuris Pueblo, New Mexico.” Journal of Archaeological\nScience 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nCasana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011.\n“Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at\nCaracol, Belize.” Journal of Archaeological Science 38\n(2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nErnenwein, Eileen G. 2023. “Geophysical Survey Techniques.”\nHandbook of Archaeological Sciences, February 10, 985–1004. https://doi.org/10.1002/9781119592112.ch49.\n\n\nGaffney, Chris, Vince Gaffney, Wolfgang Neubauer, et al. 2012.\n“The Stonehenge Hidden Landscapes Project.”\nArchaeological Prospection 19 (2): 147–55. https://doi.org/10.1002/arp.1422.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nHerrmann, Jason T., Jason L. King, and Jane E. Buikstra. 2014.\n“Mapping the Internal Structure of Hopewell Tumuli in the Lower\nIllinois River Valley Through Archaeological Geophysics.”\nAdvances in Archaeological Practice 2 (3): 164–79. https://doi.org/10.7183/2326-3768.2.3.164.\n\n\nHowey, Meghan C. L., and Michael W. Palace. 2026. “Satellite\nThermal Data Applied to Landscape Archaeology: Mounds in Michigan\n(12001600 CE).” Proceedings of the National\nAcademy of Sciences 123 (8). https://doi.org/10.1073/pnas.2528379123.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nMenze, Bjoern H., and Jason A. Ur. 2012. “Mapping Patterns of\nLong-Term Settlement in Northern Mesopotamia at a Large Scale.”\nProceedings of the National Academy of Sciences 109 (14). https://doi.org/10.1073/pnas.1115472109.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over\n20,000 Precolonial Earthworks in the Southwest Amazonia.”\nNature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.\n\n\nPorter, Samantha Thi, Morgan Roussel, and Marie Soressi. 2016. “A\nSimple Photogrammetry Rig for the Reliable Creation of 3D Artifact\nModels in the Field.” Advances in Archaeological\nPractice 4 (1): 71–86. https://doi.org/10.7183/2326-3768.4.1.71.",
     "crumbs": [
       "Appendices",
       "References"
