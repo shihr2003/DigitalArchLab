@@ -1,0 +1,48 @@
+---
+title: "Questions (Due: Nov 5)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it, alongside a .pdf 3D model, to the course Canvas site by 11:59pm, Nov 5, 2026.
+
+**Question 1**
+
+If your model was being used by an archaeologist, would it offer any useful details that would not be evident in a simple 2D photograph or drawing? That is, is the effort required to produce 3D models worth it? Why or why not? Are there things you could have done differently to address any of the challenges you faced in producing your model? (**20 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+Discuss the respective benefits and challenges of 3D laser scanning *versus* digital photogrammetry. Based on your readings, what are some archaeological contexts in which these various methods would be best suited in archaeology? (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Compare and contrast how the researchers in at least two of the readings for this week utilized 3D modeling in archaeological research. What did the technology enable the archaeologists to do that they otherwise would not have been able to? (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+Do you think there are any ethical or legal questions arising from the growing ability of 3D models of archaeological or ethnographic to be created and disseminated? Provide specific examples from readings and class discussions. (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will only be posted after the assignment deadline!
+:::
+
+**Total** 50 points

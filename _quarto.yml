@@ -22,6 +22,8 @@ book:
       chapters: [lecture_notes_w4.qmd, sinjar.qmd, Lab4.qmd]
     - part: "Lab 5 Archaeological Geophysics"
       chapters: [geophysics.qmd, Lab5.qmd]
+    - part: "Lab 6 3D Photogrammetry in Archaeology"
+      chapters: [photo_collection.qmd, 3dmodel.qmd, Lab6.qmd]
   
   appendices: 
     - references.qmd
