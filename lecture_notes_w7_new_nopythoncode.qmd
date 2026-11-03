@@ -206,14 +206,14 @@ While RFs have gained popularity in archaeology, see *e.g.*, [@orengo2020], neur
 
 Stacking multiple artificial neurons together, and you get a neural network:
 
-![](images/clipboard-3297536749.png){fig-align="center" width="100%"}
+![](images/clipboard-3297536749.png){#NN-example fig-align="center" width="100%"}
 
 For each neuron in the first hidden layer, for example, it has 2 weights (one for each input value) and 1 bias.
 
 ::: {.callout-important collapse="true"}
 ## Question
 
-How many parameters (weights and biases) does this neural network above have, *in total*?
+How many parameters (weights and biases) does the [neural network above](#NN-example) have, *in total*?
 
 **A**. 10
 
