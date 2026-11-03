@@ -46,7 +46,7 @@ To minimize loss, we ask the computer to iteratively find the combination of wei
 
 ![Gradient descent. Source: Google Developers](images/clipboard-251310442.png){fig-align="center" width="100%"}
 
-Then, we move a small amount ($\eta * slope$) to calculate the next weight and bias. We usually arbitrary define the learning rate ($\eta$) as, say, 0.1. The model can be updated using the following methods:
+Then, we move a small amount ($\eta * slope$) to calculate the next weight and bias. We usually arbitrary define the learning rate ($\eta$) as, say, 0.01. The model can be updated using the following methods:
 
 $$
 \small{New\ weight = old\ weight - (small\ amount * weight\ slope)}
@@ -57,11 +57,11 @@ $$
 ::: {.callout-important collapse="true"}
 ## Question
 
-For our previous (terribly inaccurate) model, $\hat{y} = 0.3x + 16$, the slopes for the lines tangent to the weight and bias are calculated as follows:
+For our previous (terribly inaccurate) model, $\hat{y} = 0.5x + 160$, the slopes for the lines tangent to the weight and bias are calculated as follows:
 
-$weight\ slope = 10$
+$weight\ slope = 0.98$
 
-$bias\ slope = 10$
+$bias\ slope = -0.43$
 
 After updating the model, calculate the current loss.
 :::
