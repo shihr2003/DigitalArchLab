@@ -1,6 +1,6 @@
 ---
-title: "Artificial Jones: AI and Archaeology"
-subtitle: "Lecture Notes"
+title: "Lecture Notes (for reference only)"
+subtitle: "Artificial Jones: AI and Archaeology"
 format: html
 ---
 
@@ -91,7 +91,7 @@ Regarding gradient descent, which of the following statement is false?
 
 **B.** The model rarely finds the weight and bias combo that exactly minimizes loss.
 
-**C.** Smaller learning rate is needed to not overshoot global minimum.
+**C.** Greater learning rate is needed to reach global minimum.
 :::
 
 ### Hyperparameters
@@ -139,7 +139,7 @@ For multi-class classification, we train multiple binary classifiers.
 ::: {.callout-important collapse="true"}
 ## Question
 
-If we were to train a multi-class classifier that categorizes denarii of Nerva, Trajan, Hadrian, Antoninus Pius, and Marcus Aurelius based on logistical regression of silver content, how many binary classifiers would we need at least?
+If we were to train a multi-class classifier that categorizes *denarii* of Nerva, Trajan, Hadrian, Antoninus Pius, and Marcus Aurelius based on logistical regression of silver content, how many binary classifiers would we need at least?
 :::
 
 ### Confusion Matrix
