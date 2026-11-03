@@ -7,3 +7,4 @@
 **/*.quarto_ipynb
 /_book/
 /*.pdf
+lecture_notes_w7.qmd
