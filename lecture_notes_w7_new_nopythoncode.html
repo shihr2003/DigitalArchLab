@@ -698,7 +698,7 @@ window.Quarto = {
 <figcaption>Gradient descent. Source: Google Developers</figcaption>
 </figure>
 </div>
-<p>Then, we move a small amount (<span class="math inline">\(\eta * slope\)</span>) to calculate the next weight and bias. We usually arbitrary define the learning rate (<span class="math inline">\(\eta\)</span>) as, say, 0.1. The model can be updated using the following methods:</p>
+<p>Then, we move a small amount (<span class="math inline">\(\eta * slope\)</span>) to calculate the next weight and bias. We usually arbitrary define the learning rate (<span class="math inline">\(\eta\)</span>) as, say, 0.01. The model can be updated using the following methods:</p>
 <p><span class="math display">\[
 \small{New\ weight = old\ weight - (small\ amount * weight\ slope)}
 \]</span> <span class="math display">\[
@@ -716,9 +716,9 @@ window.Quarto = {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>For our previous (terribly inaccurate) model, <span class="math inline">\(\hat{y} = 0.3x + 16\)</span>, the slopes for the lines tangent to the weight and bias are calculated as follows:</p>
-<p><span class="math inline">\(weight\ slope = 10\)</span></p>
-<p><span class="math inline">\(bias\ slope = 10\)</span></p>
+<p>For our previous (terribly inaccurate) model, <span class="math inline">\(\hat{y} = 0.5x + 160\)</span>, the slopes for the lines tangent to the weight and bias are calculated as follows:</p>
+<p><span class="math inline">\(weight\ slope = 0.98\)</span></p>
+<p><span class="math inline">\(bias\ slope = -0.43\)</span></p>
 <p>After updating the model, calculate the current loss.</p>
 </div>
 </div>
