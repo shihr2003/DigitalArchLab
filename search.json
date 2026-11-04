@@ -927,10 +927,208 @@
     "href": "lecture_notes_w7_new_nopythoncode.html#data",
     "title": "Lecture Notes (for reference only)",
     "section": "Data",
-    "text": "Data\nWe use in this lecture archaeological site detection as an example to illustrate the pipeline of AI in archaeology. This usually involves the following steps:\n\nPrepare imagery. Mosaick and georeference scenes.\nAnnotate. Label every instance in GIS.\nTile. Chips of 512/1024 pixels are a common choice, with center offset.\nSplit. Ratios vary: 70/20/10 is a common start.\nBalance background. Particularly important for archaeologists. This can include hard negatives.\nAugment. Use flips, rotations, brightness, and mosaic, etc.\nTrain. Start from pre-trained weights and default settings, then change one thing at a time.\nInfer. Run a sliding window across the scene with overlap, predict, map boxes back to scene coordinates, and remove duplicates.\nValidation. Import features in GIS; manually inspect. If possible, repeat the process.\n\n\n\n\nA simplified pipeline in Shi and Haag (2026).\n\n\n\nData Split\nTypically, the data are split into three sets: training, validation, and test. Validation sets perform the initial testing on the model as it is being trained. Test sets test the difference between combos of hyperparameters.\n\n\n\nA typical data split for NN problems; source: Google Developers\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\n\n\nWe trained a site detector to mounds in the Northern Fertile Crescent. Testing against the test set yields low loss. However, the detector peroformed pooly in the real world, resulting in many false positives. Which statement is true?\nA. The test set should contain at least 10% of the original dataset.\nB. The original dataset probably differs from real-life data.\nC. This detector has a low recall.\n\n\n\n\n\nData Balancing\nArchaeological data are usually highly imbalanced. Consider downsampling or upweight the majority class.\n\n\n\nExamples of a highly-imbalanced database\n\n\n\n\nData Augmentation\nAugmentation creates plausible variations of training images. Trier et al. (2018) used flips and 90° rotations. This is often done with Albumentations library.\n\n\n\n\n\n\nImportant\n\n\n\n\n\nYou train a CNN to assign Roman coins to reigns. Which augmentation should you leave out?\nA. Small rotations\nB. Small brightness changes\nC. Mirror flips\nD. Slight crops\n\n\n\n\n\nOverfitting\nOverfitting refers to a model that memorizes the exact pattern of the training set and it fails to generalize on new/real-world data.\n\n\n\n\n\n\nImportantDemo\n\n\n\n\n\nIn the image below, orange circles represent locations of mounds in a Near Eastern location and the blue diamonds military forts. Draw shapes between these two classes; how would a fit, underfit, and overfit model classify?\n\n\n\nHow to separate the two classes?\n\n\n\n\n\nWe can plot the loss curves on both training and validation datasets to determine overfitting. In the diagram below, the increase in validation loss suggests that decreased ability to generalize.\n\n\n\nGeneralization curve that implies overfitting; Google Developers\n\n\nNow, to synthesize everything we have learned today, answer the final question below.\n\n\n\n\n\n\nImportantQuestion\n\n\n\n\n\nYou train your CNN to assign Roman denarii to reigns. After 100 epochs, training accuracy is 99% and validation accuracy is 62%. Which step is most likely to reduce the overfitting?\n\nAdd more convolutional layers\nStop the training after only 60 epochs\nTrain for 100 more epochs\nRemove random crops and brightness augmentations\n\n\n\n\n\n\n\n\nMagnani, Matthew, and Jon Clindaniel. 2025. “Artificial Intelligence and the Interpretation of the Past.” Advances in Archaeological Practice 14 (2): 218–33. https://doi.org/10.1017/aap.2025.10110.\n\n\nMcCoy, Mark D. 2020. “The Site Problem: A Critical Review of the Site Concept in Archaeology in the Digital Age.” Journal of Field Archaeology 45 (sup1): S18–26. https://doi.org/10.1080/00934690.2020.1713283.\n\n\nOrengo, Hector A., Francesc C. Conesa, Arnau Garcia-Molsosa, et al. 2020. “Automated Detection of Archaeological Mounds Using Machine-Learning Classification of Multisensor and Multitemporal Satellite Data.” Proceedings of the National Academy of Sciences 117 (31): 18240–50. https://doi.org/10.1073/pnas.2005583117.\n\n\nShi, Casey Haoran, and Cayleigh Elizabeth Haag. 2026. “Pixelated Transformations: Tracing Changing Irrigation Management Through Deep-Learning-Based Object Detection on HEXAGON and SkySat Satellite Images.” Journal of Archaeological Method and Theory 33 (3). https://doi.org/10.1007/s10816-026-09787-z.\n\n\nTrier, Øivind Due, David C. Cowley, and Anders Ueland Waldeland. 2018. “Using Deep Neural Networks on Airborne Laser Scanning Data: Results from a Case Study of Semi-Automatic Mapping of Archaeological Topography on Arran, Scotland.” Archaeological Prospection 26 (2): 165–75. https://doi.org/10.1002/arp.1731.",
+    "text": "Data\nWe use in this lecture archaeological site detection as an example to illustrate the pipeline of AI in archaeology. This usually involves the following steps:\n\nPrepare imagery. Mosaick and georeference scenes.\nAnnotate. Label every instance in GIS.\nTile. Chips of 512/1024 pixels are a common choice, with center offset.\nSplit. Ratios vary: 70/20/10 is a common start.\nBalance background. Particularly important for archaeologists. This can include hard negatives.\nAugment. Use flips, rotations, brightness, and mosaic, etc.\nTrain. Start from pre-trained weights and default settings, then change one thing at a time.\nInfer. Run a sliding window across the scene with overlap, predict, map boxes back to scene coordinates, and remove duplicates.\nValidation. Import features in GIS; manually inspect. If possible, repeat the process.\n\n\n\n\nA simplified pipeline in Shi and Haag (2026).\n\n\n\nData Split\nTypically, the data are split into three sets: training, validation, and test. Validation sets perform the initial testing on the model as it is being trained. Test sets test the difference between combos of hyperparameters.\n\n\n\nA typical data split for NN problems; source: Google Developers\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\n\n\nWe trained a site detector to mounds in the Northern Fertile Crescent. Testing against the test set yields low loss. However, the detector peroformed pooly in the real world, resulting in many false positives. Which statement is true?\nA. The test set should contain at least 10% of the original dataset.\nB. The original dataset probably differs from real-life data.\nC. This detector has a low recall.\n\n\n\n\n\nData Balancing\nArchaeological data are usually highly imbalanced. Consider downsampling or upweight the majority class.\n\n\n\nExamples of a highly-imbalanced database\n\n\n\n\nData Augmentation\nAugmentation creates plausible variations of training images. Trier et al. (2018) used flips and 90° rotations. This is often done with Albumentations library.\n\n\n\n\n\n\nImportantQuestion\n\n\n\n\n\nYou train a CNN to assign Roman coins to reigns. Which augmentation should you leave out?\nA. Small rotations\nB. Small brightness changes\nC. Mirror flips\nD. Slight crops\n\n\n\n\n\nOverfitting\nOverfitting refers to a model that memorizes the exact pattern of the training set and it fails to generalize on new/real-world data.\n\n\n\n\n\n\nImportantDemo\n\n\n\n\n\nIn the image below, orange circles represent locations of mounds in a Near Eastern location and the blue diamonds military forts. Draw shapes between these two classes; how would a fit, underfit, and overfit model classify?\n\n\n\nHow to separate the two classes?\n\n\n\n\n\nWe can plot the loss curves on both training and validation datasets to determine overfitting. In the diagram below, the increase in validation loss suggests that decreased ability to generalize.\n\n\n\nGeneralization curve that implies overfitting; Google Developers\n\n\nNow, to synthesize everything we have learned today, answer the final question below.\n\n\n\n\n\n\nImportantQuestion\n\n\n\n\n\nYou train your CNN to assign Roman denarii to reigns. After 100 epochs, training accuracy is 99% and validation accuracy is 62%. Which step is most likely to reduce the overfitting?\nA. Add more convolutional layers\nB. Stop the training after only 60 epochs\nC. Train for 100 more epochs\nD. Remove random crops and brightness changes to the testing set\n\n\n\n\n\n\n\nMagnani, Matthew, and Jon Clindaniel. 2025. “Artificial Intelligence and the Interpretation of the Past.” Advances in Archaeological Practice 14 (2): 218–33. https://doi.org/10.1017/aap.2025.10110.\n\n\nMcCoy, Mark D. 2020. “The Site Problem: A Critical Review of the Site Concept in Archaeology in the Digital Age.” Journal of Field Archaeology 45 (sup1): S18–26. https://doi.org/10.1080/00934690.2020.1713283.\n\n\nOrengo, Hector A., Francesc C. Conesa, Arnau Garcia-Molsosa, et al. 2020. “Automated Detection of Archaeological Mounds Using Machine-Learning Classification of Multisensor and Multitemporal Satellite Data.” Proceedings of the National Academy of Sciences 117 (31): 18240–50. https://doi.org/10.1073/pnas.2005583117.\n\n\nShi, Casey Haoran, and Cayleigh Elizabeth Haag. 2026. “Pixelated Transformations: Tracing Changing Irrigation Management Through Deep-Learning-Based Object Detection on HEXAGON and SkySat Satellite Images.” Journal of Archaeological Method and Theory 33 (3). https://doi.org/10.1007/s10816-026-09787-z.\n\n\nTrier, Øivind Due, David C. Cowley, and Anders Ueland Waldeland. 2018. “Using Deep Neural Networks on Airborne Laser Scanning Data: Results from a Case Study of Semi-Automatic Mapping of Archaeological Topography on Arran, Scotland.” Archaeological Prospection 26 (2): 165–75. https://doi.org/10.1002/arp.1731.",
     "crumbs": [
       "Lab 7 AI and Archaeology",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Lecture Notes (for reference only)</span>"
+    ]
+  },
+  {
+    "objectID": "site_detection.html",
+    "href": "site_detection.html",
+    "title": "Automated Site Detection in the Northern Fertile Crescent",
+    "section": "",
+    "text": "Objectives\nIn this lab, we will be attempting to train a YOLO object detector to find archaeological sites in a HEXAGON scene in the Northern Fertile Crescent. To do so, we will use an alpha version of ODEON (Object Detection on Earth Observation for aNtiquity) that our team develops to streamline data preparation, hyperparameter tuning, transfer learning, and inference.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Automated Site Detection in the Northern Fertile Crescent</span>"
+    ]
+  },
+  {
+    "objectID": "site_detection.html#file-downloads",
+    "href": "site_detection.html#file-downloads",
+    "title": "Automated Site Detection in the Northern Fertile Crescent",
+    "section": "File Downloads",
+    "text": "File Downloads\nFor this lab, you will need to download the following six files. Please make sure to place all files in one folder.\n\n\n\n\n\n\nCaution\n\n\n\nGiven the size of the HEXAGON scenes, please make sure that your workstation has at least 30GB of storage. Otherwise, consider using a flash drive.\n\n\n\nODEON-0.3.zip: This is a recent version of the ODEON tool that we will be using. Unzip the file after you download it.\n2026DigitalArchLab7_annotations.geojson: A .geojson file that contains the labels (positive examples) of archaeological mounds in our study area.\nD3C1204-300451A005_cog.tif: One orthorectified HEXAGON scene that covers part of Northern Iraq.\nD3C1204300451A006_clip.tif, D3C1204300451A006_clip.tfw, and D3C1204300451A006_clip.tif.ovr: A clipped raster for inference/prediction. tfw and ovr store coordinates and pyramids for the quick visualization of the raster in QGIS. Make sure to group these files in one folder with a name such as Lab7_inference.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Automated Site Detection in the Northern Fertile Crescent</span>"
+    ]
+  },
+  {
+    "objectID": "site_detection.html#overview",
+    "href": "site_detection.html#overview",
+    "title": "Automated Site Detection in the Northern Fertile Crescent",
+    "section": "Overview",
+    "text": "Overview\nOpen a new QGIS project and load the geojson label and the two .tif files. Zoom in on some of the features in the geojson file and examine the mounds. For D3C1204-300451A005_cog.tif, you can get rid of the black border by adding 0 as Additional NoData Value in Layer Properties -&gt; Transparency.\n\n\n\nNoData Value\n\n\nYou can also change the Symbology of the annotation layer to make it more visible. The three files should look something like this in QGIS:\n\nWe will be using the annotations and the D3C1204-300451A005_cog.tif to create a training dataset, which involves clipping around each of the labeled examples. ODEON will help handle this.\nAfter training our model, we will run it on D3C1204300451A006_clip.tif to find features there.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Automated Site Detection in the Northern Fertile Crescent</span>"
+    ]
+  },
+  {
+    "objectID": "site_detection.html#setting-up-odeon",
+    "href": "site_detection.html#setting-up-odeon",
+    "title": "Automated Site Detection in the Northern Fertile Crescent",
+    "section": "Setting Up ODEON",
+    "text": "Setting Up ODEON\nWe will be using uv, a small tool that installs Python and manages dependencies on both macOS and Windows, to set up ODEON.\n\nmacOSWindows\n\n\nTo install uv in macOS, use curl to download the script and execute it with sh in Terminal:\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nIn Terminal, navigate to your ODEON folder by using cd; make sure to replace the directory below with the correct path in your computer.\ncd /Users/Downloads/odeon-feature-web-frontend\nFinally, run ODEON program by using uv:\nuv run --python 3.13 --with-requirements requirements.txt main.py\nWait for ODEON to run. This may take a while.\n\n\nIn Windows, open PowerShell, and use irm to download the script and execute it with iex:\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\nIn PowerShell, navigate to the directory of ODEON by using cd. Replace the folder path with yours:\ncd C:\\Users\\Username\\Documents\\odeon-feature-web-frontend\nFinally, run ODEON program by using uv:\nuv run --python 3.13 --with-requirements requirements.txt main.py\nWait for ODEON to run. This may take a while.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Automated Site Detection in the Northern Fertile Crescent</span>"
+    ]
+  },
+  {
+    "objectID": "ai_prep.html",
+    "href": "ai_prep.html",
+    "title": "Data Preparation",
+    "section": "",
+    "text": "Project Setup\nIn ODEON, start with 2) Prepare Data, where you will be guided to enter project configuration information.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Data Preparation</span>"
+    ]
+  },
+  {
+    "objectID": "ai_prep.html#project-setup",
+    "href": "ai_prep.html#project-setup",
+    "title": "Data Preparation",
+    "section": "",
+    "text": "ODEON running in macOS\n\n\n\n\nFor Project name, enter a reasonable name such as DigitalArch2026Lab7_Name_1.\nFor Output directory, give it an existing directory, and ODEON will create folders within that directory.\nFor Master random seed, use the default 42 to make sure that all results are the same across runs.\n\n\n\n\nODEON will create 10 folders within a directory of your project name",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Data Preparation</span>"
+    ]
+  },
+  {
+    "objectID": "ai_prep.html#data-import",
+    "href": "ai_prep.html#data-import",
+    "title": "Data Preparation",
+    "section": "Data Import",
+    "text": "Data Import\nFor Data Import, you will provide rasters and labels.\n\nFor Raster images directory, supply the directory where you store the .tif files, such as /Users/yesac/Downloads/DigitalArchLab7_tifs (it may be different in your machine!). ODEON will scan all .tif files within that directory for the preparation of training data.\nNext, give ODEON the path to the annotation .geojson file, such as /Users/yesac/Downloads/2026DigitalArchLab7_annotations.geojson.\nFor Classes definition file, create a .txt file in your computer, and provide its path to ODEON. There should be one line in the .txt file:\n0 mound\n\nSuccessful import should give you the number of images, labels, and classes.\n\n\n\nSuccessful import\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you are having trouble, you can always terminate the program by pressing ctrl + c and restart the process.\n\n\nODEON supports multi-attribute classification, meaning that it can classify a detected site and assign one or multiple attributes to the site. In our annotations, each mound was further labeled for the presence of holloway, walls, erosional gullies, and colluvial aprons. Select 2,3,4,5, which are the columns that contain attribute labels, for the multi-attribute classification.\n\n\n\nAttributes selection\n\n\nBecause of the vast geographical extent of HEXAGON scenes, orthorectification can usually result in slightly offset rasters that are overlapping. As such, ODEON supports a source-image column where the raster upon which a feature was labeled can be referenced.\nFor example, all of our training data were annotated using D3C1204-300451A005_cog.tif. In our annotation .geojson file, we included a src_img column that includes this information.\nIn ODEON, selects y to set a source-image column and select 13 (src_img).",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Data Preparation</span>"
+    ]
+  },
+  {
+    "objectID": "ai_prep.html#chip-generation",
+    "href": "ai_prep.html#chip-generation",
+    "title": "Data Preparation",
+    "section": "Chip Generation",
+    "text": "Chip Generation\nODEON supports the generation of “chips” around each labels, offering options such as center offset and hard negatives (human-defined background chips that are easily misclassified).\nIn Chip Settings, use the following values:\n\nChip size: 1024 (Most mounds are smaller than this)\nRandom offset: 512\nMax nodata fraction: 0.1 (Any chip that has &gt;10% nodata pixels will be discarded)\nSave irregular polygon outlines: N\n\nFor Negative Sampling, use:\n\nNumber of negative chips: 100\nMin distance from positives: 2048 (double the size of a chip to avoid sampling mounds)\nProvide hard-negative points: N\n\n\n\n\nChip settings\n\n\nAfter confirming the settings, proceed by pressing y. ODEON should now populate the pos and neg folders in your project directory with chips. Check if they are correct.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Data Preparation</span>"
+    ]
+  },
+  {
+    "objectID": "ai_prep.html#data-split-and-class-balancing",
+    "href": "ai_prep.html#data-split-and-class-balancing",
+    "title": "Data Preparation",
+    "section": "Data Split and Class Balancing",
+    "text": "Data Split and Class Balancing\nODEON supports any ratio of data split with stratification (i.e., all classes are proportionally represented in the three dataset). We will be using a typical 0.7-0.2-0.1 train-val-test split for this case.\nBecause we only created 100 negative, background chips, no class balancing strategies are needed.\n\n\n\nFormatting\n\n\nOnce this is done, go to the prepared folder in your project directory and check if three datasets are properly generated. Check, in particular, if the positive images contain mounds.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Data Preparation</span>"
+    ]
+  },
+  {
+    "objectID": "ai_prep.html#data-augmentation",
+    "href": "ai_prep.html#data-augmentation",
+    "title": "Data Preparation",
+    "section": "Data Augmentation",
+    "text": "Data Augmentation\nRun ODEON again using:\nuv run --python 3.13 --with-requirements requirements.txt main.py\nThis time, select Workflow 3) Augment Dataset. For Project name, use the same one as you just created, and make sure that the Output directory is the parent directory of the project folder. When prompted to select Prepared dataset directory, the default (yellow) path should be to the prepared folder you just created. Simply press Enter to select the default path.\n\n\n\nDataset selection for augmentation\n\n\nODEON supports augmentation strategies that can artificially increase the copies of chips in the training set only. To do this, user will define the number of augmented copies per chip and the augmentations needed. ODEON will then loop through these augmentations, implementing them one by one with 50% probability. You can also change the range of these augmentations (e.g., 10% brightness jitter)\nIn ODEON, select 1,2,4,5,6 augmentation transforms, and input the following values:\n\nBrightness jitter: 0.1\nContrast jitter: 0.1\nGaussian noise std: 0.02\nAugmented copies per chip: 2\n\nThis should create 270 augmented chips, or 405 total train chips. Check your prepared -&gt; train folder again to see if augmentation is properly applied.\nYou can now move on to train a model!",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Data Preparation</span>"
+    ]
+  },
+  {
+    "objectID": "ai_train.html",
+    "href": "ai_train.html",
+    "title": "Training a YOLO Model",
+    "section": "",
+    "text": "Model Selection\nRerun ODEON. Select Workflow 4) Train OD Model. Use the same project name and parent directory. As in the augmentation workflow, the prepapred path (shown in yellow) should be there by default. Simply press Enter to proceed.\nODEON currently supports four object detection architecture, including YOLO, RT-DETR, Faster R-CNN, and Single Shot MultiBox Detector (SSD). For YOLO and RT-DETR, this is done through Ultralytics library. For Faster R-CNN, ODEON additionally supports backbone plug-ins for transfer learning.\nIn this lab, we will be using YOLO for its efficiency and optimization. Choose 1) yolo -&gt; 3) yolo11m for a relatively recent, medium-sized neural network. Use pretrained COCO weights.\nFor YOLO image size, select 1024 to match with the chip size.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Training a YOLO Model</span>"
+    ]
+  },
+  {
+    "objectID": "ai_train.html#model-selection",
+    "href": "ai_train.html#model-selection",
+    "title": "Training a YOLO Model",
+    "section": "",
+    "text": "YOLO model selection",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Training a YOLO Model</span>"
+    ]
+  },
+  {
+    "objectID": "ai_train.html#hyperparameters",
+    "href": "ai_train.html#hyperparameters",
+    "title": "Training a YOLO Model",
+    "section": "Hyperparameters",
+    "text": "Hyperparameters\nODEON supports tuning of all hyperparameters relevant to archaeological site detection, with the possibility to add user-defined options. For simplicity in this lab, we will start with the following hyperparameters:\n\nEpochs: 30\nBatch size: 4\nLearning rate: 0.001\nOptimizer: AdamW\nEarly stopping patience: 10\nIoU threshold: 0.5\nWeight decay: 0\nDropout: 0\nDataloader workers: 0/4 (either is fine — Ultralytics will select depending on your device)\nWarm-start: Skip (by pressing Enter)",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Training a YOLO Model</span>"
+    ]
+  },
+  {
+    "objectID": "ai_train.html#training",
+    "href": "ai_train.html#training",
+    "title": "Training a YOLO Model",
+    "section": "Training",
+    "text": "Training\nBy selecting y, ODEON will now start training a YOLO model. It will first download the model weights from Ultralytics.\n\n\n\n\n\n\nImportantQuestion\n\n\n\nExamine the Terminal/Powershell output and locate the summary for YOLO-11m. How many layers are there? How many parameters?\n\n\nThe training is now starting. Depending on your device, this might take a while. Training on a GPU (cuda), which ODEON supports, will be very fast. Training on a CPU, however, will take a painfully long time.\n\n\n\nTraining on a CPU can be slow\n\n\n\n\n\n\n\n\nNote\n\n\n\nDepending on your machine, training for 30 epochs may take a few minutes to a few hours. Make sure to reserve some time for this process before the assignment deadline.\n\n\nAs you train, ODEON will save the last and best model weights (.pt files) to your project directory -&gt; weights -&gt; project name -&gt; weights folder. As the training progresses, it will also save a results.csv file, recording model performance on the validation set at each epoch.\n\n\n\n\n\n\nCaution\n\n\n\nPlease do not open results.csv while training is in progress, because doing so will prevent ODEON to write the file. You can duplicate the file and view it.\n\n\nWhen you are done, ODEON will test the model on the test set. A few graphs will also be generated in the weights folder.\n\n\n\n\n\n\nImportantQuestion\n\n\n\nReport the model performance on the validation set at epoch 30 as well as on the test set at the end. Be sure to include precision, recall, and mAP50 scores. Why does the model score higher on the validation set?\n\n\n\n\n\n\n\n\nImportantQuestion\n\n\n\nInclude the confusion_matrix.png from the weights folder in your word document. Calculate the recall, precision, and F-1 score of your model. What do these metrics suggest about your model?\nF-1 score is defined as:\n\\[F_1 = \\frac{2 \\cdot \\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}\\]\n\n\nFinally, have a look at the results.png in the weights folder. Pay close attention to train/box_loss, val/box_loss, metrics/precision, metrics/recall, and metrics/mAP50.\n\n\n\n\n\n\nImportantQuestion\n\n\n\nDo you think this training has converged? In other words, do you think that more epochs will improve model performance? Why or why not? Given the loss curves, do you think your model suffers from overfitting?",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Training a YOLO Model</span>"
+    ]
+  },
+  {
+    "objectID": "ai_inf.html",
+    "href": "ai_inf.html",
+    "title": "Prediction",
+    "section": "",
+    "text": "Inference\nRun ODEON again; this time select Workflow 5) Object Detection Inference. As before, use the existing project name and parent trajectory. Use the best weights (best.pt) from the weights folder as the model.\nFor images directory for inference, select the folder that contains D3C1204300451A006_clip.tif (with no other .tif files).\nFor inference parameters, select:\nODEON will then run inference on 1 image and return the number of detections. Depending on your device, this may take a while.",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "ai_inf.html#inference",
+    "href": "ai_inf.html#inference",
+    "title": "Prediction",
+    "section": "",
+    "text": "Tile size: 1024 (matching that of a chip)\nTile overlap: 0.1\nConfidence threshold: 0.5\nIoU threshold: 0.3\nBatch size: 4",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "ai_inf.html#export",
+    "href": "ai_inf.html#export",
+    "title": "Prediction",
+    "section": "Export",
+    "text": "Export\nODEON supports exporting prediction into three different formats: .geojson vector file, .csv table file, and a high-level .png visualization.\nFor export formats, select 1,2,3 to export everything.\nYou can now load the predictions.geojson in QGIS, alongside the rasters.\n\n\n\n\n\n\nImportantQuestion\n\n\n\nHow many detections has your model produced? In QGIS, check these detection against D3C1204300451A006_clip.tif. How would you assess the performance of your model? Has your model detected most of the mounds in the area? Are all the detections accurate? Include examples of misclassification. What kind of features are frequently misclassified? Based on your readings and the lecture notes, how would you propose to improve your model, both in terms of data preparation and training?",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "Lab7.html",
+    "href": "Lab7.html",
+    "title": "Questions (Due: Nov 12)",
+    "section": "",
+    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.\nQuestion 1\nExamine the Terminal/Powershell output and locate the summary for YOLO-11m. How many layers are there? How many parameters? (5 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 2\nReport the model performance on the validation set at epoch 30 as well as on the test set at the end. Be sure to include precision, recall, and mAP50 scores. Why does the model score higher on the validation set? (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 3\nInsert the confusion_matrix.png from the weights folder in your word document. Calculate the recall, precision, and F-1 score for your model. What do these metrics suggest about your model? (20 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 4\nDo you think this training has converged? In other words, do you think that more epochs will improve model performance? Why or why not? Given the loss curves, do you think your model suffers from overfitting? (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 5\nHow many detections has your model produced? In QGIS, check these detection against D3C1204300451A006_clip.tif. How would you assess the performance of your model? Has your model detected most of the mounds in the area? Are all the detections accurate? Include examples of misclassification. What kind of features are frequently misclassified? Based on your readings and the lecture notes, how would you propose to improve your model, both in terms of data preparation and training? (20 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nTotal 70 points",
+    "crumbs": [
+      "Lab 7 AI and Archaeology",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Questions (Due: Nov 12)</span>"
     ]
   },
   {
