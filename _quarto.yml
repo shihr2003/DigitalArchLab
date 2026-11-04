@@ -25,7 +25,7 @@ book:
     - part: "Lab 6 3D Photogrammetry in Archaeology"
       chapters: [photo_collection.qmd, 3dmodel.qmd, Lab6.qmd]
     - part: "Lab 7 AI and Archaeology"
-      chapters: [lecture_notes_w7_new_nopythoncode.qmd]
+      chapters: [lecture_notes_w7_new_nopythoncode.qmd, site_detection.qmd, ai_prep.qmd, ai_train.qmd, ai_inf.qmd, Lab7.qmd]
   
   appendices: 
     - references.qmd

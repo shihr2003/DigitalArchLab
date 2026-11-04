@@ -1,0 +1,58 @@
+---
+title: "Questions (Due: Nov 12)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.
+
+**Question 1**
+
+Examine the Terminal/Powershell output and locate the summary for YOLO-11m. How many layers are there? How many parameters? (**5 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+Report the model performance on the validation set at epoch 30 as well as on the test set at the end. Be sure to include precision, recall, and mAP50 scores. Why does the model score higher on the validation set? (**15 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Insert the `confusion_matrix.png` from the `weights` folder in your word document. Calculate the recall, precision, and F-1 score for your model. What do these metrics suggest about your model? (**20 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+Do you think this training has converged? In other words, do you think that more epochs will improve model performance? Why or why not? Given the loss curves, do you think your model suffers from overfitting? (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 5**
+
+How many detections has your model produced? In QGIS, check these detection against `D3C1204300451A006_clip.tif`. How would you assess the performance of your model? Has your model detected most of the mounds in the area? Are all the detections accurate? Include examples of misclassification. What kind of features are frequently misclassified? Based on your readings and the lecture notes, how would you propose to improve your model, both in terms of data preparation and training? (**20 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Total** 70 points

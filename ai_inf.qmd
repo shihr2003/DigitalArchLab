@@ -1,0 +1,38 @@
+---
+title: "Prediction"
+format: html
+---
+
+## Inference
+
+Run ODEON again; this time select Workflow 5) Object Detection Inference. As before, use the existing project name and parent trajectory. Use the best weights (`best.pt`) from the weights folder as the model.
+
+For images directory for inference, select the folder that contains `D3C1204300451A006_clip.tif` (with no other `.tif` files).
+
+For inference parameters, select:
+
+- `Tile size`: 1024 (matching that of a chip)
+
+- `Tile overlap`: 0.1
+
+- `Confidence threshold`: 0.5
+
+- `IoU threshold`: 0.3
+
+- `Batch size`: 4
+
+ODEON will then run inference on 1 image and return the number of detections. Depending on your device, this may take a while.
+
+## Export
+
+ODEON supports exporting prediction into three different formats: `.geojson` vector file, `.csv` table file, and a high-level `.png` visualization.
+
+For export formats, select `1,2,3` to export everything.
+
+You can now load the `predictions.geojson` in QGIS, alongside the rasters.
+
+::: callout-important
+## Question
+
+How many detections has your model produced? In QGIS, check these detection against `D3C1204300451A006_clip.tif`. How would you assess the performance of your model? Has your model detected most of the mounds in the area? Are all the detections accurate? Include examples of misclassification. What kind of features are frequently misclassified? Based on your readings and the [lecture notes](lecture_notes_w7_new_nopythoncode.qmd), how would you propose to improve your model, both in terms of data preparation and training?
+:::
