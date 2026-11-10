@@ -9,7 +9,7 @@ In this lab, we will be attempting to train a [YOLO](https://docs.ultralytics.co
 
 ## File Downloads
 
-For this lab, you will need to download the following six files. Please make sure to place all files in one folder.
+For this lab, you will need to download the following six files.
 
 ::: callout-caution
 Given the size of the HEXAGON scenes, please make sure that your workstation has at least 30GB of storage. Otherwise, consider using a flash drive.
@@ -19,9 +19,13 @@ Given the size of the HEXAGON scenes, please make sure that your workstation has
 
 2.  [`2026DigitalArchLab7_annotations.geojson`](https://drive.google.com/file/d/153wY5reYWXqWbaUnyXZ9Bq3SVBhUHnKJ/view?usp=sharing): A `.geojson` file that contains the labels (positive examples) of archaeological mounds in our study area.
 
-3.  [`D3C1204-300451A005_cog.tif`](https://drive.google.com/file/d/1cYAqVL9OsOX9HDfd2tXU9A8O76uZVrMs/view?usp=drive_link): One orthorectified HEXAGON scene that covers part of Northern Iraq.
+3.  [`D3C1204-300451A005_cog.tif`](https://drive.google.com/file/d/1cYAqVL9OsOX9HDfd2tXU9A8O76uZVrMs/view?usp=drive_link): One orthorectified HEXAGON scene that covers part of Northern Iraq. This is for data preparation.
 
-4.  [`D3C1204300451A006_clip.tif`](https://drive.google.com/file/d/16CT4t8alGnRsduXW7PHlsM7yJhoQqzrm/view?usp=drive_link), [`D3C1204300451A006_clip.tfw`](https://drive.google.com/file/d/1jCrDjdN11aeRy-MvQskk5yZ856nXOnfX/view?usp=drive_link), and [`D3C1204300451A006_clip.tif.ovr`](https://drive.google.com/file/d/1n-2upGPmqi1hOqvV9z__8vi4oVb7t1jh/view?usp=drive_link): A clipped raster for inference/prediction. `tfw` and `ovr` store coordinates and pyramids for the quick visualization of the raster in QGIS. Make sure to group these files in one folder with a name such as `Lab7_inference`.
+4.  [`D3C1204300451A006_clip.tif`](https://drive.google.com/file/d/16CT4t8alGnRsduXW7PHlsM7yJhoQqzrm/view?usp=drive_link), [`D3C1204300451A006_clip.tfw`](https://drive.google.com/file/d/1jCrDjdN11aeRy-MvQskk5yZ856nXOnfX/view?usp=drive_link), and [`D3C1204300451A006_clip.tif.ovr`](https://drive.google.com/file/d/1n-2upGPmqi1hOqvV9z__8vi4oVb7t1jh/view?usp=drive_link): A clipped raster for inference/prediction. `tfw` and `ovr` store coordinates and pyramids for the quick visualization of the raster in QGIS. Make sure to group these three files in one folder with a name such as `Lab7_inference`.
+
+::: callout-note
+We will only be using [`2026DigitalArchLab7_annotations.geojson`](https://drive.google.com/file/d/153wY5reYWXqWbaUnyXZ9Bq3SVBhUHnKJ/view?usp=sharing) and [`D3C1204-300451A005_cog.tif`](https://drive.google.com/file/d/1cYAqVL9OsOX9HDfd2tXU9A8O76uZVrMs/view?usp=drive_link) for data preparation. The idea is to extract raster chips (or small parts of the `D3C1204-300451A005_cog.tif`) around each of the annotations in the `.geojson` file.
+:::
 
 ## Overview
 

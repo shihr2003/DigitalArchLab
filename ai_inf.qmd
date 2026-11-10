@@ -7,7 +7,7 @@ format: html
 
 Run ODEON again; this time select Workflow 5) Object Detection Inference. As before, use the existing project name and parent trajectory. Use the best weights (`best.pt`) from the weights folder as the model.
 
-For images directory for inference, select the folder that contains `D3C1204300451A006_clip.tif` (with no other `.tif` files).
+For images directory for inference, select the folder that contains `D3C1204300451A006_clip.tif` and associated files (with no other `.tif` files).
 
 For inference parameters, select:
 

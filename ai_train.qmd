@@ -63,22 +63,26 @@ As you train, ODEON will save the last and best model weights (`.pt` files) to y
 Please do not open `results.csv` while training is in progress, because doing so will prevent ODEON to write the file. You can duplicate the file and view it.
 :::
 
-When you are done, ODEON will test the model on the *test* set. A few graphs will also be generated in the weights folder.
+When you are done, a few graphs will also be generated in the weights folder.
 
 ::: callout-important
 ## Question
 
-Report the model performance on the *validation* set at epoch 30 as well as on the *test* set at the end. Be sure to include precision, recall, and mAP50 scores. Why does the model score higher on the validation set?
+Report the model performance on the *validation* set at epoch 30. Be sure to include precision, recall, and mAP50 scores.
 :::
 
 ::: callout-important
 ## Question
 
-Include the `confusion_matrix.png` from the `weights` folder in your word document. Calculate the recall, precision, and F-1 score of your model. What do these metrics suggest about your model?
+Include the `confusion_matrix.png` from the `weights` folder in your word document. Calculate the recall, precision, and F-1 score of your model.
 
 F-1 score is defined as:
 
 $$F_1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$$
+:::
+
+::: callout-note
+The confusion matrix might look weird and contradict with the (hopefully) good metrics that you have. This is mostly because Ultralytics counts a prediction as correct if it overlaps a labeled box with IoU ≥ 0.45. In most of our cases, this is pretty difficult to achieve.
 :::
 
 Finally, have a look at the `results.png` in the `weights` folder. Pay close attention to train/box_loss, val/box_loss, metrics/precision, metrics/recall, and metrics/mAP50.
