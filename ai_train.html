@@ -676,7 +676,7 @@ Caution
 <p>Please do not open <code>results.csv</code> while training is in progress, because doing so will prevent ODEON to write the file. You can duplicate the file and view it.</p>
 </div>
 </div>
-<p>When you are done, ODEON will test the model on the <em>test</em> set. A few graphs will also be generated in the weights folder.</p>
+<p>When you are done, a few graphs will also be generated in the weights folder.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -687,7 +687,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Report the model performance on the <em>validation</em> set at epoch 30 as well as on the <em>test</em> set at the end. Be sure to include precision, recall, and mAP50 scores. Why does the model score higher on the validation set?</p>
+<p>Report the model performance on the <em>validation</em> set at epoch 30. Be sure to include precision, recall, and mAP50 scores.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -700,9 +700,22 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Include the <code>confusion_matrix.png</code> from the <code>weights</code> folder in your word document. Calculate the recall, precision, and F-1 score of your model. What do these metrics suggest about your model?</p>
+<p>Include the <code>confusion_matrix.png</code> from the <code>weights</code> folder in your word document. Calculate the recall, precision, and F-1 score of your model.</p>
 <p>F-1 score is defined as:</p>
 <p><span class="math display">\[F_1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The confusion matrix might look weird and contradict with the (hopefully) good metrics that you have. This is mostly because Ultralytics counts a prediction as correct if it overlaps a labeled box with IoU ≥ 0.45. In most of our cases, this is pretty difficult to achieve.</p>
 </div>
 </div>
 <p>Finally, have a look at the <code>results.png</code> in the <code>weights</code> folder. Pay close attention to train/box_loss, val/box_loss, metrics/precision, metrics/recall, and metrics/mAP50.</p>

@@ -610,7 +610,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="file-downloads" class="level2">
 <h2 class="anchored" data-anchor-id="file-downloads">File Downloads</h2>
-<p>For this lab, you will need to download the following six files. Please make sure to place all files in one folder.</p>
+<p>For this lab, you will need to download the following six files.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -627,9 +627,22 @@ Caution
 <ol type="1">
 <li><p><a href="https://drive.google.com/file/d/1VGWZhtzEGixke7E9ghGh-heIwcD-0EMS/view?usp=sharing"><code>ODEON-0.3.zip</code></a>: This is a recent version of the ODEON tool that we will be using. Unzip the file after you download it.</p></li>
 <li><p><a href="https://drive.google.com/file/d/153wY5reYWXqWbaUnyXZ9Bq3SVBhUHnKJ/view?usp=sharing"><code>2026DigitalArchLab7_annotations.geojson</code></a>: A <code>.geojson</code> file that contains the labels (positive examples) of archaeological mounds in our study area.</p></li>
-<li><p><a href="https://drive.google.com/file/d/1cYAqVL9OsOX9HDfd2tXU9A8O76uZVrMs/view?usp=drive_link"><code>D3C1204-300451A005_cog.tif</code></a>: One orthorectified HEXAGON scene that covers part of Northern Iraq.</p></li>
-<li><p><a href="https://drive.google.com/file/d/16CT4t8alGnRsduXW7PHlsM7yJhoQqzrm/view?usp=drive_link"><code>D3C1204300451A006_clip.tif</code></a>, <a href="https://drive.google.com/file/d/1jCrDjdN11aeRy-MvQskk5yZ856nXOnfX/view?usp=drive_link"><code>D3C1204300451A006_clip.tfw</code></a>, and <a href="https://drive.google.com/file/d/1n-2upGPmqi1hOqvV9z__8vi4oVb7t1jh/view?usp=drive_link"><code>D3C1204300451A006_clip.tif.ovr</code></a>: A clipped raster for inference/prediction. <code>tfw</code> and <code>ovr</code> store coordinates and pyramids for the quick visualization of the raster in QGIS. Make sure to group these files in one folder with a name such as <code>Lab7_inference</code>.</p></li>
+<li><p><a href="https://drive.google.com/file/d/1cYAqVL9OsOX9HDfd2tXU9A8O76uZVrMs/view?usp=drive_link"><code>D3C1204-300451A005_cog.tif</code></a>: One orthorectified HEXAGON scene that covers part of Northern Iraq. This is for data preparation.</p></li>
+<li><p><a href="https://drive.google.com/file/d/16CT4t8alGnRsduXW7PHlsM7yJhoQqzrm/view?usp=drive_link"><code>D3C1204300451A006_clip.tif</code></a>, <a href="https://drive.google.com/file/d/1jCrDjdN11aeRy-MvQskk5yZ856nXOnfX/view?usp=drive_link"><code>D3C1204300451A006_clip.tfw</code></a>, and <a href="https://drive.google.com/file/d/1n-2upGPmqi1hOqvV9z__8vi4oVb7t1jh/view?usp=drive_link"><code>D3C1204300451A006_clip.tif.ovr</code></a>: A clipped raster for inference/prediction. <code>tfw</code> and <code>ovr</code> store coordinates and pyramids for the quick visualization of the raster in QGIS. Make sure to group these three files in one folder with a name such as <code>Lab7_inference</code>.</p></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will only be using <a href="https://drive.google.com/file/d/153wY5reYWXqWbaUnyXZ9Bq3SVBhUHnKJ/view?usp=sharing"><code>2026DigitalArchLab7_annotations.geojson</code></a> and <a href="https://drive.google.com/file/d/1cYAqVL9OsOX9HDfd2tXU9A8O76uZVrMs/view?usp=drive_link"><code>D3C1204-300451A005_cog.tif</code></a> for data preparation. The idea is to extract raster chips (or small parts of the <code>D3C1204-300451A005_cog.tif</code>) around each of the annotations in the <code>.geojson</code> file.</p>
+</div>
+</div>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
