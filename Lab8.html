@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -523,12 +542,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./underwater1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lake Morey</span></a>
+  <a href="./underwater1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lake Winnipesaukee, NH</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./underwater2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lake Winnipesaukee</span></a>
+  <a href="./underwater2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lake Morey</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -588,7 +607,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.</p>
 <p><strong>Question 1</strong></p>
-<p>Can you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (<strong>15 points</strong>)</p>
+<p>Zoom in to different parts of available sonar data. Find, with screenshots, the steamship <em>Lady of the Lake</em>, a tugboat, a SCAMP boat, a flat-bottomed barge, and finally a railroad boxcar. (<strong>15 points</strong>)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -606,7 +625,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p><strong>Question 2</strong></p>
-<p>Carefully examine <code>LakeMorey18June2024</code> and <code>LakeMorey25June2024</code>. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (<strong>20 points</strong>)</p>
+<p>Can you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (<strong>15 points</strong>)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -624,7 +643,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p><strong>Question 3</strong></p>
-<p>Zoom in to different parts with sonar data. Find, with screenshots, the steamship <em>Lady of the Lake</em>, a tugboat, a 78’ scamp, a flat-bottomed barge, and finally a railroad boxcar. (<strong>15 points</strong>)</p>
+<p>Carefully examine <code>LakeMorey18June2024</code> and <code>LakeMorey25June2024</code>. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (<strong>20 points</strong>)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -642,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p><strong>Question 4</strong></p>
-<p>TBA (<strong>10 points</strong>)</p>
+<p>What are the strengths and weaknesses of various methods used by <span class="citation" data-cites="ferentinos2020">Ferentinos et al. (<a href="references.html#ref-ferentinos2020" role="doc-biblioref">2020</a>)</span> to document a shipwreck in Greece? How well do you think these methods would work on the wrecks in Lake Winnipesaukee or Lake Morey? (<strong>10 points</strong>)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -660,7 +679,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p><strong>Question 5</strong></p>
-<p>TBA (<strong>10 points</strong>)</p>
+<p>Both <span class="citation" data-cites="grøn2021">Grøn et al. (<a href="references.html#ref-grøn2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="davis2024">Davis et al. (<a href="references.html#ref-davis2024" role="doc-biblioref">2024</a>)</span> use different methods to document submerged prehistoric sites. What are the relative advantages of each? Would any of these techniques work for site documentation in New England? (<strong>10 points</strong>)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -680,6 +699,17 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Total</strong> 70 points</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-davis2024" class="csl-entry" role="listitem">
+Davis, Dylan&nbsp;S., Jessica&nbsp;W. Cook&nbsp;Hale, Nathan&nbsp;L. Hale, Trevor&nbsp;Z. Johnston, and Matthew&nbsp;C. Sanger. 2024. <span>“Bathymetric LiDAR and Semi<span>-</span>Automated Feature Extraction Assist Underwater Archaeological Surveys.”</span> <em>Archaeological Prospection</em> 31 (2): 171–86. <a href="https://doi.org/10.1002/arp.1939">https://doi.org/10.1002/arp.1939</a>.
+</div>
+<div id="ref-ferentinos2020" class="csl-entry" role="listitem">
+Ferentinos, George, Elias Fakiris, Dimitrios Christodoulou, et al. 2020. <span>“Optimal Sidescan Sonar and Subbottom Profiler Surveying of Ancient Wrecks: The <span>‘</span>Fiskardo<span>’</span> Wreck, Kefallinia Island, Ionian Sea.”</span> <em>Journal of Archaeological Science</em> 113 (January): 105032. <a href="https://doi.org/10.1016/j.jas.2019.105032">https://doi.org/10.1016/j.jas.2019.105032</a>.
+</div>
+<div id="ref-grøn2021" class="csl-entry" role="listitem">
+Grøn, Ole, Lars Ole Boldreel, Morgan F. Smith, et al. 2021. <span>“Acoustic Mapping of Submerged Stone Age Sites<span></span>a HALD Approach.”</span> <em>Remote Sensing</em> 13 (3): 445. <a href="https://doi.org/10.3390/rs13030445">https://doi.org/10.3390/rs13030445</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1097,8 +1127,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./underwater2.html" class="pagination-link" aria-label="Lake Winnipesaukee">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Lake Winnipesaukee</span></span>
+      <a href="./underwater2.html" class="pagination-link" aria-label="Lake Morey">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Lake Morey</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

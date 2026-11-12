@@ -1134,67 +1134,78 @@
   {
     "objectID": "underwater1.html",
     "href": "underwater1.html",
-    "title": "Lake Morey",
+    "title": "Lake Winnipesaukee, NH",
     "section": "",
     "text": "Objectives\nIn this lab, we will be using side-scan sonar images and publicly available bathymetric data to find wrecks in Lake Morey, VT, and Lake Winnipesaukee, NH. One of these shipwrecks belonged to the famed steamship Lady of the Lake, which was retired in 1893 and sunk near the Glendale Docks. Can you uncover the secrets of “The Lady?”",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Winnipesaukee, NH</span>"
     ]
   },
   {
     "objectID": "underwater1.html#objectives",
     "href": "underwater1.html#objectives",
-    "title": "Lake Morey",
+    "title": "Lake Winnipesaukee, NH",
     "section": "",
-    "text": "Lady of the Lake",
+    "text": "S.S. Lady of the Lake at Weirs Beach (c.1865). Image courtesy: NY Public Library.",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Winnipesaukee, NH</span>"
     ]
   },
   {
     "objectID": "underwater1.html#file-downloads",
     "href": "underwater1.html#file-downloads",
-    "title": "Lake Morey",
+    "title": "Lake Winnipesaukee, NH",
     "section": "File Downloads",
-    "text": "File Downloads\nFor this week’s lab, we will be mostly dealing with MBTiles files. These are SQLite databases that can contain both raster and vector tilesets. MBTiles can be loaded in QGIS just like any other raster files.\nDownload the following files for Lake Morey, VT and save them in a folder such as Lab8_Morey:\n\nBathymetry data derived from CSV points provided by the state of VT: lakemoreyvt_bathymetry_m.tif and lakemoreyvt_bathymetry_m.tfw\nSonar mosaics using Humminbird side scanner from 18 and 25 June 2024: LakeMorey18June2024.mbtiles and LakeMorey25June2024.mbtiles\nSonar mosaic from our blue boat: Canoe14Oct26_BlueBoat47.mbtiles\n\nNext, download these files for Lake Winnipesaukee in New Hampshire and store them in a separate folder:\n\nSonar mosaics of Lady of the Lake plus a few other interesting wrecks: LadyofLake23.mbtiles, ScampBarge30.mbtiles, TrainCar8.mbtiles, and TugBoat22.mbtiles\nBathymetric lidar of an underwater peninsula near Weirs Beach (filtered for ground): weirs_bathymetric_lidar_ground.tif\nSonar mosaics of that underwater peninsula: Weirs171632.mbtiles\n40m contour interval bathymetric lines from the State of NH: Winnepsaukee_NHState_Bathymetry_Lines.zip",
+    "text": "File Downloads\nFor this week’s lab, we will be mostly dealing with MBTiles files. These are SQLite databases that can contain both raster and vector tilesets. MBTiles can be loaded in QGIS just like any other raster files.\nFirst, download these files for Lake Winnipesaukee in New Hampshire and store them in a separate folder such as Lab8_Winni:\n\nSonar mosaics of Lady of the Lake plus a few other interesting wrecks: LadyofLake23.mbtiles, ScampBarge30.mbtiles, TrainCar8.mbtiles, and TugBoat22.mbtiles\nBathymetric lidar of an underwater peninsula near Weirs Beach (filtered for ground): weirs_bathymetric_lidar_ground.tif\nSonar mosaics of that underwater peninsula: Weirs171632.mbtiles\n40m contour interval bathymetric lines from the State of NH: Winnepsaukee_NHState_Bathymetry_Lines.zip\nShapefile of known wrecks: winni_wrecks_shp.zip\n\nDownload the following files for Lake Morey, VT and save them in a folder such as Lab8_Morey:\n\nBathymetry data derived from CSV points provided by the state of VT: lakemoreyvt_bathymetry_m.tif and lakemoreyvt_bathymetry_m.tfw\nSonar mosaics using Humminbird side scanner from 18 and 25 June 2024: LakeMorey18June2024.mbtiles and LakeMorey25June2024.mbtiles\nSonar mosaic from our blue boat: Canoe14Oct26_BlueBoat47.mbtiles",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Winnipesaukee, NH</span>"
     ]
   },
   {
-    "objectID": "underwater1.html#lake-morey-vt",
-    "href": "underwater1.html#lake-morey-vt",
-    "title": "Lake Morey",
-    "section": "Lake Morey, VT",
-    "text": "Lake Morey, VT\nAdd all Lake Morey files to QGIS. Group these layer together. For lakemoreyvt_bathymetry_m.tif, change the Symbology Render Type to Hillshade. For Z Factor, select 3, so that elevation difference is more exaggerated.\n\n\n\nMorey data\n\n\nIn the sonar data collected on 25 June, 2024, locate a canoe near the coordinates -8032333.33,5452655.77.\n\n\n\nLake Morey Canoe, near the center of the image, highlighted by a yellow dot\n\n\nToggle on and off other layers to check if you can see the canoe there.\n\n\n\n\n\n\nImportantQuestion 1\n\n\n\nCan you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe?\n\n\nThere are other possible shipwrecks around. Go to -8032160.804,5452708.113, and you can see a wreck in the LakeMorey25June2024 layer.\n\n\n\nAnother shipwreck around -8032160.804,5452708.113\n\n\n\n\n\n\n\n\nImportantQuestion 2\n\n\n\nCarefully examine LakeMorey18June2024 and LakeMorey25June2024. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not?\n\n\nOnce you are ready, let us move on to Lake Winnipesaukee, where much more underwater archaeology awaits.",
+    "objectID": "underwater1.html#lake-winnipesaukee",
+    "href": "underwater1.html#lake-winnipesaukee",
+    "title": "Lake Winnipesaukee, NH",
+    "section": "Lake Winnipesaukee",
+    "text": "Lake Winnipesaukee\nThere are a large number of documented shipwrecks and other features in Lake Winnipesaukee. The shapefile winni_wrecks_shp.zip provides information on previously mapped wrecks, and our team has collected sidescan sonar data over several of them. In this portion of the lab you should try to find as many of these shipwrecks and other features as possible.\n\n\n\nUnderwater ROV image of the Lady of the Lake in 2022\n\n\nImport all Lake Winnipesaukee files, including the shapefile, in QGIS. Using a satellite basemap in this case might help you navigate.\n\n\n\nPart of the database (sans basemap)\n\n\nZoom in to different parts with sonar data. Using the shapefile Attribute Table, you can find descriptions of different wrecks.\n\n\n\nAttribute table for winni_wrecks_shp\n\n\n\n\n\n\n\n\nTip\n\n\n\nRemember that you can use Identify Features tool () to identify wrecks in the shapefile.\n\n\n\n\n\n\n\n\nImportantQuestion 1\n\n\n\nFind, with screenshots, the steamship Lady of the Lake, a tugboat, a SCAMP boat, a flat-bottomed barge near the SCAMP, and finally a railroad boxcar.",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Winnipesaukee, NH</span>"
     ]
   },
   {
     "objectID": "underwater2.html",
     "href": "underwater2.html",
-    "title": "Lake Winnipesaukee",
+    "title": "Lake Morey",
     "section": "",
-    "text": "A Lake of Disasters\nImport all Lake Winnipesaukee files. Using a satellite basemap in this case might help you navigate.",
+    "text": "Unknown Depths\nUnlike Lake Winnipesaukee, the bottom of Lake Morey has never been well surveyed and it is unknown how many shipwrecks or other features are hidden in its murky depths.\nThe lake is named for inventor Samuel Morey (1762-1843), who according to local legend, used Lake Morey (then known as Lake Fairlee) as the testing site for his invention of a steam powered boat. Although Robert Fulton is often given credit as the inventor of the steamboat, Morey received several pattens for his steam powered engines and paddle wheel driven boats in the 1790s (now in Rauner Library here at Dartmouth). He tried to sell his boat to investors at an exposition in New York in 1797, but was unsuccessful. A few years later, Fulton would use financial backers from the same exposition to invent his own steam boat, and Morey claimed until his death that Fulton has stolen his design. His boat, the Aunt Sally, once steamed up and down the Connecticut River, but he was so depressed at his failure to sell his invention and so angry about it having been stolen, that in 1821, he is reported to have brought the Aunt Sally into Lake Morey and intentionally scuttled it. To this day, the veracity of the story and the location of the wreck if true is unknown.\nYour mission is to examine the side scan sonar data for Lake Morey and see if you can find any shipwrecks or other features that are potential candidates for the Aunt Sally.",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Winnipesaukee</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Morey</span>"
     ]
   },
   {
-    "objectID": "underwater2.html#a-lake-of-disasters",
-    "href": "underwater2.html#a-lake-of-disasters",
-    "title": "Lake Winnipesaukee",
+    "objectID": "underwater2.html#unknown-depths",
+    "href": "underwater2.html#unknown-depths",
+    "title": "Lake Morey",
     "section": "",
-    "text": "Part of the database (sans basemap)\n\n\n\n\n\n\n\n\nImportantQuestion 3\n\n\n\nZoom in to different parts with sonar data. Find, with screenshots, the steamship Lady of the Lake, a tugboat, a 78’ scamp, a flat-bottomed barge, and finally a railroad boxcar.",
+    "text": "Steamboat Barnet, a later paddle boat based on Samuel Morey’s Aunt Sally",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Winnipesaukee</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Morey</span>"
+    ]
+  },
+  {
+    "objectID": "underwater2.html#possible-wrecks",
+    "href": "underwater2.html#possible-wrecks",
+    "title": "Lake Morey",
+    "section": "Possible Wrecks",
+    "text": "Possible Wrecks\nAdd all Lake Morey files to QGIS. Group these layer together. For lakemoreyvt_bathymetry_m.tif, change the Symbology Render Type to Hillshade. For Z Factor, select 3, so that elevation difference is more exaggerated.\n\n\n\nMorey data\n\n\nIn the sonar data collected on 25 June, 2024, locate a canoe near the coordinates -8032333.33,5452655.77.\n\n\n\nLake Morey Canoe, near the center of the image, highlighted by a yellow dot\n\n\nToggle on and off other layers to check if you can see the canoe there.\n\n\n\n\n\n\nImportantQuestion 2\n\n\n\nCan you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe?\n\n\nThere are other possible shipwrecks around. Go to -8032160.804,5452708.113, and you can see a wreck in the LakeMorey25June2024 layer.\n\n\n\nAnother shipwreck around -8032160.804,5452708.113\n\n\n\n\n\n\n\n\nImportantQuestion 3\n\n\n\nCarefully examine LakeMorey18June2024 and LakeMorey25June2024, ideally in a systematic fashion. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both sonar mosaics? Based on your understanding of side-scan sonar, why or why not?\n\n\nOnce you are done, answer the following questions based on your readings.\n\n\n\n\n\n\nImportantQuestion 4\n\n\n\nWhat are the strengths and weaknesses of various methods used by Ferentinos et al. (2020) to document a shipwreck in Greece? How well do you think these methods would work on the wrecks in Lake Winnipesaukee or Lake Morey?\n\n\n\n\n\n\n\n\nImportantQuestion 5\n\n\n\nBoth Grøn et al. (2021) and Davis et al. (2024) use different methods to document submerged prehistoric sites. What are the relative advantages of each? Would any of these techniques work for site documentation in New England?\n\n\n\n\n\n\nDavis, Dylan S., Jessica W. Cook Hale, Nathan L. Hale, Trevor Z. Johnston, and Matthew C. Sanger. 2024. “Bathymetric LiDAR and Semi-Automated Feature Extraction Assist Underwater Archaeological Surveys.” Archaeological Prospection 31 (2): 171–86. https://doi.org/10.1002/arp.1939.\n\n\nFerentinos, George, Elias Fakiris, Dimitrios Christodoulou, et al. 2020. “Optimal Sidescan Sonar and Subbottom Profiler Surveying of Ancient Wrecks: The ‘Fiskardo’ Wreck, Kefallinia Island, Ionian Sea.” Journal of Archaeological Science 113 (January): 105032. https://doi.org/10.1016/j.jas.2019.105032.\n\n\nGrøn, Ole, Lars Ole Boldreel, Morgan F. Smith, et al. 2021. “Acoustic Mapping of Submerged Stone Age Sitesa HALD Approach.” Remote Sensing 13 (3): 445. https://doi.org/10.3390/rs13030445.",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Morey</span>"
     ]
   },
   {
@@ -1202,21 +1213,10 @@
     "href": "Lab8.html",
     "title": "Questions (Due: Nov 19)",
     "section": "",
-    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.\nQuestion 1\nCan you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 2\nCarefully examine LakeMorey18June2024 and LakeMorey25June2024. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (20 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 3\nZoom in to different parts with sonar data. Find, with screenshots, the steamship Lady of the Lake, a tugboat, a 78’ scamp, a flat-bottomed barge, and finally a railroad boxcar. (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 4\nTBA (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 5\nTBA (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nTotal 70 points",
+    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.\nQuestion 1\nZoom in to different parts of available sonar data. Find, with screenshots, the steamship Lady of the Lake, a tugboat, a SCAMP boat, a flat-bottomed barge, and finally a railroad boxcar. (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 2\nCan you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 3\nCarefully examine LakeMorey18June2024 and LakeMorey25June2024. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (20 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 4\nWhat are the strengths and weaknesses of various methods used by Ferentinos et al. (2020) to document a shipwreck in Greece? How well do you think these methods would work on the wrecks in Lake Winnipesaukee or Lake Morey? (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 5\nBoth Grøn et al. (2021) and Davis et al. (2024) use different methods to document submerged prehistoric sites. What are the relative advantages of each? Would any of these techniques work for site documentation in New England? (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nTotal 70 points\n\n\n\n\nDavis, Dylan S., Jessica W. Cook Hale, Nathan L. Hale, Trevor Z. Johnston, and Matthew C. Sanger. 2024. “Bathymetric LiDAR and Semi-Automated Feature Extraction Assist Underwater Archaeological Surveys.” Archaeological Prospection 31 (2): 171–86. https://doi.org/10.1002/arp.1939.\n\n\nFerentinos, George, Elias Fakiris, Dimitrios Christodoulou, et al. 2020. “Optimal Sidescan Sonar and Subbottom Profiler Surveying of Ancient Wrecks: The ‘Fiskardo’ Wreck, Kefallinia Island, Ionian Sea.” Journal of Archaeological Science 113 (January): 105032. https://doi.org/10.1016/j.jas.2019.105032.\n\n\nGrøn, Ole, Lars Ole Boldreel, Morgan F. Smith, et al. 2021. “Acoustic Mapping of Submerged Stone Age Sitesa HALD Approach.” Remote Sensing 13 (3): 445. https://doi.org/10.3390/rs13030445.",
     "crumbs": [
       "Lab 8 Underwater Archaeology",
       "<span class='chapter-number'>29</span>  <span class='chapter-title'>Questions (Due: Nov 19)</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Bauer, Andrew M. 2018. “Remote Sensing Soils and Social\nGeographies of Difference: The Landscape Archaeology of Regur from Iron\nAge Through Medieval Period Northern Karnataka, Southern India.”\nJournal of Field Archaeology 43 (1): 31–43. https://doi.org/10.1080/00934690.2017.1418611.\n\n\nCasana, Jesse, Severin Fowles, Lindsay M. Montgomery, et al. 2023.\n“Multi-Sensor Drone Survey of Ancestral Agricultural Landscapes at\nPicuris Pueblo, New Mexico.” Journal of Archaeological\nScience 157 (September): 105837. https://doi.org/10.1016/j.jas.2023.105837.\n\n\nCasana, Jesse, David D. Goodman, and Carolin Ferwerda. 2023. “A\nWall or a Road? A Remote Sensing-Based Investigation of Fortifications\non Rome’s Eastern Frontier.” Antiquity 97 (396):\n1516–33. https://doi.org/10.15184/aqy.2023.153.\n\n\nChase, Arlen F., Diane Z. Chase, John F. Weishampel, et al. 2011.\n“Airborne LiDAR, Archaeology, and the Ancient Maya Landscape at\nCaracol, Belize.” Journal of Archaeological Science 38\n(2): 387–98. https://doi.org/10.1016/j.jas.2010.09.018.\n\n\nErnenwein, Eileen G. 2023. “Geophysical Survey Techniques.”\nHandbook of Archaeological Sciences, February 10, 985–1004. https://doi.org/10.1002/9781119592112.ch49.\n\n\nGaffney, Chris, Vince Gaffney, Wolfgang Neubauer, et al. 2012.\n“The Stonehenge Hidden Landscapes Project.”\nArchaeological Prospection 19 (2): 147–55. https://doi.org/10.1002/arp.1422.\n\n\nHerrmann, Jason T., Benjamin Glissmann, Paola Sconzo, and Peter\nPfälzner. 2018. “Unmanned Aerial Vehicle (UAV) Survey with\nCommercial-Grade Instruments: A Case Study from the Eastern Ḫabur\nArchaeological Survey, Iraq.” Journal of Field\nArchaeology 43 (4): 269–83. https://doi.org/10.1080/00934690.2018.1465808.\n\n\nHerrmann, Jason T., Jason L. King, and Jane E. Buikstra. 2014.\n“Mapping the Internal Structure of Hopewell Tumuli in the Lower\nIllinois River Valley Through Archaeological Geophysics.”\nAdvances in Archaeological Practice 2 (3): 164–79. https://doi.org/10.7183/2326-3768.2.3.164.\n\n\nHowey, Meghan C. L., and Michael W. Palace. 2026. “Satellite\nThermal Data Applied to Landscape Archaeology: Mounds in Michigan\n(12001600 CE).” Proceedings of the National\nAcademy of Sciences 123 (8). https://doi.org/10.1073/pnas.2528379123.\n\n\nMagnani, Matthew, and Jon Clindaniel. 2025. “Artificial\nIntelligence and the Interpretation of the Past.” Advances in\nArchaeological Practice 14 (2): 218–33. https://doi.org/10.1017/aap.2025.10110.\n\n\nMaterazzi, Filippo, and Marco Pacifici. 2022. “Archaeological Crop\nMarks Detection Through Drone Multispectral Remote Sensing and\nVegetation Indices: A New Approach Tested on the Italian Pre-Roman City\nof Veii.” Journal of Archaeological Science: Reports 41\n(February): 103235. https://doi.org/10.1016/j.jasrep.2021.103235.\n\n\nMcCoy, Mark D. 2020. “The Site Problem: A Critical Review of the\nSite Concept in Archaeology in the Digital Age.” Journal of\nField Archaeology 45 (sup1): S18–26. https://doi.org/10.1080/00934690.2020.1713283.\n\n\nMenze, Bjoern H., and Jason A. Ur. 2012. “Mapping Patterns of\nLong-Term Settlement in Northern Mesopotamia at a Large Scale.”\nProceedings of the National Academy of Sciences 109 (14). https://doi.org/10.1073/pnas.1115472109.\n\n\nOrengo, Hector A., Francesc C. Conesa, Arnau Garcia-Molsosa, et al.\n2020. “Automated Detection of Archaeological Mounds Using\nMachine-Learning Classification of Multisensor and Multitemporal\nSatellite Data.” Proceedings of the National Academy of\nSciences 117 (31): 18240–50. https://doi.org/10.1073/pnas.2005583117.\n\n\nPärssinen, Martti, Risto Kalliola, Alceu Ranzi, et al. 2026. “Over\n20,000 Precolonial Earthworks in the Southwest Amazonia.”\nNature 657 (8131): 420–25. https://doi.org/10.1038/s41586-026-10835-7.\n\n\nPaulsen, Paige, Carolin Ferwerda, Joseph W. Lehner, et al. 2026.\n“Drone-Based Thermal Imaging of Subsurface Architecture:\nMethodological Insights and Discoveries at Iron Age Raki (Oman).”\nJournal of Archaeological Science: Reports 69 (February):\n105569. https://doi.org/10.1016/j.jasrep.2026.105569.\n\n\nPorter, Samantha Thi, Morgan Roussel, and Marie Soressi. 2016. “A\nSimple Photogrammetry Rig for the Reliable Creation of 3D Artifact\nModels in the Field.” Advances in Archaeological\nPractice 4 (1): 71–86. https://doi.org/10.7183/2326-3768.4.1.71.\n\n\nShi, Casey Haoran, and Cayleigh Elizabeth Haag. 2026. “Pixelated\nTransformations: Tracing Changing Irrigation Management Through\nDeep-Learning-Based Object Detection on HEXAGON and SkySat Satellite\nImages.” Journal of Archaeological Method and Theory 33\n(3). https://doi.org/10.1007/s10816-026-09787-z.\n\n\nTrier, Øivind Due, David C. Cowley, and Anders Ueland Waldeland. 2018.\n“Using Deep Neural Networks on Airborne Laser Scanning Data:\nResults from a Case Study of Semi-Automatic Mapping of\nArchaeological Topography on Arran, Scotland.” Archaeological\nProspection 26 (2): 165–75. https://doi.org/10.1002/arp.1731.",
-    "crumbs": [
-      "Appendices",
-      "References"
     ]
   }
 ]
