@@ -26,11 +26,12 @@ book:
       chapters: [photo_collection.qmd, 3dmodel.qmd, Lab6.qmd]
     - part: "Lab 7 AI and Archaeology"
       chapters: [lecture_notes_w7_new_nopythoncode.qmd, site_detection.qmd, ai_prep.qmd, ai_train.qmd, ai_inf.qmd, Lab7.qmd]
-  
+    - part: "Lab 8 Underwater Archaeology"
+      chapters: [underwater1.qmd, underwater2.qmd, Lab8.qmd]
   appendices: 
     - references.qmd
     
-  page-footer: "Copyright 2026, Casey H. Shi || Do not share course materials"
+  page-footer: "All rights reserved, 2026, Casey H. Shi || Do not share course materials"
 
 bibliography: references.bib
 

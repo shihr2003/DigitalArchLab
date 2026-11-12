@@ -1,0 +1,16 @@
+---
+title: "Lake Winnipesaukee"
+format: html
+---
+
+## A Lake of Disasters
+
+Import all Lake Winnipesaukee files. Using a satellite basemap in this case might help you navigate.
+
+![Part of the database (*sans* basemap)](images/clipboard-1581513350.png){fig-align="center" width="100%"}
+
+::: callout-important
+## Question 3
+
+Zoom in to different parts with sonar data. Find, with screenshots, the steamship *Lady of the Lake*, a tugboat, a 78' scamp, a flat-bottomed barge, and finally a railroad boxcar.
+:::

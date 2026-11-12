@@ -1,0 +1,58 @@
+---
+title: "Questions (Due: Nov 19)"
+format: html
+---
+
+Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.
+
+**Question 1**
+
+Can you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (**15 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 2**
+
+Carefully examine `LakeMorey18June2024` and `LakeMorey25June2024`. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (**20 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 3**
+
+Zoom in to different parts with sonar data. Find, with screenshots, the steamship *Lady of the Lake*, a tugboat, a 78' scamp, a flat-bottomed barge, and finally a railroad boxcar. (**15 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 4**
+
+TBA (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Question 5**
+
+TBA (**10 points**)
+
+::: {.callout-note collapse="true"}
+## Click to reveal answer
+
+Answer key will be posted after the assignment deadline!
+:::
+
+**Total** 70 points
