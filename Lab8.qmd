@@ -7,7 +7,7 @@ Please answer the following questions in a separate Word document and submit it 
 
 **Question 1**
 
-Can you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (**15 points**)
+Zoom in to different parts of available sonar data. Find, with screenshots, the steamship *Lady of the Lake*, a tugboat, a SCAMP boat, a flat-bottomed barge, and finally a railroad boxcar. (**15 points**)
 
 ::: {.callout-note collapse="true"}
 ## Click to reveal answer
@@ -17,7 +17,7 @@ Answer key will be posted after the assignment deadline!
 
 **Question 2**
 
-Carefully examine `LakeMorey18June2024` and `LakeMorey25June2024`. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (**20 points**)
+Can you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (**15 points**)
 
 ::: {.callout-note collapse="true"}
 ## Click to reveal answer
@@ -27,7 +27,7 @@ Answer key will be posted after the assignment deadline!
 
 **Question 3**
 
-Zoom in to different parts with sonar data. Find, with screenshots, the steamship *Lady of the Lake*, a tugboat, a 78' scamp, a flat-bottomed barge, and finally a railroad boxcar. (**15 points**)
+Carefully examine `LakeMorey18June2024` and `LakeMorey25June2024`. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (**20 points**)
 
 ::: {.callout-note collapse="true"}
 ## Click to reveal answer
@@ -37,7 +37,7 @@ Answer key will be posted after the assignment deadline!
 
 **Question 4**
 
-TBA (**10 points**)
+What are the strengths and weaknesses of various methods used by @ferentinos2020 to document a shipwreck in Greece? How well do you think these methods would work on the wrecks in Lake Winnipesaukee or Lake Morey? (**10 points**)
 
 ::: {.callout-note collapse="true"}
 ## Click to reveal answer
@@ -47,7 +47,7 @@ Answer key will be posted after the assignment deadline!
 
 **Question 5**
 
-TBA (**10 points**)
+Both @grøn2021 and @davis2024 use different methods to document submerged prehistoric sites. What are the relative advantages of each? Would any of these techniques work for site documentation in New England? (**10 points**)
 
 ::: {.callout-note collapse="true"}
 ## Click to reveal answer
