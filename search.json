@@ -1132,6 +1132,83 @@
     ]
   },
   {
+    "objectID": "underwater1.html",
+    "href": "underwater1.html",
+    "title": "Lake Morey",
+    "section": "",
+    "text": "Objectives\nIn this lab, we will be using side-scan sonar images and publicly available bathymetric data to find wrecks in Lake Morey, VT, and Lake Winnipesaukee, NH. One of these shipwrecks belonged to the famed steamship Lady of the Lake, which was retired in 1893 and sunk near the Glendale Docks. Can you uncover the secrets of “The Lady?”",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+    ]
+  },
+  {
+    "objectID": "underwater1.html#objectives",
+    "href": "underwater1.html#objectives",
+    "title": "Lake Morey",
+    "section": "",
+    "text": "Lady of the Lake",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+    ]
+  },
+  {
+    "objectID": "underwater1.html#file-downloads",
+    "href": "underwater1.html#file-downloads",
+    "title": "Lake Morey",
+    "section": "File Downloads",
+    "text": "File Downloads\nFor this week’s lab, we will be mostly dealing with MBTiles files. These are SQLite databases that can contain both raster and vector tilesets. MBTiles can be loaded in QGIS just like any other raster files.\nDownload the following files for Lake Morey, VT and save them in a folder such as Lab8_Morey:\n\nBathymetry data derived from CSV points provided by the state of VT: lakemoreyvt_bathymetry_m.tif and lakemoreyvt_bathymetry_m.tfw\nSonar mosaics using Humminbird side scanner from 18 and 25 June 2024: LakeMorey18June2024.mbtiles and LakeMorey25June2024.mbtiles\nSonar mosaic from our blue boat: Canoe14Oct26_BlueBoat47.mbtiles\n\nNext, download these files for Lake Winnipesaukee in New Hampshire and store them in a separate folder:\n\nSonar mosaics of Lady of the Lake plus a few other interesting wrecks: LadyofLake23.mbtiles, ScampBarge30.mbtiles, TrainCar8.mbtiles, and TugBoat22.mbtiles\nBathymetric lidar of an underwater peninsula near Weirs Beach (filtered for ground): weirs_bathymetric_lidar_ground.tif\nSonar mosaics of that underwater peninsula: Weirs171632.mbtiles\n40m contour interval bathymetric lines from the State of NH: Winnepsaukee_NHState_Bathymetry_Lines.zip",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+    ]
+  },
+  {
+    "objectID": "underwater1.html#lake-morey-vt",
+    "href": "underwater1.html#lake-morey-vt",
+    "title": "Lake Morey",
+    "section": "Lake Morey, VT",
+    "text": "Lake Morey, VT\nAdd all Lake Morey files to QGIS. Group these layer together. For lakemoreyvt_bathymetry_m.tif, change the Symbology Render Type to Hillshade. For Z Factor, select 3, so that elevation difference is more exaggerated.\n\n\n\nMorey data\n\n\nIn the sonar data collected on 25 June, 2024, locate a canoe near the coordinates -8032333.33,5452655.77.\n\n\n\nLake Morey Canoe, near the center of the image, highlighted by a yellow dot\n\n\nToggle on and off other layers to check if you can see the canoe there.\n\n\n\n\n\n\nImportantQuestion 1\n\n\n\nCan you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe?\n\n\nThere are other possible shipwrecks around. Go to -8032160.804,5452708.113, and you can see a wreck in the LakeMorey25June2024 layer.\n\n\n\nAnother shipwreck around -8032160.804,5452708.113\n\n\n\n\n\n\n\n\nImportantQuestion 2\n\n\n\nCarefully examine LakeMorey18June2024 and LakeMorey25June2024. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not?\n\n\nOnce you are ready, let us move on to Lake Winnipesaukee, where much more underwater archaeology awaits.",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Lake Morey</span>"
+    ]
+  },
+  {
+    "objectID": "underwater2.html",
+    "href": "underwater2.html",
+    "title": "Lake Winnipesaukee",
+    "section": "",
+    "text": "A Lake of Disasters\nImport all Lake Winnipesaukee files. Using a satellite basemap in this case might help you navigate.",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Winnipesaukee</span>"
+    ]
+  },
+  {
+    "objectID": "underwater2.html#a-lake-of-disasters",
+    "href": "underwater2.html#a-lake-of-disasters",
+    "title": "Lake Winnipesaukee",
+    "section": "",
+    "text": "Part of the database (sans basemap)\n\n\n\n\n\n\n\n\nImportantQuestion 3\n\n\n\nZoom in to different parts with sonar data. Find, with screenshots, the steamship Lady of the Lake, a tugboat, a 78’ scamp, a flat-bottomed barge, and finally a railroad boxcar.",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Lake Winnipesaukee</span>"
+    ]
+  },
+  {
+    "objectID": "Lab8.html",
+    "href": "Lab8.html",
+    "title": "Questions (Due: Nov 19)",
+    "section": "",
+    "text": "Please answer the following questions in a separate Word document and submit it to the course Canvas site by 11:59pm, Nov 12, 2026.\nQuestion 1\nCan you see the canoe in the bathymetric layer or the sonar data collected by the Blue Boat? Using the bathymetry, measure the depth at which this canoe was found. How long is this canoe? (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 2\nCarefully examine LakeMorey18June2024 and LakeMorey25June2024. Identify at least three more shipwrecks. Report with coordinates and screenshots. Can you see them in both layers? Based on your understanding of side-scan sonar, why or why not? (20 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 3\nZoom in to different parts with sonar data. Find, with screenshots, the steamship Lady of the Lake, a tugboat, a 78’ scamp, a flat-bottomed barge, and finally a railroad boxcar. (15 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 4\nTBA (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nQuestion 5\nTBA (10 points)\n\n\n\n\n\n\nNoteClick to reveal answer\n\n\n\n\n\nAnswer key will be posted after the assignment deadline!\n\n\n\nTotal 70 points",
+    "crumbs": [
+      "Lab 8 Underwater Archaeology",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Questions (Due: Nov 19)</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
